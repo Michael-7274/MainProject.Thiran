@@ -1,0 +1,1002 @@
+[
+  {
+      "name": "Ariel",
+      "image": "product.jpg",
+      "category": "Detergent",
+      "description": "For washing clothes",
+      "price": "Rs.200",
+      "warranty": "nil",
+      "return": "2 days from delivery",
+      "id": "PID0"
+  },
+  {
+      "name": "Whirlpool Washing Machine",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "Fully automatic washing machine",
+      "price": "Rs. 20,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID1"
+  },
+  {
+      "name": "Cool Breeze Air Cooler",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "Powerful air cooler for large spaces",
+      "price": "Rs. 15,000",
+      "warranty": "2 years",
+      "return": "15 days from delivery",
+      "id": "PID2"
+  },
+  {
+      "name": "Iron Master Iron Box",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "Steam iron for wrinkle-free clothes",
+      "price": "Rs. 1,500",
+      "warranty": "6 months",
+      "return": "7 days from delivery",
+      "id": "PID3"
+  },
+  {
+      "name": "Samsung Refrigerator",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "Double door refrigerator with inverter compressor",
+      "price": "Rs. 25,000",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID4"
+  },
+  {
+      "name": "Sony 4K Smart TV",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "55 inch LED TV with Android TV",
+      "price": "Rs. 50,000",
+      "warranty": "3 years",
+      "return": "60 days from delivery",
+      "id": "PID5"
+  },
+  {
+      "name": "Nike Running Shoes",
+      "image": "product.jpg",
+      "category": "Footwear",
+      "description": "Men's running shoes with air cushioning",
+      "price": "Rs. 3,000",
+      "warranty": "6 months",
+      "return": "14 days from delivery",
+      "id": "PID6"
+  },
+  {
+      "name": "Canon EOS DSLR Camera",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "24.1 MP camera with EF-S 18-55mm lens",
+      "price": "Rs. 35,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID7"
+  },
+  {
+      "name": "Bosch Drill Machine",
+      "image": "product.jpg",
+      "category": "Tools",
+      "description": "Cordless drill with extra battery",
+      "price": "Rs. 10,000",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID8"
+  },
+  {
+      "name": "LG Microwave Oven",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "Convection microwave with grill",
+      "price": "Rs. 8,000",
+      "warranty": "1.5 years",
+      "return": "20 days from delivery",
+      "id": "PID9"
+  },
+  {
+      "name": "Dove Shampoo",
+      "image": "product.jpg",
+      "category": "Hair Care",
+      "description": "Nourishing shampoo for smooth hair",
+      "price": "Rs. 150",
+      "warranty": "nil",
+      "return": "2 days from delivery",
+      "id": "PID10"
+  },
+  {
+      "name": "HP Laptop",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "15.6 inch laptop with Intel i5 processor",
+      "price": "Rs. 50,000",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID11"
+  },
+  {
+      "name": "Adidas Sports Shoes",
+      "image": "product.jpg",
+      "category": "Footwear",
+      "description": "Men's sports shoes with Boost technology",
+      "price": "Rs. 4,000",
+      "warranty": "6 months",
+      "return": "14 days from delivery",
+      "id": "PID12"
+  },
+  {
+      "name": "LG 4K UHD Smart TV",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "65 inch LED TV with webOS",
+      "price": "Rs. 70,000",
+      "warranty": "3 years",
+      "return": "60 days from delivery",
+      "id": "PID13"
+  },
+  {
+      "name": "Bajaj Mixer Grinder",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "550W mixer grinder with 3 jars",
+      "price": "Rs. 3,000",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID14"
+  },
+  {
+      "name": "Puma Running Shorts",
+      "image": "product.jpg",
+      "category": "Apparel",
+      "description": "Men's shorts for running",
+      "price": "Rs. 800",
+      "warranty": "nil",
+      "return": "7 days from delivery",
+      "id": "PID15"
+  },
+  {
+      "name": "LG Front Load Washing Machine",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "7 kg fully automatic washing machine",
+      "price": "Rs. 30,000",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID16"
+  },
+  {
+      "name": "Sony Noise Cancelling Headphones",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Wireless headphones with industry-leading noise cancellation",
+      "price": "Rs. 20,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID17"
+  },
+  {
+      "name": "Bosch Angle Grinder",
+      "image": "product.jpg",
+      "category": "Tools",
+      "description": "800W angle grinder with auxiliary handle",
+      "price": "Rs. 4,500",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID18"
+  },
+  {
+      "name": "Philips Air Fryer",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "1400W air fryer with rapid air technology",
+      "price": "Rs. 6,000",
+      "warranty": "2 years",
+      "return": "20 days from delivery",
+      "id": "PID19"
+  },
+  {
+      "name": "Nike Pro Training Tights",
+      "image": "product.jpg",
+      "category": "Apparel",
+      "description": "Women's training tights with Dri-FIT technology",
+      "price": "Rs. 2,500",
+      "warranty": "nil",
+      "return": "7 days from delivery",
+      "id": "PID20"
+  },
+  {
+      "name": "LG Inverter Split AC",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "1.5 ton 3 star split air conditioner",
+      "price": "Rs. 35,000",
+      "warranty": "3 years",
+      "return": "30 days from delivery",
+      "id": "PID21"
+  },
+  {
+      "name": "Fitbit Charge 4 Fitness Tracker",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Advanced fitness tracker with built-in GPS",
+      "price": "Rs. 12,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID22"
+  },
+  {
+      "name": "Black & Decker Drill Kit",
+      "image": "product.jpg",
+      "category": "Tools",
+      "description": "20V cordless drill kit with accessories",
+      "price": "Rs. 8,000",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID23"
+  },
+  {
+      "name": "LG Fully Automatic Top Load Washing Machine",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "6.5 kg top load washing machine",
+      "price": "Rs. 20,000",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID24"
+  },
+  {
+      "name": "JBL Flip 5 Portable Bluetooth Speaker",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Wireless speaker with 12 hours of playtime",
+      "price": "Rs. 8,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID25"
+  },
+  {
+      "name": "Prestige Induction Cooktop",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "2000W induction cooktop with push button controls",
+      "price": "Rs. 2,000",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID26"
+  },
+  {
+      "name": "Under Armour Sports Bra",
+      "image": "product.jpg",
+      "category": "Apparel",
+      "description": "Women's high support sports bra",
+      "price": "Rs. 1,500",
+      "warranty": "nil",
+      "return": "7 days from delivery",
+      "id": "PID27"
+  },
+  {
+      "name": "Godrej 1.5 Ton Split Inverter AC",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "3 star split air conditioner with anti-bacterial filter",
+      "price": "Rs. 30,000",
+      "warranty": "3 years",
+      "return": "30 days from delivery",
+      "id": "PID28"
+  },
+  {
+      "name": "Fitbit Versa 3 Smartwatch",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Advanced health and fitness smartwatch",
+      "price": "Rs. 20,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID29"
+  },
+  {
+      "name": "Milton Thermosteel Water Bottle",
+      "image": "product.jpg",
+      "category": "Kitchenware",
+      "description": "1000 ml vacuum insulated bottle",
+      "price": "Rs. 700",
+      "warranty": "6 months",
+      "return": "15 days from delivery",
+      "id": "PID30"
+  },
+  {
+      "name": "Reebok CrossFit Shoes",
+      "image": "product.jpg",
+      "category": "Footwear",
+      "description": "Men's shoes for CrossFit training",
+      "price": "Rs. 4,500",
+      "warranty": "6 months",
+      "return": "14 days from delivery",
+      "id": "PID31"
+  },
+  {
+      "name": "IFB Front Load Washing Machine",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "7 kg fully automatic front load washing machine",
+      "price": "Rs. 28,000",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID32"
+  },
+  {
+      "name": "JBL Tune 750BTNC Wireless Headphones",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Over-ear wireless headphones with active noise cancellation",
+      "price": "Rs. 12,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID33"
+  },
+  {
+      "name": "Milwaukee Cordless Screwdriver",
+      "image": "product.jpg",
+      "category": "Tools",
+      "description": "4V cordless screwdriver with LED light",
+      "price": "Rs. 3,500",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID34"
+  },
+  {
+      "name": "Kent RO Water Purifier",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "8 liter RO + UV + UF water purifier",
+      "price": "Rs. 15,000",
+      "warranty": "1.5 years",
+      "return": "20 days from delivery",
+      "id": "PID35"
+  },
+  {
+      "name": "Under Armour Compression Leggings",
+      "image": "product.jpg",
+      "category": "Apparel",
+      "description": "Men's compression leggings for training",
+      "price": "Rs. 1,800",
+      "warranty": "nil",
+      "return": "7 days from delivery",
+      "id": "PID36"
+  },
+  {
+      "name": "Sony Bluetooth Soundbar",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "120W soundbar with wireless subwoofer",
+      "price": "Rs. 18,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID37"
+  },
+  {
+      "name": "Crompton Ceiling Fan",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "1200 mm ceiling fan with 3 blades",
+      "price": "Rs. 2,000",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID38"
+  },
+  {
+      "name": "Logitech Wireless Mouse",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Wireless mouse with nano receiver",
+      "price": "Rs. 800",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID39"
+  },
+  {
+      "name": "Prestige Non-Stick Cookware Set",
+      "image": "product.jpg",
+      "category": "Kitchenware",
+      "description": "Aluminium cookware set with non-stick coating",
+      "price": "Rs. 4,000",
+      "warranty": "2 years",
+      "return": "15 days from delivery",
+      "id": "PID40"
+  },
+  {
+      "name": "Nike Yoga Mat",
+      "image": "product.jpg",
+      "category": "Fitness",
+      "description": "6 mm thick yoga mat with carrying strap",
+      "price": "Rs. 1,500",
+      "warranty": "nil",
+      "return": "7 days from delivery",
+      "id": "PID41"
+  },
+  {
+      "name": "LG Fully Automatic Top Load Washing Machine",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "7 kg top load washing machine with turbo drum",
+      "price": "Rs. 22,000",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID42"
+  },
+  {
+      "name": "Bose QuietComfort Noise Cancelling Earbuds",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Wireless earbuds with noise cancellation",
+      "price": "Rs. 25,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID43"
+  },
+  {
+      "name": "Bajaj Ceiling Fan",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "1200 mm ceiling fan with 3 blades",
+      "price": "Rs. 1,500",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID44"
+  },
+  {
+      "name": "Logitech Wired Keyboard",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Wired keyboard with spill-resistant design",
+      "price": "Rs. 1,200",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID45"
+  },
+  {
+      "name": "Tupperware 10-Piece Container Set",
+      "image": "product.jpg",
+      "category": "Kitchenware",
+      "description": "Plastic food containers with airtight seals",
+      "price": "Rs. 1,000",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID46"
+  },
+  {
+      "name": "Reebok Classic Leather Sneakers",
+      "image": "product.jpg",
+      "category": "Footwear",
+      "description": "Men's sneakers with leather upper",
+      "price": "Rs. 3,500",
+      "warranty": "6 months",
+      "return": "14 days from delivery",
+      "id": "PID47"
+  },
+  {
+      "name": "Samsung Washing Machine",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "8 kg front load washing machine with eco bubble technology",
+      "price": "Rs. 30,000",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID48"
+  },
+  {
+      "name": "JBL Quantum 800 Gaming Headset",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Over-ear gaming headset with 7.1 surround sound",
+      "price": "Rs. 15,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID49"
+  },
+  {
+      "name": "Philips 4ft LED Tube Light",
+      "image": "product.jpg",
+      "category": "Home Improvement",
+      "description": "18W LED tube light for energy-efficient lighting",
+      "price": "Rs. 500",
+      "warranty": "2 years",
+      "return": "15 days from delivery",
+      "id": "PID50"
+  },
+  {
+      "name": "Casio Digital Watch",
+      "image": "product.jpg",
+      "category": "Watches",
+      "description": "Digital watch with water resistance",
+      "price": "Rs. 1,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID51"
+  },
+  {
+      "name": "Milton Insulated Casserole",
+      "image": "product.jpg",
+      "category": "Kitchenware",
+      "description": "1000 ml stainless steel casserole with lid",
+      "price": "Rs. 800",
+      "warranty": "6 months",
+      "return": "15 days from delivery",
+      "id": "PID52"
+  },
+  {
+      "name": "Fastrack Aviator Sunglasses",
+      "image": "product.jpg",
+      "category": "Eyewear",
+      "description": "Polarized aviator sunglasses for men",
+      "price": "Rs. 2,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID53"
+  },
+  {
+      "name": "Syska LED Bulb Pack",
+      "image": "product.jpg",
+      "category": "Home Improvement",
+      "description": "Pack of 3 LED bulbs with 10W power",
+      "price": "Rs. 300",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID54"
+  },
+  {
+      "name": "Titan Analog Watch",
+      "image": "product.jpg",
+      "category": "Watches",
+      "description": "Analog watch with leather strap",
+      "price": "Rs. 2,500",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID55"
+  },
+  {
+      "name": "Cello Non-Stick Cookware Set",
+      "image": "product.jpg",
+      "category": "Kitchenware",
+      "description": "Aluminium cookware set with non-stick coating",
+      "price": "Rs. 5,000",
+      "warranty": "2 years",
+      "return": "15 days from delivery",
+      "id": "PID56"
+  },
+  {
+      "name": "Skechers Memory Foam Sneakers",
+      "image": "product.jpg",
+      "category": "Footwear",
+      "description": "Men's sneakers with memory foam insole",
+      "price": "Rs. 4,000",
+      "warranty": "6 months",
+      "return": "14 days from delivery",
+      "id": "PID57"
+  },
+  {
+      "name": "LG 32 inch HD LED TV",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "32 inch LED TV with 20W sound output",
+      "price": "Rs. 15,000",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID58"
+  },
+  {
+      "name": "Bose SoundLink Color Bluetooth Speaker II",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Portable Bluetooth speaker with 8 hours of playtime",
+      "price": "Rs. 10,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID59"
+  },
+  {
+      "name": "Pigeon Induction Cookware Set",
+      "image": "product.jpg",
+      "category": "Kitchenware",
+      "description": "Induction base cookware set with 3 pieces",
+      "price": "Rs. 1,500",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID60"
+  },
+  {
+      "name": "Ray-Ban Wayfarer Sunglasses",
+      "image": "product.jpg",
+      "category": "Eyewear",
+      "description": "Classic Wayfarer sunglasses with polarized lenses",
+      "price": "Rs. 5,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID61"
+  },
+  {
+      "name": "Havells Ceiling Fan",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "1200 mm ceiling fan with 4 blades",
+      "price": "Rs. 1,800",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID62"
+  },
+  {
+      "name": "Microsoft Wireless Keyboard and Mouse Combo",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Wireless keyboard and mouse combo with USB receiver",
+      "price": "Rs. 2,500",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID63"
+  },
+  {
+      "name": "Prestige Pressure Cooker",
+      "image": "product.jpg",
+      "category": "Kitchenware",
+      "description": "5 liter aluminium pressure cooker",
+      "price": "Rs. 1,200",
+      "warranty": "5 years",
+      "return": "15 days from delivery",
+      "id": "PID64"
+  },
+  {
+      "name": "Adidas Ultraboost Running Shoes",
+      "image": "product.jpg",
+      "category": "Footwear",
+      "description": "Men's running shoes with Boost technology",
+      "price": "Rs. 6,000",
+      "warranty": "6 months",
+      "return": "14 days from delivery",
+      "id": "PID65"
+  },
+  {
+      "name": "Samsung 1.5 Ton Split Inverter AC",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "3 star split air conditioner with anti-corrosion coating",
+      "price": "Rs. 35,000",
+      "warranty": "3 years",
+      "return": "30 days from delivery",
+      "id": "PID66"
+  },
+  {
+      "name": "Sony Extra Bass Headphones",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Over-ear headphones with deep bass sound",
+      "price": "Rs. 3,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID67"
+  },
+  {
+      "name": "Bosch Impact Drill",
+      "image": "product.jpg",
+      "category": "Tools",
+      "description": "500W impact drill with 10 mm chuck",
+      "price": "Rs. 3,500",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID68"
+  },
+  {
+      "name": "LG 43 inch 4K UHD Smart TV",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "43 inch LED TV with 20W sound output",
+      "price": "Rs. 35,000",
+      "warranty": "3 years",
+      "return": "30 days from delivery",
+      "id": "PID69"
+  },
+  {
+      "name": "Philips Hair Dryer",
+      "image": "product.jpg",
+      "category": "Personal Care",
+      "description": "1200W hair dryer with 3 heat settings",
+      "price": "Rs. 800",
+      "warranty": "2 years",
+      "return": "15 days from delivery",
+      "id": "PID70"
+  },
+  {
+      "name": "Crompton High Speed Ceiling Fan",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "1200 mm ceiling fan with 3 blades",
+      "price": "Rs. 1,800",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID71"
+  },
+  {
+      "name": "Logitech Webcam",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "720p HD webcam with built-in microphone",
+      "price": "Rs. 1,500",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID72"
+  },
+  {
+      "name": "Tupperware 6-Piece Bowl Set",
+      "image": "product.jpg",
+      "category": "Kitchenware",
+      "description": "Plastic mixing bowls with lids",
+      "price": "Rs. 1,200",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID73"
+  },
+  {
+      "name": "Fossil Chronograph Watch",
+      "image": "product.jpg",
+      "category": "Watches",
+      "description": "Men's chronograph watch with leather strap",
+      "price": "Rs. 5,000",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID74"
+  },
+  {
+      "name": "Milton Thermosteel Flask",
+      "image": "product.jpg",
+      "category": "Kitchenware",
+      "description": "1000 ml vacuum insulated flask",
+      "price": "Rs. 900",
+      "warranty": "6 months",
+      "return": "15 days from delivery",
+      "id": "PID75"
+  },
+  {
+      "name": "Wildcraft Backpack",
+      "image": "product.jpg",
+      "category": "Bags",
+      "description": "20 liter backpack with laptop compartment",
+      "price": "Rs. 1,500",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID76"
+  },
+  {
+      "name": "Skybags Duffle Bag",
+      "image": "product.jpg",
+      "category": "Bags",
+      "description": "30 liter duffle bag with adjustable strap",
+      "price": "Rs. 1,800",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID77"
+  },
+  {
+      "name": "Nova Hair Straightener",
+      "image": "product.jpg",
+      "category": "Personal Care",
+      "description": "Ceramic coated hair straightener with temperature control",
+      "price": "Rs. 1,000",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID78"
+  },
+  {
+      "name": "Prestige Roti Maker",
+      "image": "product.jpg",
+      "category": "Kitchenware",
+      "description": "900W electric roti maker with non-stick plates",
+      "price": "Rs. 2,000",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID79"
+  },
+  {
+      "name": "Puma Active T-Shirt",
+      "image": "product.jpg",
+      "category": "Apparel",
+      "description": "Men's active t-shirt with moisture-wicking technology",
+      "price": "Rs. 1,200",
+      "warranty": "nil",
+      "return": "7 days from delivery",
+      "id": "PID80"
+  },
+  {
+      "name": "LG 1 Ton Split Inverter AC",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "3 star split air conditioner with Himalaya cool technology",
+      "price": "Rs. 30,000",
+      "warranty": "3 years",
+      "return": "30 days from delivery",
+      "id": "PID81"
+  },
+  {
+      "name": "Fitbit Inspire 2 Fitness Tracker",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Advanced fitness tracker with heart rate monitoring",
+      "price": "Rs. 8,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID82"
+  },
+  {
+      "name": "Black & Decker Electric Kettle",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "1.7 liter electric kettle with boil dry protection",
+      "price": "Rs. 1,500",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID83"
+  },
+  {
+      "name": "Sony Portable Bluetooth Speaker",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Wireless speaker with extra bass",
+      "price": "Rs. 4,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID84"
+  },
+  {
+      "name": "Crompton Exhaust Fan",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "150 mm exhaust fan with automatic shutter",
+      "price": "Rs. 800",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID85"
+  },
+  {
+      "name": "Logitech Wireless Gamepad",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Wireless gamepad for PC gaming",
+      "price": "Rs. 2,500",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID86"
+  },
+  {
+      "name": "Tupperware Insulated Lunch Box",
+      "image": "product.jpg",
+      "category": "Kitchenware",
+      "description": "1000 ml insulated lunch box with containers",
+      "price": "Rs. 1,000",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID87"
+  },
+  {
+      "name": "Fossil Women's Watch",
+      "image": "product.jpg",
+      "category": "Watches",
+      "description": "Women's analog watch with stainless steel strap",
+      "price": "Rs. 4,500",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID88"
+  },
+  {
+      "name": "Milton Insulated Tiffin Box",
+      "image": "product.jpg",
+      "category": "Kitchenware",
+      "description": "4 container insulated tiffin box",
+      "price": "Rs. 700",
+      "warranty": "6 months",
+      "return": "15 days from delivery",
+      "id": "PID89"
+  },
+  {
+      "name": "Wildcraft Laptop Backpack",
+      "image": "product.jpg",
+      "category": "Bags",
+      "description": "30 liter laptop backpack with rain cover",
+      "price": "Rs. 2,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID90"
+  },
+  {
+      "name": "Skybags Cabin Luggage",
+      "image": "product.jpg",
+      "category": "Bags",
+      "description": "55 cm cabin luggage with 4 wheels",
+      "price": "Rs. 3,000",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID91"
+  },
+  {
+      "name": "Nova Hair Dryer",
+      "image": "product.jpg",
+      "category": "Personal Care",
+      "description": "Ionic hair dryer with 2 heat settings",
+      "price": "Rs. 800",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID92"
+  },
+  {
+      "name": "Prestige Electric Kettle",
+      "image": "product.jpg",
+      "category": "Kitchenware",
+      "description": "1.7 liter electric kettle with temperature control",
+      "price": "Rs. 1,200",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID93"
+  },
+  {
+      "name": "Puma Gym Bag",
+      "image": "product.jpg",
+      "category": "Bags",
+      "description": "25 liter gym bag with shoe compartment",
+      "price": "Rs. 1,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID94"
+  },
+  {
+      "name": "LG 1.5 Ton Window AC",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "3 star window air conditioner with copper condenser",
+      "price": "Rs. 28,000",
+      "warranty": "3 years",
+      "return": "30 days from delivery",
+      "id": "PID95"
+  },
+  {
+      "name": "Fitbit Aria Air Smart Scale",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "Smart scale for weight and BMI tracking",
+      "price": "Rs. 4,000",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID96"
+  },
+  {
+      "name": "Black & Decker Hand Blender",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "300W hand blender with stainless steel blades",
+      "price": "Rs. 1,500",
+      "warranty": "1 year",
+      "return": "15 days from delivery",
+      "id": "PID97"
+  },
+  {
+      "name": "Sony On-Ear Headphones",
+      "image": "product.jpg",
+      "category": "Electronics",
+      "description": "On-ear headphones with deep bass",
+      "price": "Rs. 2,500",
+      "warranty": "1 year",
+      "return": "30 days from delivery",
+      "id": "PID98"
+  },
+  {
+      "name": "Crompton Table Fan",
+      "image": "product.jpg",
+      "category": "Appliance",
+      "description": "400 mm table fan with 4 blades",
+      "price": "Rs. 2,000",
+      "warranty": "2 years",
+      "return": "30 days from delivery",
+      "id": "PID99"
+  }
+]
