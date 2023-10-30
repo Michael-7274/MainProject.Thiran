@@ -28,17 +28,17 @@ button.highlight {
     top: 1px;
 }
 
-#product-container {
+.card-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-#product-text {
+.card-text {
     position: absolute;
     bottom: -17px;
 }
 
-#search-container {
+.search-container {
     position: relative;
     height: 75px;
     background-color: darkslategray;
@@ -59,4 +59,19 @@ button.highlight {
     width: 100px;
     height: 36px;
     right: 350px;
+}
+
+#add-to-cart{
+    position: absolute;
+    top: 51px;
+    left: 107px;
+    right: -60px;
+}
+#cart-button{
+    position: absolute;
+    font-weight:900;
+    top: 10px;
+    width: 100px;
+    height: 36px;
+    right:200px;
 }

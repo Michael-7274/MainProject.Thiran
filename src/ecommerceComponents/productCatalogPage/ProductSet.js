@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ProductPagination from './ProductPagination';
 import ProductShow from './ProductShow';
+import { NavLink } from 'react-router-dom';
 
 export default function ProductSet() {
   
@@ -36,20 +37,23 @@ export default function ProductSet() {
      };
     //setItemCount(products.length);
     return products.slice((currentPage-1)*10,currentPage*10).map((productItem,index) => {
-      return <ProductShow key={productItem.id} productItem={productItem} />
+      return <ProductShow key={productItem.id} productItem={productItem} />;
    });
   }
 
   let showProduct=filterProducts();
   return (
     <>
-      <div id='search-container'>
+      <div className='search-container'>
         <div className='centerdiv'>
           <input id='search-bar' onChange={(event)=>{setFilterKeyword(event.target.value)}}/>&nbsp;&nbsp;&nbsp;&nbsp;
           <button id='search-button' onClick={()=>setFilter(filterKeyword)}>Search</button>
+          <NavLink to={'/cart'}>
+            <button id='cart-button'>CART</button>
+          </NavLink>
         </div>
       </div>
-      <div id='product-container'>
+      <div className='card-container'>
         {showProduct}
       </div>
       <ProductPagination itemCount={itemCount} currentPage={currentPage} setCurrentPage={setCurrentPage} />

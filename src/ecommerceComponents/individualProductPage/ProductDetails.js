@@ -10,24 +10,23 @@ export default function ProductDetails() {
     getCartItems();
   }, []);
 
-  const getCartItems = () => 
-  {
+  const getCartItems = () => {
     const cartList = JSON.parse(localStorage.getItem('cart'));
     setToCart(cartList ? cartList : []);
   }
 
-  const getProductItem=()=>{
-    const productList=JSON.parse(localStorage.getItem('products'));
+  const getProductItem = () => {
+    const productList = JSON.parse(localStorage.getItem('products'));
     const product = productList.find(product => product.id === productID);
-    return product?product:{};
+    return product ? product : {};
   }
 
-  const isProductInCart=()=>{
+  const isProductInCart = () => {
     return cart.find(cartItem => cartItem.id === productID) !== undefined;
   }
 
   const product = getProductItem();
-  
+
   const isInCart = isProductInCart();
 
   const addToCart = () => {
@@ -40,12 +39,14 @@ export default function ProductDetails() {
 
   return (
     <>
-      <div className="product-card">
-        <img className='image-style' alt='product' src={require('./productCatalogPage/' + product.image)} />{/*Without require('./'+) the image won't apppear here*/}
-        <div id='product-text'>
-          <p>{product.name}</p>
-          <p>{product.price}</p>
-          <button id="add-to-cart" onClick={() => { addToCart() }}>{isInCart ? "Added to cart" : "Add to cart"}</button>
+      <div className='card-container'>
+        <div className="product-card">
+          <img className='image-style' alt='product' src={require('../productCatalogPage/' + product.image)} />{/*Without require('./'+) the image won't apppear here*/}
+          <div className='card-text'>
+            <p>{product.name}</p>
+            <p>{product.price}</p>
+            <button id="add-to-cart" onClick={() => { addToCart() }}>{isInCart ? "Added to cart" : "Add to cart"}</button>
+          </div>
         </div>
       </div>
     </>
