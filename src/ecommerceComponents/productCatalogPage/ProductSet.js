@@ -3,16 +3,23 @@ import ProductPagination from './ProductPagination';
 import ProductShow from './ProductShow';
 
 export default function ProductSet() {
-  const [productsList, setProductsList] = useState(() => {
-    const getProductList = JSON.parse(localStorage.getItem('products'));//JSON.parse() converts a JSON string into a JS object
-    return getProductList?getProductList:[];//modifying data in local storage is reflected on screen only after refresh
-  });
+  
+  // const [productsList, setProductsList] = useState(() => {
+  //   const getProductList = JSON.parse(localStorage.getItem('products'));//JSON.parse() converts a JSON string into a JS object
+  //   return getProductList?getProductList:[];//modifying data in local storage is reflected on screen only after refresh
+  // });
+  const getProductList=()=>{
+    const listOfProducts=JSON.parse(localStorage.getItem('products'));//JSON.parse() converts a JSON string into a JS object
+    return listOfProducts?listOfProducts:[];//modifying data in local storage is reflected on screen only after refresh
+  }
+  const productsList=getProductList();
   const [itemCount, setItemCount] = useState(productsList.length);
   const [currentPage, setCurrentPage] = useState(1);
   const [filter,setFilter]=useState('');
   const [filterKeyword,setFilterKeyword]=useState();
   useEffect(() => {
     setItemCount(productsList.filter((products)=>(products.name).toLowerCase().indexOf(filter.toLowerCase())!==-1).length);
+    setCurrentPage(1);
   }, [filter])
   
 

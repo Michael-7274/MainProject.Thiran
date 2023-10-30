@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import ProductSet from './ecommerceComponents/productCatalogPage/ProductSet';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import PageNotFound from './ecommerceComponents/PageNotFound';
+import ProductDetails from './ecommerceComponents/ProductDetails';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ProductSet/>
+    
+    <BrowserRouter>
+    <Routes>
+      <Route exact path='/' element={<ProductSet/>}></Route>
+      <Route exact path='/product/:productID' element={<ProductDetails/>}></Route>
+      <Route exact path='*' element={<PageNotFound/>}></Route>
+    </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
