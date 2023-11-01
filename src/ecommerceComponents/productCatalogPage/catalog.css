@@ -23,6 +23,8 @@ button.highlight {
 .image-style {
     position: absolute;
     border: 1px solid black;
+    height: 140px;
+    width: 140px;
     left: 29px;
     right: 50px;
     top: 1px;
@@ -36,6 +38,21 @@ button.highlight {
 .card-text {
     position: absolute;
     bottom: -17px;
+}
+
+#add-to-cart{
+    position: absolute;
+    top: 51px;
+    left: 107px;
+    right: -60px;
+}
+
+#catalog-logout-button{
+    position: absolute;
+    top: 10px;
+    width: 100px;
+    height: 36px;
+    left: 50px;
 }
 
 .search-container {
@@ -61,12 +78,6 @@ button.highlight {
     right: 350px;
 }
 
-#add-to-cart{
-    position: absolute;
-    top: 51px;
-    left: 107px;
-    right: -60px;
-}
 #cart-button{
     position: absolute;
     font-weight:900;

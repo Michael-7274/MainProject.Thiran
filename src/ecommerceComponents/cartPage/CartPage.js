@@ -32,8 +32,12 @@ export default function CartPage() {
       setCartItems(tempArr);
     }
   }
-  const itemCards = cartItems.map((item, i) => { return <ShowCartItems cartItemAndIndex={[item, i]} index={i} 
-  deleteItem={deleteItem} /> });
+  const showCartItems=()=>{
+    return cartItems.map((item, i) => { 
+      return <ShowCartItems key={item.id} cartItemAndIndex={[item, i]} index={i} deleteItem={deleteItem} /> 
+    });
+  }
+  const itemCards = showCartItems();
   return (
     <>
       <h1>CART PAGE</h1>

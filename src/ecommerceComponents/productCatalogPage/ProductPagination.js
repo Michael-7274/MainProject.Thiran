@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import'./catalogStyle.css'
+import'./catalog.css'
 export default function ProductPagination({itemCount,currentPage,setCurrentPage}) {
     const buttonCount = Math.ceil(itemCount / 10);
 
@@ -14,6 +14,7 @@ export default function ProductPagination({itemCount,currentPage,setCurrentPage}
             setCurrentPage(currentPage+1);
         }
     }
+
     //const buttons=[];
     function generateButtons() {
         const buttons = [];

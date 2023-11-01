@@ -2,24 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ProductSet from './ecommerceComponents/productCatalogPage/ProductSet';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import PageNotFound from './ecommerceComponents/PageNotFound';
-import ProductDetails from './ecommerceComponents/individualProductPage/ProductDetails';
-import CartPage from './ecommerceComponents/cartPage/CartPage';
+import SetRoutes from './ecommerceComponents/routing/SetRoutes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>    
-    <BrowserRouter>
-    <Routes>
-      <Route exact path='/' element={<ProductSet/>}></Route>
-      <Route exact path='/product/:productID' element={<ProductDetails/>}></Route>
-      <Route exact path='/cart' element={<CartPage/>}></Route>
-      <Route exact path='*' element={<PageNotFound/>}></Route>
-    </Routes>
-    </BrowserRouter>
-    
+    <SetRoutes/>
   </React.StrictMode>
 );
 

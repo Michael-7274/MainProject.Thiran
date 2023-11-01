@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-export default function ProductDetails() {
+export default function ProductFullDetails() {
 
   const { productID } = useParams();
   const [cart, setToCart] = useState([]);
@@ -41,7 +41,7 @@ export default function ProductDetails() {
     <>
       <div className='card-container'>
         <div className="product-card">
-          <img className='image-style' alt='product' src={require('../productCatalogPage/' + product.image)} />{/*Without require('./'+) the image won't apppear here*/}
+          <img className='image-style' alt='product' src={product.imageurls.small} />{/*Without require('./'+) the image won't apppear here*/}
           <div className='card-text'>
             <p>{product.name}</p>
             <p>{product.price}</p>

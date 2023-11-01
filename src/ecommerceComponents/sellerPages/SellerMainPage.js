@@ -1,7 +1,29 @@
 import React from 'react'
-
+import './seller.css'
 export default function SellerMainPage() {
+
   return (
-    <div>SellerMainPage</div>
+    <>
+      <div id='seller-headline-container'>
+        <div className='centerdiv'>
+          <div id='seller-title'>SellerMainPage</div>
+        </div>
+        <button id='seller-logout'>Logout</button>
+      </div>
+      <div id='product-container'>
+        <button id='seller-add-product'>Add product +</button>
+      </div>
+      <div className='centerdiv'>
+        <table id='seller-product-table'>
+          <thead>
+            <tr><td>ID</td><td>Product</td><td>Price</td><td></td><td></td></tr>
+          </thead>
+          <tbody>
+          <tr><td>1</td><td>ariel</td><td>Rs.200</td><td>Update</td><td>Delete</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </>
+
   )
 }

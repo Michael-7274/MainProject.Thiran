@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './loginStyle.css'
+import { useNavigate } from 'react-router-dom';
 
-export default function Login() {
+export default function Login({setAuth}) {
     const[userData,setUserData]=useState();
     const[userName,setuserName]=useState();
     const[userPassword,setUserPassword]=useState();
@@ -9,6 +10,8 @@ export default function Login() {
     useEffect(() => {
         getData();
     }, []);
+    
+    const navigate=useNavigate();
 
     const getData=async()=>{
         try{
@@ -29,16 +32,40 @@ export default function Login() {
         setUserPassword(event.target.value);
     }
 
+    function setToLocalStorage(obj){
+        localStorage.setItem('authentication',JSON.stringify(obj));
+    }
+
     function isUserValid(){
         for(let i=0;i<userData.length;i++)
         {
             if(userData[i].userName===userName){
                 if(userData[i].password===userPassword){
                     if(userData[i].role==="buyer"){
-                        alert("Welcome Buyer")
+                        setToLocalStorage({
+                            authentication:true,
+                            role:'buyer',
+                            id:userData[i].id
+                        });
+                        setAuth({
+                            authentication:true,
+                            role:'buyer',
+                            id:userData[i].id
+                        });
+                        navigate('/catalog');
                     }
                     else{
-                        alert("Welcome Seller")
+                        setToLocalStorage({
+                            authentication:true,
+                            role:'seller',
+                            id:userData[i].id
+                        });
+                        setAuth({
+                            authentication:true,
+                            role:'seller',
+                            id:userData[i].id
+                        });
+                        navigate('/seller')
                     }
                 }
                 else{

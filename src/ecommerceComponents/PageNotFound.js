@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function PageNotFound() {
   return (
-    <div>PageNotFound</div>
+    <div>Sorry, Page Not Found.Either page has been removed or check link </div>
   )
 }
