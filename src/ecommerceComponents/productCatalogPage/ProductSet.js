@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ProductPagination from './ProductPagination';
 import ProductShow from './ProductShow';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 //modifying data in local storage is reflected on screen only after refresh
 export default function ProductSet({ logout }) {
@@ -10,7 +10,8 @@ export default function ProductSet({ logout }) {
   const [itemCount, setItemCount] = useState(productsList.length);
   const [currentPage, setCurrentPage] = useState(1);
   const [filter, setFilter] = useState('');
-  const [filterKeyword, setFilterKeyword] = useState('');
+  let filterKeyword=''
+  const navigate=useNavigate();
 
   useEffect(() => {
     getProductList();
@@ -60,12 +61,21 @@ export default function ProductSet({ logout }) {
     setCurrentPage(1);
   }
 
+  const setFilterKeyword=(val)=>{
+    filterKeyword=val;
+  }
+
+  const logoutOfSite=()=>{
+    logout();
+    navigate('/');
+  }
+
   let showProduct = filterProducts();
   return (
     <>
       <div className='search-container'>
         <div className='centerdiv'>
-          <button id='catalog-logout-button' onClick={logout}>Logout</button>{/* //the logout is a function */}
+          <button id='catalog-logout-button' onClick={logoutOfSite}>Logout</button>{/* //the logout is a function */}
           <input id='search-bar' onChange={(event) => { setFilterKeyword(event.target.value) }} />&nbsp;&nbsp;&nbsp;&nbsp;
           <button id='search-button' onClick={() => setFilter(filterKeyword)}>Search</button>
           <NavLink to={'/cart'}>

@@ -1,14 +1,19 @@
 import React from 'react'
 import './seller.css'
-export default function SellerMainPage() {
-
+import { useNavigate } from 'react-router-dom';
+export default function SellerMainPage({logout}) {
+  const navigate=useNavigate();
+  const logoutOfSite=()=>{
+    logout();
+    navigate('/');
+  }
   return (
     <>
       <div id='seller-headline-container'>
         <div className='centerdiv'>
           <div id='seller-title'>SellerMainPage</div>
         </div>
-        <button id='seller-logout'>Logout</button>
+        <button id='seller-logout'onClick={logoutOfSite}>Logout</button>
       </div>
       <div id='product-container'>
         <button id='seller-add-product'>Add product +</button>
