@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import'./catalog.css'
 export default function ProductPagination({itemCount,currentPage,setCurrentPage}) {
+    
     const buttonCount = Math.ceil(itemCount / 10);
 
     function goToPreviousPage() {

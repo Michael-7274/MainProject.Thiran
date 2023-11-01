@@ -12,11 +12,9 @@ export default function SetRoutes() {
 
     const [auth, setAuth] = useState({});
 
-
     useEffect(() => {
         getAuthentication();
     }, [])
-
 
     function setNewAuthentication() {
         localStorage.setItem('authentication', JSON.stringify(
@@ -34,7 +32,7 @@ export default function SetRoutes() {
     const getAuthentication = () => {
 
         let data = JSON.parse(localStorage.getItem('authentication'));
-        if (data) {
+        if (data && (data!=="undefined")) {
             setAuth(data);
         }
         else {
@@ -42,7 +40,6 @@ export default function SetRoutes() {
             data = JSON.parse(localStorage.getItem('authentication'));
             setAuth(data);
         }
-
     }
 
     return (

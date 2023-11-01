@@ -21,7 +21,7 @@ export default function CartPage() {
 
   const getCartItems = () => {
     const items = JSON.parse(localStorage.getItem('cart'));
-    setCartItems(items ? items : []);
+    setCartItems(items && items!=="undefined"? items : []);
   }
   
   const deleteItem = (i) => {

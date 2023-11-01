@@ -12,7 +12,7 @@ export default function ProductFullDetails() {
 
   const getCartItems = () => {
     const cartList = JSON.parse(localStorage.getItem('cart'));
-    setToCart(cartList ? cartList : []);
+    setToCart(cartList && (cartList!=="undefined")? cartList : []);
   }
 
   const getProductItem = () => {

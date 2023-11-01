@@ -23,8 +23,8 @@ export default function ProductSet({ logout }) {
   }, [filter, productsList]);
 
   const getProductList =async() => {
-    const listOfProducts = localStorage.getItem('products');
-    if (listOfProducts!=="undefined") 
+    const listOfProducts = JSON.parse(localStorage.getItem('products'));
+    if ((listOfProducts!=="undefined") && listOfProducts) 
     {                                  //undefined(string)-returned by localStorage.getItem('products')
                                        //'products' is undefined
       // console.log(listOfProducts);  //the listOfProducts are given as a JSON string
@@ -35,6 +35,7 @@ export default function ProductSet({ logout }) {
       try{
         const response = await fetch('products.json');
         const data = await response.json();
+        console.log(data);
         setProductsList(data ? data : []);
         localStorage.setItem('products',JSON.stringify(data));
       }
