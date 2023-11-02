@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './seller.css'
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import SellerProductTable from './SellerProductTable';
 
 export default function SellerMainPage({ logout }) {
@@ -11,11 +11,9 @@ export default function SellerMainPage({ logout }) {
 
   useEffect(() => {
     getProductList();
-  }, [])  
+  }, []);
 
-  let list;
-
-  const getProductList = async () => {//return in async is different from normal function return
+  const getProductList = async() => {//return in async is different from normal function return
     const listOfProducts = JSON.parse(localStorage.getItem('products'));
     if ((listOfProducts !== "undefined") && listOfProducts) {
       console.log("if executed");
@@ -68,7 +66,9 @@ export default function SellerMainPage({ logout }) {
         <button id='seller-logout' onClick={logoutOfSite}>Logout</button>
       </div>
       <div id='product-container'>
+        <NavLink to={`/productcreateorupdate/${'addProduct'}`}>
         <button id='seller-add-product-button'>Add product +</button>
+        </NavLink>
       </div>
       <div className='centerdiv'>
         <h2>Seller Products</h2>

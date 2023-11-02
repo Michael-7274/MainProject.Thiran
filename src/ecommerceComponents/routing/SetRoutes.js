@@ -63,7 +63,7 @@ export default function SetRoutes() {
                                         </Route>
                                         <Route exact path='/seller'element={<SellerMainPage logout={setNewAuthentication} />}>
                                         </Route>
-                                        <Route exact path='/productcreateorupdate' element={<AddOrUpdateProducts />}></Route>
+                                        <Route exact path='/productcreateorupdate/:id' element={<AddOrUpdateProducts />}></Route>
                                     </>
                             )
                     }

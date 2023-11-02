@@ -1,5 +1,6 @@
 import React from 'react'
 import './seller.css'
+import { NavLink } from 'react-router-dom';
 
 export default function SellerProductTable({ sellerProducts ,deleteProduct}) {
 
@@ -7,12 +8,14 @@ export default function SellerProductTable({ sellerProducts ,deleteProduct}) {
   const getProductRows = () => {
     return sellerProducts.map((product, i) => {
       return (
-        <tr>
+        <tr key={product.id}>
           <td>{i+1}</td>
           <td>{product.name}</td>
           <td>{product.price}</td>
           <td>
+            <NavLink to={`/productcreateorupdate/${product.id}`}>
             <button>Update</button>
+            </NavLink>
             </td>
           <td>
             <button onClick={()=>{deleteProduct(product)}}>Delete</button>
