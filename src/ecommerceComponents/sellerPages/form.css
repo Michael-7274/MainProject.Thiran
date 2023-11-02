@@ -1,8 +1,8 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-}
+} */
 
 .form-container {
     max-width: 600px;
@@ -13,27 +13,26 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1, h3 {
+.form-container h1#form-title {
     text-align: center;
 }
 
-.newdiv {
+.form-container .newdiv {
     margin-bottom: 10px;
 }
 
-label {
+.form-container label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-input[type="date"],
-textarea,
-select {
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container input[type="number"],
+.form-container input[type="date"],
+.form-container textarea{
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -42,11 +41,7 @@ select {
     font-size: 16px;
 }
 
-select {
-    height: 38px;
-}
-
-button[type="submit"] {
+.form-container button[type="submit"] {
     background-color: #4caf50;
     color: white;
     padding: 10px 20px;
@@ -56,6 +51,6 @@ button[type="submit"] {
     font-size: 16px;
 }
 
-button[type="submit"]:hover {
+.form-container button[type="submit"]:hover {
     background-color: #45a049;
 }

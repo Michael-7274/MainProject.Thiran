@@ -45,7 +45,6 @@ export default function SellerProductTable({ sellerProducts ,deleteProduct}) {
           </tbody>
         </table>
       </div>
-
     </>
   )
 }

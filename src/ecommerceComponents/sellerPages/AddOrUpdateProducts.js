@@ -14,64 +14,93 @@ export default function AddOrUpdateProducts() {
     "id": "",
     "slug": "",
     "imageurls": {
-        "full": "",
-        "thumb": ""
+      "full": "",
+      "small": ""
     },
     "seller": ""
   });
 
   const { id } = useParams();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setProductObject({
-      ...productObject,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(productObject);
-
-    // Add code here to save productObject to localStorage or send it to a server
-
-    // Reset the form if needed
-    setProductObject({
-      "name": "",
-      "image": "",
-      "category": "",
-      "description": "",
-      "price": "",
-      "warranty": "",
-      "return": "",
-      "id": "",
-      "slug": "",
-      "imageurls": {
-          "full": "",
-          "thumb": ""
-      },
-      "seller": ""
-    });
-  };
-
+  
   useEffect(() => {
     checkId();
-  }, [id]);
+  }, []);
+
+  useEffect(() => {
+    console.log(productObject);
+  }, [productObject]);
 
   const checkId = () => {
-    if(id !== "addProduct") {
+    if (id !== "addProduct") {
       const products = JSON.parse(localStorage.getItem('products'));
       const currentProduct = products.find((product) => product.id === id);
       setProductObject(currentProduct);
     }
   };
 
-  let price = Number(productObject.price.replace(/[^0-9]/g, ''));
+  const handleChange=(event)=>{
+
+    const {name,value}=event.target;
+    const [outerAttribute,innerAttribute]=name.split(".");//if no '.' then entire name is stored in outerAttribute
+    const tempObject={...productObject}
+    if(name===outerAttribute){
+      if(name==="price"){
+        tempObject[name]="Rs."+value;//to access an attribute directly
+        setProductObject(tempObject);
+        console.log(tempObject[name]);
+      }
+      else{
+        tempObject[name]=value;//to access an attribute directly
+        setProductObject(tempObject);
+      }
+    }
+    else{
+      tempObject[outerAttribute]={
+        ...tempObject[outerAttribute],
+        [innerAttribute]:value//to access an attribute inside an attribute
+      }
+      setProductObject(tempObject);
+    }
+  }
+
+  const setProductArrayInLocalStorage=()=>{
+    let productList=JSON.parse(localStorage.getItem('products'));
+    if(productList==="undefined"|| productList===null){
+      fetch('products.json').then((response)=>{return response.json();})
+      .then((data)=>{localStorage.setItem('products',JSON.stringify(data));});
+    }
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if(id!=="addProduct"){
+      console.log("add product");
+      let products=JSON.parse(localStorage.getItem('products'));
+      let replaceIndex=products.findIndex((product)=>product.id===productObject.id);
+      console.log(productObject);
+      products.splice(replaceIndex,1,productObject);
+      console.log(replaceIndex);
+      localStorage.setItem('products',JSON.stringify(products));
+    }
+    else{
+      setProductArrayInLocalStorage();
+      let productList=JSON.parse(localStorage.getItem('products'));
+      let sellerID=JSON.parse(localStorage.getItem('authentication')).id;
+      const d=new Date();
+      productList[0].itemCount=productList[0].itemCount++;
+      const objectToBeAdded={...productObject};
+      objectToBeAdded.seller=sellerID;
+      objectToBeAdded.id="PID"+d.getTime();
+      console.log(objectToBeAdded);
+      productList=[...productList,objectToBeAdded];
+      localStorage.setItem('products',JSON.stringify(productList));
+    }
+  }
 
   return (
     <div className="form-container">
-      <h1>{id === "addProduct" ? "Add product" : "Update product"}</h1>
+      <h1 id="form-title">{id === "addProduct" ? "Add product" : "Update product"}</h1>
       <p>*all fields are required</p>
 
       <form id="acform" onSubmit={handleSubmit}>
@@ -148,12 +177,12 @@ export default function AddOrUpdateProducts() {
         </div>
 
         <div className="newdiv">
-          <label htmlFor="thumbnail-url">Thumbnail URL:</label>
+          <label htmlFor="small-image-url">Thumbnail URL:</label>
           <input
             type="text"
-            id="thumbnail-url"
-            name="imageurls.thumb"
-            value={productObject.imageurls.thumb}
+            id="small-image-url"
+            name="imageurls.small"
+            value={productObject.imageurls.small}
             onChange={handleChange}
             required
           />
@@ -164,17 +193,15 @@ export default function AddOrUpdateProducts() {
           <input
             type="number"
             id="price"
-            min={0}
-            max={999999999999}
             name="price"
-            value={price}
+            value={id!=="addProduct"?Number(productObject.price.replace(/[^0-9]/g, '')):null}
             onChange={handleChange}
             required
           />
         </div>
 
         <div className="newdiv">
-          <button type="submit">Submit</button>
+          <button type="submit" >Submit</button>
         </div>
       </form>
     </div>

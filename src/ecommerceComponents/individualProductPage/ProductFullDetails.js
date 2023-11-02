@@ -44,7 +44,7 @@ export default function ProductFullDetails() {
           <img className='image-style' alt='product' src={product.imageurls.small} />{/*Without require('./'+) the image won't apppear here*/}
           <div className='card-text'>
             <p>{product.name}</p>
-            <p>{product.price}</p>
+            <p>Rs.{product.price}</p>
             <button id="add-to-cart" onClick={() => { addToCart() }}>{isInCart ? "Added to cart" : "Add to cart"}</button>
           </div>
         </div>
