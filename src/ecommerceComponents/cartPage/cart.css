@@ -1,0 +1,39 @@
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.product-card {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 30px;
+}
+
+.image-style {
+    position: absolute;
+    border: 1px solid black;
+    height: 140px;
+    width: 140px;
+    left: 29px;
+    right: 50px;
+    top: 1px;
+}
+
+.card-text {
+    position: absolute;
+    bottom: -2px;
+}
+
+.card-text p {
+    color: black;
+    margin: 0px;
+}
+
+.delete-from-cart {
+    position: absolute;
+    bottom: -22px;
+    left: 30px;
+    right: 30px;
+}

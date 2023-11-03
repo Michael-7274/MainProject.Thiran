@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './form.css';
+
 
 export default function AddOrUpdateProducts() {
   const [productObject, setProductObject] = useState({
@@ -22,6 +23,7 @@ export default function AddOrUpdateProducts() {
 
   const { id } = useParams();
 
+  const navigate=useNavigate();
   
   useEffect(() => {
     checkId();
@@ -82,6 +84,8 @@ export default function AddOrUpdateProducts() {
       products.splice(replaceIndex,1,productObject);
       console.log(replaceIndex);
       localStorage.setItem('products',JSON.stringify(products));
+      alert("product modified");
+      navigate('/seller');
     }
     else{
       setProductArrayInLocalStorage();
@@ -95,6 +99,8 @@ export default function AddOrUpdateProducts() {
       console.log(objectToBeAdded);
       productList=[...productList,objectToBeAdded];
       localStorage.setItem('products',JSON.stringify(productList));
+      alert("product added");
+      navigate('/seller');
     }
   }
 
@@ -201,8 +207,9 @@ export default function AddOrUpdateProducts() {
         </div>
 
         <div className="newdiv">
-          <button type="submit" >Submit</button>
+          <button type="submit" >{id==="addProduct"?"Add":"Modify"}</button>
         </div>
+
       </form>
     </div>
   );

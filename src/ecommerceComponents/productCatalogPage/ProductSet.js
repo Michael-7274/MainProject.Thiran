@@ -31,7 +31,8 @@ export default function ProductSet({ logout }) {
       const data=JSON.parse(localStorage.getItem('products'));//JSON.parse() converts a JSON string into a JS object
       setProductsList(data);
     }
-    else {
+    else 
+    {
       try{
         const response = await fetch('products.json');
         const data = await response.json();
@@ -39,7 +40,8 @@ export default function ProductSet({ logout }) {
         setProductsList(data ? data : []);
         localStorage.setItem('products',JSON.stringify(data));
       }
-      catch(err){
+      catch(err)
+      {
         console.error(err);
       }
     }

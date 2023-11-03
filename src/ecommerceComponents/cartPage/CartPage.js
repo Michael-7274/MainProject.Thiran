@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ShowCartItems from './ShowCartItems';
-
+import './cart.css';
 export default function CartPage() {
 
   const [cartItems, setCartItems] = useState([]);

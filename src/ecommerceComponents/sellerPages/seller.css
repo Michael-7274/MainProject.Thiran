@@ -1,18 +1,27 @@
-#seller-headline-container{
-    position: relative;
+#seller-headline-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 75px;
-    background-color: rgb(0, 133, 71);
+    background-color: orangered;
+    z-index: 999;
+    /* Ensures it stays on top of other elements */
 }
 
-#seller-title{
+#seller-title {
     font-size: large;
     font-weight: bolder;
     position: absolute;
     top: 15px;
 }
 
-#seller-logout{
+#seller-logout {
     position: absolute;
+    background-color: #000000;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #FFFFFF;
     font-weight: 900;
     top: 10px;
     width: 100px;
@@ -20,24 +29,120 @@
     right: 200px;
 }
 
-#seller-add-product-button{
-    background-color: white;
-    border: none;
-    color: black;
-    padding: 15px 32px;
+
+#seller-add-product-button {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 900;
-    margin: 4px 2px;
-    cursor: pointer;
-    border: 1px solid black;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
-.table-wrapper{
-    margin: 10px 70px 70px;
-    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+#seller-add-product-button:hover {
+    background-color: #00D100;
+    box-shadow: #8AFF8A 0 -6px 8px inset;
+    transform: scale(1.125);
+}
+
+#seller-add-product-button:active {
+    transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+    #seller-add-product-button {
+        font-size: 1.5rem;
+        padding: .75rem 2rem;
+    }
+}
+
+.seller-main-page .page-button-container {
+    position: fixed;
+    z-index: 999;
+    left: 0px;
+    right: 0px;
+    background-color: orangered;
+    bottom: 0px;
+}
+
+
+.product-table-container {
+    margin: 10px 70px 38px;
+    box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+}
+
+.product-table-container .product-delete {
+    background: linear-gradient(to bottom right, #EF4765, #d90404);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+}
+
+.product-table-container .product-delete:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.product-table-container .product-delete:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.product-table-container .product-update {
+    background-color: #13aa52;
+    border: 1px solid #13aa52;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    outline: none;
+    outline: 0;
+    padding: 5px 10px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.product-table-container .product-update:hover {
+    box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+    transform: translateY(-2px);
 }
 
 .fl-table {
@@ -52,7 +157,8 @@
     background-color: white;
 }
 
-.fl-table td, .fl-table th {
+.fl-table td,
+.fl-table th {
     text-align: center;
     padding: 8px;
 }
@@ -64,7 +170,7 @@
 
 .fl-table thead th {
     color: #ffffff;
-    background: #4FC3A1;
+    background: orangered;
 }
 
 
@@ -84,7 +190,8 @@
         display: block;
         width: 100%;
     }
-    .table-wrapper:before{
+
+    .table-wrapper:before {
         content: "Scroll horizontally >";
         display: block;
         text-align: right;
@@ -92,21 +199,29 @@
         color: white;
         padding: 0 0 10px;
     }
-    .fl-table thead, .fl-table tbody, .fl-table thead th {
+
+    .fl-table thead,
+    .fl-table tbody,
+    .fl-table thead th {
         display: block;
     }
-    .fl-table thead th:last-child{
+
+    .fl-table thead th:last-child {
         border-bottom: none;
     }
+
     .fl-table thead {
         float: left;
     }
+
     .fl-table tbody {
         width: auto;
         position: relative;
         overflow-x: auto;
     }
-    .fl-table td, .fl-table th {
+
+    .fl-table td,
+    .fl-table th {
         padding: 20px .625em .625em .625em;
         height: 60px;
         vertical-align: middle;
@@ -117,30 +232,35 @@
         font-size: 13px;
         text-overflow: ellipsis;
     }
+
     .fl-table thead th {
         text-align: left;
         border-bottom: 1px solid #f7f7f9;
     }
+
     .fl-table tbody tr {
         display: table-cell;
     }
+
     .fl-table tbody tr:nth-child(odd) {
         background: none;
     }
+
     .fl-table tr:nth-child(even) {
         background: transparent;
     }
+
     .fl-table tr td:nth-child(odd) {
         background: #F8F8F8;
         border-right: 1px solid #E6E4E4;
     }
+
     .fl-table tr td:nth-child(even) {
         border-right: 1px solid #E6E4E4;
     }
+
     .fl-table tbody td {
         display: block;
         text-align: center;
     }
 }
-
-

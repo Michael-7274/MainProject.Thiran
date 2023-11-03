@@ -1,10 +1,22 @@
+.zoom:hover {
+    -ms-transform: scale(1.5);
+    /* for the transform to work on IE 9 */
+    -webkit-transform: scale(1.5);
+    /* for the transform to work on Safari 3-8 */
+    transform: scale(1.1);
+}
+
 button.highlight {
     background-color: yellow;
 }
 
 .page-button-container {
     height: 45px;
-    background-color: darkslategray;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    background-color: orangered;
+    bottom: 0px;
 }
 
 .centerdiv {
@@ -37,17 +49,22 @@ button.highlight {
 
 .card-text {
     position: absolute;
-    bottom: -17px;
+    bottom: -2px;
 }
 
-#add-to-cart{
+.card-text p {
+    color: black;
+    margin: 0px;
+}
+
+#add-to-cart {
     position: absolute;
     top: 51px;
     left: 107px;
     right: -60px;
 }
 
-#catalog-logout-button{
+#catalog-logout-button {
     position: absolute;
     top: 10px;
     width: 100px;
@@ -58,14 +75,14 @@ button.highlight {
 .search-container {
     position: relative;
     height: 75px;
-    background-color: darkslategray;
+    background-color: orangered;
 }
 
 #search-bar {
     font-size: large;
     position: absolute;
     top: 10px;
-    right:450px;
+    right: 450px;
     width: 600px;
     height: 30px;
 }
@@ -78,11 +95,11 @@ button.highlight {
     right: 350px;
 }
 
-#cart-button{
+#cart-button {
     position: absolute;
-    font-weight:900;
+    font-weight: 900;
     top: 10px;
     width: 100px;
     height: 36px;
-    right:200px;
+    right: 200px;
 }

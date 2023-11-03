@@ -1,7 +1,8 @@
 import React from 'react'
+import './cart.css';
 
-export default function ShowCartItems({ cartItemAndIndex ,deleteItem}) {
-  const itemArr=cartItemAndIndex;
+export default function ShowCartItems({ cartItemAndIndex, deleteItem }) {
+  const itemArr = cartItemAndIndex;
 
   return (
     <div className="product-card">
@@ -9,8 +10,8 @@ export default function ShowCartItems({ cartItemAndIndex ,deleteItem}) {
       <div className='card-text'>
         <p>{itemArr[0].name}</p>
         <p>{itemArr[0].price}</p>
-        <button id="add-to-cart" onClick={()=>{deleteItem(itemArr[1])}}>Delete from cart</button>
       </div>
+      <button className="delete-from-cart" onClick={() => { deleteItem(itemArr[1]) }}>Delete from cart</button>
     </div>
   )
 }

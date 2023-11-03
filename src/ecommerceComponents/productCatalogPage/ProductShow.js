@@ -7,7 +7,7 @@ export default function ProductShow({productItem}) {
 
   return (
     <NavLink target='_blank' to={`/product/${productVariable.id}`}>
-    <div className="product-card">
+    <div className="zoom product-card">
       <img className='image-style' alt='product' src={productItem.imageurls.small}/>
       <div className='card-text'>
       <p>{productVariable.name}</p>

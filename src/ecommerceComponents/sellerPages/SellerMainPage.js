@@ -13,6 +13,18 @@ export default function SellerMainPage({ logout }) {
   useEffect(() => {
     getProductList();
   }, []);
+  // useEffect(() => {
+  //   let sellerProductLength = productsList.filter((product) => product.seller === sellerID).length;
+  //   if (sellerProductLength !== 0 && sellerProductLength % 10 == 0) {
+  //     setCurrentPage(sellerProductLength / 10)
+  //   }
+  // }, [productsList])
+
+  useEffect(() => {
+    console.log(currentPage);
+  }, [currentPage])
+
+
 
   const getProductList = async () => {//return in async is different from normal function return
     const listOfProducts = JSON.parse(localStorage.getItem('products'));
@@ -41,7 +53,7 @@ export default function SellerMainPage({ logout }) {
 
   const sellerProducts = getSellerProducts();
 
-  const getProductRows = () => {
+  const generateProductRows = () => {
     return sellerProducts.slice((currentPage - 1) * 10, (currentPage * 10)).map((product, i) => {
       return (
         <tr key={product.id}>
@@ -50,11 +62,11 @@ export default function SellerMainPage({ logout }) {
           <td>{product.price}</td>
           <td>
             <NavLink to={`/productcreateorupdate/${product.id}`}>
-              <button>Update</button>
+              <button className='product-update'>Update</button>
             </NavLink>
           </td>
           <td>
-            <button onClick={() => { deleteSellerProduct(product) }}>Delete</button>
+            <button className='product-delete' onClick={() => { deleteSellerProduct(product) }}>Delete</button>
           </td>
         </tr>
       );
@@ -69,6 +81,11 @@ export default function SellerMainPage({ logout }) {
       tempArr.splice(indexOfObjectToBeDeleted, 1);
       setProductsList(tempArr);
       localStorage.setItem('products', JSON.stringify(tempArr));
+      let sellerProductLength = JSON
+      .parse(localStorage.getItem('products')).filter((product) => product.seller === sellerID).length;
+      if (sellerProductLength !== 0 && sellerProductLength % 10 == 0) {
+        setCurrentPage(sellerProductLength / 10)
+      }
     }
   }
 
@@ -77,43 +94,49 @@ export default function SellerMainPage({ logout }) {
     navigate('/');
   }
 
-  const productRows = getProductRows();
+  const productRows = generateProductRows();
 
   return (
     <>
-      <div id='seller-headline-container'>
-        <div className='centerdiv'>
-          <div id='seller-title'>SellerMainPage</div>
+      <div className='seller-main-page'>
+
+        <div id='seller-headline-container'>
+          <div className='centerdiv'>
+            <div id='seller-title'>SellerMainPage</div>
+          </div>
+          <button id='seller-logout' onClick={logoutOfSite}>Logout</button>
         </div>
-        <button id='seller-logout' onClick={logoutOfSite}>Logout</button>
-      </div>
-      <div id='product-container'>
-        <NavLink to={`/productcreateorupdate/${'addProduct'}`}>
-          <button id='seller-add-product-button'>Add product +</button>
-        </NavLink>
-      </div>
-      <div className='centerdiv'>
-        <h2>Seller Products</h2>
-      </div>
-      <div className='centerdiv'>
-        <div className="table-wrapper">
-          <table className="fl-table">
-            <thead>
-              <tr>
-                <th>S.no</th>
-                <th>Product</th>
-                <th>Price</th>
-                <th></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {productRows}
-            </tbody>
-          </table>
+
+        <br /><br /><br /><br />
+
+        <div id='product-seller-body'>
+          <div id='add-button-container'>
+            <NavLink to={`/productcreateorupdate/${'addProduct'}`}>
+              <button id='seller-add-product-button'>Add product +</button>
+            </NavLink>
+          </div>
+          <div className='centerdiv'>
+            <div className="product-table-container">
+              <table className="fl-table">
+                <thead>
+                  <tr>
+                    <th>S.no</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody >
+                  {productRows}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
+
+        <ProductPagination itemCount={sellerProducts.length} currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </div>
-      <ProductPagination itemCount={sellerProducts.length} currentPage={currentPage} setCurrentPage={setCurrentPage} />
     </>
   )
 }
