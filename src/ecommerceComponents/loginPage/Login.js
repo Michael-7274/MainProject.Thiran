@@ -13,6 +13,7 @@ export default function Login({setAuth}) {
     
     const navigate=useNavigate();
 
+    //get user data from json
     const getData=async()=>{
         try{
             const response=await fetch('users.json');
@@ -24,18 +25,22 @@ export default function Login({setAuth}) {
         }
     }
 
+    //get username and set username state
     function getName(event){
         setuserName(event.target.value);
     }
 
+    //get user's password and set it as state
     function getPassword(event){
         setUserPassword(event.target.value);
     }
 
+    //set user data to local storage
     function setToLocalStorage(obj){
         localStorage.setItem('authentication',JSON.stringify(obj));
     }
 
+    //check user credentials
     function isUserValid(){
         for(let i=0;i<userData.length;i++)
         {

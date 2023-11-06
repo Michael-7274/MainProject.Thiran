@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from '../loginPage/Login';
-import ProductSet from '../productCatalogPage/ProductSet';
+import AssignProducts from '../productCatalogPage/AssignProducts';
 import ProductFullDetails from '../individualProductPage/ProductFullDetails';
 import CartPage from '../cartPage/CartPage';
 import PageNotFound from '../PageNotFound';
@@ -16,6 +16,7 @@ export default function SetRoutes() {
         getAuthentication();
     }, [])
 
+    //set the authentication to null(no one) , also doubles as logout
     function setNewAuthentication() {
         localStorage.setItem('authentication', JSON.stringify(
             {
@@ -29,6 +30,7 @@ export default function SetRoutes() {
         });
     }
 
+    //Find the user who is currently logged-in from local storage
     const getAuthentication = () => {
 
         let data = JSON.parse(localStorage.getItem('authentication'));
@@ -46,14 +48,14 @@ export default function SetRoutes() {
         <>
             <BrowserRouter>
                 <Routes>
-                    {
+                    {   //based on user authentication set the routes available for a user
                         (!auth.authentication) ?
                             <Route exact path='/' element={<Login setAuth={setAuth} />}></Route> :
                             (
                                 (auth.role === 'buyer') ?
                                     <>
-                                        <Route exact path='/' element={<ProductSet logout={setNewAuthentication} />}></Route>
-                                        <Route exact path='/catalog' element={<ProductSet logout={setNewAuthentication} />}>
+                                        <Route exact path='/' element={<AssignProducts logout={setNewAuthentication} />}></Route>
+                                        <Route exact path='/catalog' element={<AssignProducts logout={setNewAuthentication} />}>
                                         </Route>
                                         <Route exact path='/product/:productID' element={<ProductFullDetails />}></Route>
                                         <Route exact path='/cart' element={<CartPage />}></Route>

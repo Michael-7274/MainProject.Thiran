@@ -1,6 +1,6 @@
 import React from 'react'
 import './cart.css';
-
+//component to show individual cart items
 export default function ShowCartItems({ cartItemAndIndex, deleteItem }) {
   const itemArr = cartItemAndIndex;
 

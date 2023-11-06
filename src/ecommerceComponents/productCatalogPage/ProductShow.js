@@ -1,7 +1,7 @@
 import React from 'react'
 import './catalog.css'
 import { NavLink } from 'react-router-dom';
-
+//function to show individual products in the catalog
 export default function ProductShow({productItem}) {
   let productVariable=productItem;
 

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import './form.css';
-
-
 export default function AddOrUpdateProducts() {
   const [productObject, setProductObject] = useState({
     "name": "",
@@ -29,10 +27,7 @@ export default function AddOrUpdateProducts() {
     checkId();
   }, []);
 
-  useEffect(() => {
-    console.log(productObject);
-  }, [productObject]);
-
+  //check whether to add or update product, gets the product properties from local storage incase of update product
   const checkId = () => {
     if (id !== "addProduct") {
       const products = JSON.parse(localStorage.getItem('products'));
@@ -41,10 +36,12 @@ export default function AddOrUpdateProducts() {
     }
   };
 
+  //Assign the form values to an oject on input
   const handleChange=(event)=>{
 
     const {name,value}=event.target;
-    const [outerAttribute,innerAttribute]=name.split(".");//if no '.' then entire name is stored in outerAttribute
+    const [outerAttribute,innerAttribute]=name.split(".");//if string doesn't contain '.' then the entire name 
+                                                          //is stored in outerAttribute
     const tempObject={...productObject}
     if(name===outerAttribute){
       if(name==="price"){
@@ -66,33 +63,13 @@ export default function AddOrUpdateProducts() {
     }
   }
 
-  const setProductArrayInLocalStorage=()=>{
-    let productList=JSON.parse(localStorage.getItem('products'));
-    if(productList==="undefined"|| productList===null){
-      fetch('products.json').then((response)=>{return response.json();})
-      .then((data)=>{localStorage.setItem('products',JSON.stringify(data));});
-    }
-  }
-
+  //Evaluate product details and update local storage on the click of the submit button
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(id!=="addProduct"){
-      console.log("add product");
-      let products=JSON.parse(localStorage.getItem('products'));
-      let replaceIndex=products.findIndex((product)=>product.id===productObject.id);
-      console.log(productObject);
-      products.splice(replaceIndex,1,productObject);
-      console.log(replaceIndex);
-      localStorage.setItem('products',JSON.stringify(products));
-      alert("product modified");
-      navigate('/seller');
-    }
-    else{
-      setProductArrayInLocalStorage();
+    if(id==="addProduct"){
       let productList=JSON.parse(localStorage.getItem('products'));
       let sellerID=JSON.parse(localStorage.getItem('authentication')).id;
       const d=new Date();
-      productList[0].itemCount=productList[0].itemCount++;
       const objectToBeAdded={...productObject};
       objectToBeAdded.seller=sellerID;
       objectToBeAdded.id="PID"+d.getTime();
@@ -100,6 +77,16 @@ export default function AddOrUpdateProducts() {
       productList=[...productList,objectToBeAdded];
       localStorage.setItem('products',JSON.stringify(productList));
       alert("product added");
+      navigate('/seller');
+    }
+    else{
+      let products=JSON.parse(localStorage.getItem('products'));
+      let replaceIndex=products.findIndex((product)=>product.id===productObject.id);
+      console.log(productObject);
+      products.splice(replaceIndex,1,productObject);
+      console.log(replaceIndex);
+      localStorage.setItem('products',JSON.stringify(products));
+      alert("product modified");
       navigate('/seller');
     }
   }
@@ -173,7 +160,7 @@ export default function AddOrUpdateProducts() {
         <div className="newdiv">
           <label htmlFor="image-url">Full Size Image URL:</label>
           <input
-            type="text"
+            type="url"
             id="image-url"
             name="imageurls.full"
             value={productObject.imageurls.full}
@@ -185,7 +172,7 @@ export default function AddOrUpdateProducts() {
         <div className="newdiv">
           <label htmlFor="small-image-url">Thumbnail URL:</label>
           <input
-            type="text"
+            type="url"
             id="small-image-url"
             name="imageurls.small"
             value={productObject.imageurls.small}

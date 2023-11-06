@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import ProductPagination from '../productCatalogPage/ProductPagination';
 
 export default function SellerMainPage({ logout }) {
-  //using state get productsList
+
   const navigate = useNavigate();
   const sellerID = JSON.parse((localStorage.getItem('authentication'))).id;
   const [productsList, setProductsList] = useState([]);
@@ -13,20 +13,9 @@ export default function SellerMainPage({ logout }) {
   useEffect(() => {
     getProductList();
   }, []);
-  // useEffect(() => {
-  //   let sellerProductLength = productsList.filter((product) => product.seller === sellerID).length;
-  //   if (sellerProductLength !== 0 && sellerProductLength % 10 == 0) {
-  //     setCurrentPage(sellerProductLength / 10)
-  //   }
-  // }, [productsList])
 
-  useEffect(() => {
-    console.log(currentPage);
-  }, [currentPage])
-
-
-
-  const getProductList = async () => {//return in async is different from normal function return
+  //get the product array from the user
+  const getProductList = async () => {//return in async is different from normal function return ,here it returns a promise
     const listOfProducts = JSON.parse(localStorage.getItem('products'));
     if ((listOfProducts !== "undefined") && listOfProducts) {
       console.log("if executed");
@@ -47,12 +36,14 @@ export default function SellerMainPage({ logout }) {
     }
   }
 
+  //filter the particular seller products from the list of products
   const getSellerProducts = () => {
     return productsList.filter((product) => product.seller === sellerID);
   }
 
   const sellerProducts = getSellerProducts();
 
+  //map the seller products to produce product table
   const generateProductRows = () => {
     return sellerProducts.slice((currentPage - 1) * 10, (currentPage * 10)).map((product, i) => {
       return (
@@ -73,6 +64,7 @@ export default function SellerMainPage({ logout }) {
     });
   }
 
+  //delete the seller product from local storage
   const deleteSellerProduct = (productToBeDeleted) => {
     const deleteConfirmation = window.confirm("Do you really want to remove " + productToBeDeleted.name + " from your store?");
     if (deleteConfirmation) {
@@ -83,12 +75,13 @@ export default function SellerMainPage({ logout }) {
       localStorage.setItem('products', JSON.stringify(tempArr));
       let sellerProductLength = JSON
       .parse(localStorage.getItem('products')).filter((product) => product.seller === sellerID).length;
-      if (sellerProductLength !== 0 && sellerProductLength % 10 == 0) {
+      if (sellerProductLength !== 0 && sellerProductLength % 10 === 0) {
         setCurrentPage(sellerProductLength / 10)
       }
     }
   }
 
+  //call logout function and navigate to login page
   const logoutOfSite = () => {
     logout();
     navigate('/');

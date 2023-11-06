@@ -11,9 +11,9 @@ export default function ProductFullDetails() {
   }, []);
   useEffect(() => {
     window.addEventListener('focus', refreshPage);//add a eventListener that calls refreshPage() when we get to the tab
-    // return () => {
-    //   window.removeEventListener('focus', refreshPage);//removes the eventlistener when we are in the tab to avoid memory leaks
-    // }
+    return () => {
+      window.removeEventListener('focus', refreshPage);//removes the eventlistener when we are in the tab to avoid memory leaks
+    }
   }, []);
 
   const refreshPage = () => {//refreshes the page whenever we return to it from another tab
