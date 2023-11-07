@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from '../loginPage/Login';
 import AssignProducts from '../productCatalogPage/AssignProducts';
 import ProductFullDetails from '../individualProductPage/ProductFullDetails';
-import AssignCartProducts from '../cartPage/AssignCartProducts';
+import Cart from '../cartPage/Cart';
 import PageNotFound from '../PageNotFound';
 import SellerMainPage from '../sellerPages/SellerMainPage';
 import AddOrUpdateProducts from '../sellerPages/AddOrUpdateProducts';
@@ -30,7 +30,7 @@ export default function SetRoutes() {
         });
     }
 
-    //Find the user who is currently logged-in from local storage
+    //Find the user who is currently logged-in -using local storage
     const getAuthentication = () => {
 
         let data = localStorage.getItem('authentication');
@@ -59,7 +59,7 @@ export default function SetRoutes() {
                                         <Route exact path='/catalog' element={<AssignProducts logout={setNewAuthentication} />}>
                                         </Route>
                                         <Route exact path='/product/:productID' element={<ProductFullDetails />}></Route>
-                                        <Route exact path='/cart' element={<AssignCartProducts />}></Route>
+                                        <Route exact path='/cart' element={<Cart />}></Route>
                                     </> :
                                     <>
                                         <Route exact path='/' element={<SellerMainPage logout={setNewAuthentication} />}>

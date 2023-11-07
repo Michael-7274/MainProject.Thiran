@@ -16,27 +16,33 @@ export default function ProductFullDetails() {
     }
   }, []);
 
-  const refreshPage = () => {//refreshes the page whenever we return to it from another tab
+  //refreshes the page whenever we return to it from another tab
+  const refreshPage = () => {
     window.location.reload();
   }
 
+  //get the items which are in cart or create an empty array if cart unavailable in local storage
   const getCartItems = () => {
-    const cartList = JSON.parse(localStorage.getItem('cart'));
-    setToCart(cartList && (cartList !== "undefined") ? cartList : []);
+    const cartList = localStorage.getItem('cart');
+    setToCart(cartList && (cartList !== "undefined") ? JSON.parse(cartList) : []);
   }
 
+  //get this particular product from array
   const getProductItem = () => {
     const productList = JSON.parse(localStorage.getItem('products'));
     const product = productList.find(product => product.id === productID);
     return product ? product : {};
   }
 
+  //check if the product is in cart
   const isProductInCart = () => {
     return (cart.find(cartItem => cartItem.id === productID)) !== undefined;
   }
 
   const product = getProductItem();
   console.log(product);
+  
+  //checks if there are new lines in the description and puts <br/> in place of '\n' to create new lines
   const getProperDescription=()=>{
     let descriptionLines=product.description.split('\n')
     return descriptionLines.map((description)=><p>{description}</p>);
@@ -46,6 +52,7 @@ export default function ProductFullDetails() {
 
   const description=getProperDescription();
 
+  //adds the current item shown to cart
   const addToCart = () => {
     if (!isInCart) {
       let cartItems = [...cart, product];
