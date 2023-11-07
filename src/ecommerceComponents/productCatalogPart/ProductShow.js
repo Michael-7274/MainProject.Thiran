@@ -6,7 +6,7 @@ export default function ProductShow({productItem}) {
   let productVariable=productItem;
 
   return (
-    <NavLink target='_blank' to={`/product/${productVariable.id}`}>
+    <NavLink to={`/product/${productVariable.id}`}>
     <div className="zoom product-card">
       <img className='image-style' alt='product' src={productItem.imageurls.small}/>
       <div className='card-text'>

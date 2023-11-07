@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ProductPagination from './ProductPagination';
 import ProductShow from './ProductShow';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, json, useNavigate } from 'react-router-dom';
 
 //modifying data in local storage is reflected on screen only after refresh
 export default function AssignProducts({ logout }) {
@@ -16,6 +16,7 @@ export default function AssignProducts({ logout }) {
   //get the products from local storage
   useEffect(() => {
     getProductList();
+    getFilterandPageNo();
   }, []);
 
   //set the no of items based on the productlist length
@@ -27,7 +28,6 @@ export default function AssignProducts({ logout }) {
   //when filter changes based on filter keyword set itemCount and setCurrent page to 1
   useEffect(() => {
     assignNoOfItems();
-    setCurrentPage(1);
   }, [filter]);
 
   //get the products from local storage, if unavailable set it on local storage from JSON document
@@ -55,6 +55,30 @@ export default function AssignProducts({ logout }) {
     }
   }
 
+  const getFilterandPageNo=()=>{
+    let filterWord=localStorage.getItem('filter');
+    if(filterWord&&(filterWord!=="undefined")){
+      filterWord=JSON.parse(filterWord);
+      setFilter(filterWord);
+    }
+    else{
+      localStorage.setItem("filter",JSON.stringify(''));
+      setFilter('');
+    }
+
+    let pgNo=localStorage.getItem('pgNo');
+    if(pgNo&&(pgNo!=="undefined")){
+      pgNo=Number(JSON.parse(pgNo));
+      console.log(pgNo);
+      setCurrentPage(pgNo);
+    }
+    else{
+      localStorage.setItem("pgNo",JSON.stringify(1));
+      setCurrentPage(1);
+    }
+
+  }
+
   //if there's a filter keyword filter the products otherwise return all products
   const filterProducts = () => {
     let products = productsList;
@@ -70,7 +94,6 @@ export default function AssignProducts({ logout }) {
   const assignNoOfItems=()=>{
     setItemCount(productsList.filter((products) => 
     (products.name).toLowerCase().indexOf(filter.toLowerCase()) !== -1).length);
-    setCurrentPage(1);
   }
 
   //set the temporary filter keyword
@@ -78,11 +101,22 @@ export default function AssignProducts({ logout }) {
     filterKeyword=val;
   }
 
+  const setFilterKeywordToFilter=()=>{
+    setFilter(filterKeyword);
+    localStorage.setItem('filter',JSON.stringify(filterKeyword));
+    setCurrentPage(1);
+    localStorage.setItem("pgNo",JSON.stringify(1));
+  }
+
   //call logout function and go to login page
   const logoutOfSite=()=>{
     logout();
+    localStorage.setItem("pgNo",JSON.stringify(1));
+    localStorage.setItem("filter",JSON.stringify(''));
     navigate('/');
   }
+
+
 
   let showProduct = filterProducts();
   return (
@@ -91,7 +125,7 @@ export default function AssignProducts({ logout }) {
         <div className='centerdiv'>
           <button id='catalog-logout-button' onClick={logoutOfSite}>Logout</button>{/* //the logout is a function */}
           <input id='search-bar' onChange={(event) => { setFilterKeyword(event.target.value) }} />&nbsp;&nbsp;&nbsp;&nbsp;
-          <button id='search-button' onClick={() => setFilter(filterKeyword)}>Search</button>{/* the temporary filter keyword 
+          <button id='search-button' onClick={setFilterKeywordToFilter}>Search</button>{/* the temporary filter keyword 
                                                                                               is set as state*/}
           <NavLink to={'/cart'}>
             <button id='cart-button'>CART</button>

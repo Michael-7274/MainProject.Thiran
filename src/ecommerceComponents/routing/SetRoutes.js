@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from '../loginPage/Login';
-import AssignProducts from '../productCatalogPage/AssignProducts';
+import Login from '../loginPart/Login';
+import AssignProducts from '../productCatalogPart/AssignProducts';
 import ProductFullDetails from '../individualProductPage/ProductFullDetails';
-import Cart from '../cartPage/Cart';
+import Cart from '../cartPart/Cart';
 import PageNotFound from '../PageNotFound';
-import SellerMainPage from '../sellerPages/SellerMainPage';
-import AddOrUpdateProducts from '../sellerPages/AddOrUpdateProducts';
+import SellerMainPage from '../sellerPart/SellerMainPage';
+import AddOrUpdateProducts from '../sellerPart/AddOrUpdateProducts';
 
 export default function SetRoutes() {
 
@@ -40,8 +40,6 @@ export default function SetRoutes() {
         }
         else {
             setNewAuthentication();
-            // data = JSON.parse(localStorage.getItem('authentication'));
-            // setAuth(data);
         }
     }
 

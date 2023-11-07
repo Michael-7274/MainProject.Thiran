@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './seller.css'
 import { NavLink, useNavigate } from 'react-router-dom';
-import ProductPagination from '../productCatalogPage/ProductPagination';
+import ProductPagination from '../productCatalogPart/ProductPagination';
 
 export default function SellerMainPage({ logout }) {
 
@@ -12,6 +12,7 @@ export default function SellerMainPage({ logout }) {
 
   useEffect(() => {
     getProductList();
+    getPageNo();
   }, []);
 
   //get the product array from the user
@@ -33,6 +34,18 @@ export default function SellerMainPage({ logout }) {
       catch (err) {
         console.error(err);
       }
+    }
+  }
+
+  const getPageNo=()=>{
+    let pageNo=localStorage.getItem('pgNo');
+    if(pageNo&&pageNo!=="undefined")
+    {
+      pageNo=JSON.parse(pageNo);
+      setCurrentPage(Number(pageNo));
+    }
+    else{
+      localStorage.setItem("pgNo",JSON.stringify(1));
     }
   }
 
@@ -84,6 +97,7 @@ export default function SellerMainPage({ logout }) {
   //call logout function and navigate to login page
   const logoutOfSite = () => {
     logout();
+    localStorage.setItem("pgNo",JSON.stringify(1));
     navigate('/');
   }
 
