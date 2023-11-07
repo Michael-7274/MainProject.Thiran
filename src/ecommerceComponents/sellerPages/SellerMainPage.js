@@ -5,10 +5,10 @@ import ProductPagination from '../productCatalogPage/ProductPagination';
 
 export default function SellerMainPage({ logout }) {
 
-  const navigate = useNavigate();
-  const sellerID = JSON.parse((localStorage.getItem('authentication'))).id;
   const [productsList, setProductsList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const navigate = useNavigate();
+  const sellerID = JSON.parse((localStorage.getItem('authentication'))).id;
 
   useEffect(() => {
     getProductList();
@@ -48,23 +48,23 @@ export default function SellerMainPage({ logout }) {
     return sellerProducts.slice((currentPage - 1) * 10, (currentPage * 10)).map((product, i) => {
       return (
         <tr key={product.id}>
-          <td>{i + 1}</td>
+          <td>{i + 1+((currentPage-1)*10)}</td>
           <td>{product.name}</td>
-          <td>{product.price}</td>
+          <td>Rs.{product.price}</td>
           <td>
             <NavLink to={`/productcreateorupdate/${product.id}`}>
-              <button className='product-update'>Update</button>
+              <button className='product-update-button'>Update</button>
             </NavLink>
           </td>
           <td>
-            <button className='product-delete' onClick={() => { deleteSellerProduct(product) }}>Delete</button>
+            <button className='product-delete-button' onClick={() => { deleteSellerProduct(product) }}>Delete</button>
           </td>
         </tr>
       );
     });
   }
 
-  //delete the seller product from local storage
+  //delete the seller product from local storage and update the state productsList
   const deleteSellerProduct = (productToBeDeleted) => {
     const deleteConfirmation = window.confirm("Do you really want to remove " + productToBeDeleted.name + " from your store?");
     if (deleteConfirmation) {

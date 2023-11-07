@@ -11,7 +11,7 @@ export default function ProductShow({productItem}) {
       <img className='image-style' alt='product' src={productItem.imageurls.small}/>
       <div className='card-text'>
       <p>{productVariable.name}</p>
-      <p>{productVariable.price}</p>  
+      <p>Rs.{productVariable.price}</p>  
       </div>  
     </div>
     </NavLink>

@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from '../loginPage/Login';
 import AssignProducts from '../productCatalogPage/AssignProducts';
 import ProductFullDetails from '../individualProductPage/ProductFullDetails';
-import CartPage from '../cartPage/CartPage';
+import AssignCartProducts from '../cartPage/AssignCartProducts';
 import PageNotFound from '../PageNotFound';
 import SellerMainPage from '../sellerPages/SellerMainPage';
 import AddOrUpdateProducts from '../sellerPages/AddOrUpdateProducts';
@@ -33,14 +33,15 @@ export default function SetRoutes() {
     //Find the user who is currently logged-in from local storage
     const getAuthentication = () => {
 
-        let data = JSON.parse(localStorage.getItem('authentication'));
+        let data = localStorage.getItem('authentication');
         if (data && (data!=="undefined")) {
+            data=JSON.parse(data);
             setAuth(data);
         }
         else {
             setNewAuthentication();
-            data = JSON.parse(localStorage.getItem('authentication'));
-            setAuth(data);
+            // data = JSON.parse(localStorage.getItem('authentication'));
+            // setAuth(data);
         }
     }
 
@@ -58,7 +59,7 @@ export default function SetRoutes() {
                                         <Route exact path='/catalog' element={<AssignProducts logout={setNewAuthentication} />}>
                                         </Route>
                                         <Route exact path='/product/:productID' element={<ProductFullDetails />}></Route>
-                                        <Route exact path='/cart' element={<CartPage />}></Route>
+                                        <Route exact path='/cart' element={<AssignCartProducts />}></Route>
                                     </> :
                                     <>
                                         <Route exact path='/' element={<SellerMainPage logout={setNewAuthentication} />}>

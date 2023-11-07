@@ -23,3 +23,13 @@ button.signin{
     font-weight: bold;
     font-size: larger;
 }
+.error-message-one{
+    font-size: small;
+    color: red;
+    margin-left: 95px;
+}
+.error-message-two{
+    font-size: small;
+    color: red;
+    margin-left: 150px;
+}

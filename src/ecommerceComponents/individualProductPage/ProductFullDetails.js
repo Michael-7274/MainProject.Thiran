@@ -36,8 +36,15 @@ export default function ProductFullDetails() {
   }
 
   const product = getProductItem();
+  console.log(product);
+  const getProperDescription=()=>{
+    let descriptionLines=product.description.split('\n')
+    return descriptionLines.map((description)=><p>{description}</p>);
+  }
 
   const isInCart = isProductInCart();
+
+  const description=getProperDescription();
 
   const addToCart = () => {
     if (!isInCart) {
@@ -49,31 +56,17 @@ export default function ProductFullDetails() {
 
   return (
     <>
-      {/* <div className='card-container'>
-        <div className="product-card">
-          <img className='image-style' alt='product' src={product.imageurls.small} />{/*Without require('./'+) the image won't apppear here*/}
-          {/*<div className='card-text'>
-            <p>{product.name}</p>
-            <p>{product.price}</p>
-            <button id="add-to-cart" onClick={() => { addToCart() }}>{isInCart ? "Added to cart" : "Add to cart"}</button>
-          </div>
-        </div>
-      </div> */}
-
-
-      
-
         <div class="split-container">
 
           <div class="left-section">
-            <img src={product.imageurls.full} />
+            <img src={product.imageurls.small} alt='product'/>
           </div>
 
           <div class="right-section">
             <h2>{product.name}</h2>
             <p>Category: {product.category}</p>
-            <p>Description: {product.description}</p>
-            <p>Price: {product.price}</p>
+            <p>Description: {description}</p>
+            <p>Price: Rs.{product.price}</p>
             <p>Warranty: {product.warranty}</p>
             <p>Return: {product.return}</p>
             <button onClick={() => { addToCart() }}>{isInCart ? "Added to cart" : "Add to cart"}</button>
