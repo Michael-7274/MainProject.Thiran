@@ -1,22 +1,9 @@
 .zoom:hover {
-    -ms-transform: scale(1.5);
+    -ms-transform: scale(1.1);
     /* for the transform to work on IE 9 */
-    -webkit-transform: scale(1.5);
+    -webkit-transform: scale(1.1);
     /* for the transform to work on Safari 3-8 */
     transform: scale(1.1);
-}
-
-button.highlight {
-    background-color: yellow;
-}
-
-.page-button-container {
-    height: 45px;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    background-color: orangered;
-    bottom: 0px;
 }
 
 .centerdiv {
@@ -26,9 +13,11 @@ button.highlight {
 
 .product-card {
     position: relative;
-    width: 200px;
-    height: 200px;
-    border: 2px solid black;
+    width: 201px;
+    height: 201px;
+    border: 3px solid #febd69;
+    background-color: #232F3E;
+    border-radius: 20px;
     margin: 30px;
 }
 
@@ -50,62 +39,11 @@ button.highlight {
 .card-text {
     position: absolute;
     bottom: -2px;
+    left:15px;
 }
 
 .card-text p {
-    color: black;
+    color: #febd69;
     margin: 0px;
 }
 
-#add-to-cart {
-    position: absolute;
-    top: 51px;
-    left: 107px;
-    right: -60px;
-}
-
-#catalog-logout-button {
-    position: absolute;
-    top: 10px;
-    width: 100px;
-    height: 36px;
-    left: 50px;
-    background-color: #000000;
-    border-radius: 10px;
-    cursor: pointer;
-    color: #FFFFFF;
-    font-weight: 900;
-
-}
-
-.search-container {
-    position: relative;
-    height: 75px;
-    background-color: orangered;
-}
-
-#search-bar {
-    font-size: large;
-    position: absolute;
-    top: 10px;
-    right: 450px;
-    width: 600px;
-    height: 30px;
-}
-
-#search-button {
-    position: absolute;
-    top: 10px;
-    width: 100px;
-    height: 36px;
-    right: 350px;
-}
-
-#cart-button {
-    position: absolute;
-    font-weight: 900;
-    top: 10px;
-    width: 100px;
-    height: 36px;
-    right: 200px;
-}

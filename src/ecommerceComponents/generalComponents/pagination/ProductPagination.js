@@ -1,18 +1,17 @@
-import React, { useState } from 'react'
-import './catalog.css'
+import './pagination.css'
 export default function ProductPagination({ itemCount, currentPage, setCurrentPage }) {
 
     const buttonCount = Math.ceil(itemCount / 10);
 
-    const setPgNoToLocalStorage=(pgNo)=>{
-        localStorage.setItem("pgNo",JSON.stringify(pgNo));
+    const setPgNoToLocalStorage = (pgNo) => {
+        localStorage.setItem("pgNo", JSON.stringify(pgNo));
     }
 
     //decrease page count on click
     function goToPreviousPage() {
         if (currentPage > 1) {
             setCurrentPage(currentPage - 1);
-            setPgNoToLocalStorage(currentPage-1);
+            setPgNoToLocalStorage(currentPage - 1);
         }
     }
 
@@ -20,7 +19,7 @@ export default function ProductPagination({ itemCount, currentPage, setCurrentPa
     function goToNextPage() {
         if (currentPage < buttonCount) {
             setCurrentPage(currentPage + 1);
-            setPgNoToLocalStorage(currentPage-1);
+            setPgNoToLocalStorage(currentPage + 1);
         }
     }
 
@@ -28,10 +27,9 @@ export default function ProductPagination({ itemCount, currentPage, setCurrentPa
     function generateButtons() {
         const buttons = [];
         for (let i = 1; i <= buttonCount; i++) {
-            buttons.push(<button key={"B" + i} className={currentPage === i ? 'highlight' : ''}
-                onClick={() => { changeCurrentPage(i) }}>{i}</button>)//Directly pushing to button array kept outside the 
-                                                                      //function pushes button objects into the array which 
-                                                                      //can't be shown on screen
+            buttons.push(<button key={"B" + i}
+                className={currentPage === i ? 'highlight' : 'normal'}
+                onClick={() => { changeCurrentPage(i) }}>{i}</button>)
         }
         return buttons;
     }
@@ -47,11 +45,10 @@ export default function ProductPagination({ itemCount, currentPage, setCurrentPa
 
     return (
         <>
-            <div className='page-button-container'>
-                <div className='centerdiv'>
-                    <button onClick={goToPreviousPage}>{'<'}</button>
-                    {buttons}
-                    <button onClick={goToNextPage}>{'>'}</button></div>
+            <div className='page-no-button-container'>
+                <button id="previous" onClick={goToPreviousPage}>Previous</button>
+                <div className='pages'>{buttons}</div>
+                <button id="next" onClick={goToNextPage}>Next</button>
             </div>
 
         </>

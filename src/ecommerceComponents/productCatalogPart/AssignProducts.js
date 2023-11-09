@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import ProductPagination from './ProductPagination';
+import ProductPagination from '../generalComponents/pagination/ProductPagination';
 import ProductShow from './ProductShow';
 import { NavLink, json, useNavigate } from 'react-router-dom';
-
+import './catalog.css'
+import NavBar from '../generalComponents/navBar/NavBar';
 //modifying data in local storage is reflected on screen only after refresh
 export default function AssignProducts({ logout }) {
 
@@ -83,8 +84,11 @@ export default function AssignProducts({ logout }) {
   const filterProducts = () => {
     let products = productsList;
     if (filter !== '') {
-      products = productsList.filter((products) => (products.name).toLowerCase().indexOf(filter.toLowerCase()) !== -1);
+      products = products.filter((products) => (products.name).toLowerCase().indexOf(filter.toLowerCase()) !== -1);
     };
+    if(products.length===0){
+      return(<h1>Product Unavailable</h1>);
+    }
     return products.slice((currentPage - 1) * 10, currentPage * 10).map((productItem) => {
       return <ProductShow key={productItem.id} productItem={productItem} />;
     });
@@ -96,42 +100,10 @@ export default function AssignProducts({ logout }) {
     (products.name).toLowerCase().indexOf(filter.toLowerCase()) !== -1).length);
   }
 
-  //set the temporary filter keyword
-  const setFilterKeyword=(val)=>{
-    filterKeyword=val;
-  }
-
-  const setFilterKeywordToFilter=()=>{
-    setFilter(filterKeyword);
-    localStorage.setItem('filter',JSON.stringify(filterKeyword));
-    setCurrentPage(1);
-    localStorage.setItem("pgNo",JSON.stringify(1));
-  }
-
-  //call logout function and go to login page
-  const logoutOfSite=()=>{
-    logout();
-    localStorage.setItem("pgNo",JSON.stringify(1));
-    localStorage.setItem("filter",JSON.stringify(''));
-    navigate('/');
-  }
-
-
-
   let showProduct = filterProducts();
   return (
     <>
-      <div className='search-container'>
-        <div className='centerdiv'>
-          <button id='catalog-logout-button' onClick={logoutOfSite}>Logout</button>{/* //the logout is a function */}
-          <input id='search-bar' onChange={(event) => { setFilterKeyword(event.target.value) }} />&nbsp;&nbsp;&nbsp;&nbsp;
-          <button id='search-button' onClick={setFilterKeywordToFilter}>Search</button>{/* the temporary filter keyword 
-                                                                                              is set as state*/}
-          <NavLink to={'/cart'}>
-            <button id='cart-button'>CART</button>
-          </NavLink>
-        </div>
-      </div>
+      <NavBar/>
       <div className='card-container'>
         {showProduct}
       </div>

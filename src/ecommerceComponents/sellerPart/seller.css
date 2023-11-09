@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 75px;
-    background-color: orangered;
+    background-color: #232F3E;
     z-index: 999;
     /* Ensures it stays on top of other elements */
 }
@@ -14,21 +14,21 @@
     font-weight: bolder;
     position: absolute;
     top: 15px;
+    color: #FEBD69;
 }
 
 #seller-logout {
     position: absolute;
-    background-color: #000000;
-    border-radius: 10px;
-    cursor: pointer;
-    color: #FFFFFF;
-    font-weight: 900;
     top: 10px;
     width: 100px;
     height: 36px;
-    right: 200px;
+    left: 50px;
+    background-color: #FEBD69;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #232F3E;
+    font-weight: 900;
 }
-
 
 #seller-add-product-button {
     appearance: none;
@@ -57,8 +57,8 @@
 }
 
 #seller-add-product-button:hover {
-    background-color: #00D100;
-    box-shadow: #8AFF8A 0 -6px 8px inset;
+    background-color: #FEBD69;
+    box-shadow: #febd692d 0 -6px 8px inset;
     transform: scale(1.125);
 }
 
@@ -73,22 +73,10 @@
     }
 }
 
-.seller-main-page .page-button-container {
-    position: fixed;
-    z-index: 999;
-    left: 0px;
-    right: 0px;
-    background-color: orangered;
-    bottom: 0px;
-}
 
 
-.product-table-container {
-    margin: 10px 70px 38px;
-    box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
-}
 
-.product-table-container .product-delete-button {
+.product-table .product-delete-button {
     background: linear-gradient(to bottom right, #EF4765, #d90404);
     border: 0;
     border-radius: 12px;
@@ -96,8 +84,8 @@
     cursor: pointer;
     display: inline-block;
     font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 900;
     line-height: 2.5;
     outline: transparent;
     padding: 0 1rem;
@@ -110,15 +98,15 @@
     white-space: nowrap;
 }
 
-.product-table-container .product-delete-button:not([disabled]):focus {
+.product-table .product-delete-button:not([disabled]):focus {
     box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
-.product-table-container .product-delete-button:not([disabled]):hover {
+.product-table .product-delete-button:not([disabled]):hover {
     box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
-.product-table-container .product-update-button {
+.product-table .product-update-button {
     background-color: #13aa52;
     border: 1px solid #13aa52;
     border-radius: 4px;
@@ -127,8 +115,8 @@
     color: #fff;
     cursor: pointer;
     font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 900;
     outline: none;
     outline: 0;
     padding: 5px 10px;
@@ -140,12 +128,12 @@
     touch-action: manipulation;
 }
 
-.product-table-container .product-update-button:hover {
+.product-table .product-update-button:hover {
     box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
     transform: translateY(-2px);
 }
 
-.fl-table {
+.product-table {
     border-radius: 5px;
     font-size: 12px;
     font-weight: normal;
@@ -157,36 +145,38 @@
     background-color: white;
 }
 
-.fl-table td,
-.fl-table th {
+.product-table td,
+.product-table th {
     text-align: center;
     padding: 8px;
+    font-size: 14px;
 }
 
-.fl-table td {
+.product-table td {
     border-right: 1px solid #f8f8f8;
-    font-size: 12px;
+    font-size: 14px;
 }
 
-.fl-table thead th {
-    color: #ffffff;
-    background: orangered;
+.product-table thead th {
+    color: #FEBD69;
+    background: #232F3E;
+    font-size: 14px;
 }
 
 
-.fl-table thead th:nth-child(odd) {
-    color: #ffffff;
-    background: #324960;
+.product-table thead th:nth-child(odd) {
+    color: #232F3E;
+    background: #FEBD69
 }
 
-.fl-table tr:nth-child(even) {
+.product-table tr:nth-child(even) {
     background: #F8F8F8;
 }
 
 /* Responsive */
 
 @media (max-width: 767px) {
-    .fl-table {
+    .product-table {
         display: block;
         width: 100%;
     }
@@ -200,28 +190,28 @@
         padding: 0 0 10px;
     }
 
-    .fl-table thead,
-    .fl-table tbody,
-    .fl-table thead th {
+    .product-table thead,
+    .product-table tbody,
+    .product-table thead th {
         display: block;
     }
 
-    .fl-table thead th:last-child {
+    .product-table thead th:last-child {
         border-bottom: none;
     }
 
-    .fl-table thead {
+    .product-table thead {
         float: left;
     }
 
-    .fl-table tbody {
+    .product-table tbody {
         width: auto;
         position: relative;
         overflow-x: auto;
     }
 
-    .fl-table td,
-    .fl-table th {
+    .product-table td,
+    .product-table th {
         padding: 20px .625em .625em .625em;
         height: 60px;
         vertical-align: middle;
@@ -233,34 +223,38 @@
         text-overflow: ellipsis;
     }
 
-    .fl-table thead th {
+    .product-table thead th {
         text-align: left;
         border-bottom: 1px solid #f7f7f9;
     }
 
-    .fl-table tbody tr {
+    .product-table tbody tr {
         display: table-cell;
     }
 
-    .fl-table tbody tr:nth-child(odd) {
+    .product-table tbody tr:nth-child(odd) {
         background: none;
     }
 
-    .fl-table tr:nth-child(even) {
+    .product-table tr:nth-child(even) {
         background: transparent;
     }
 
-    .fl-table tr td:nth-child(odd) {
+    .product-table tr td:nth-child(odd) {
         background: #F8F8F8;
         border-right: 1px solid #E6E4E4;
     }
 
-    .fl-table tr td:nth-child(even) {
+    .product-table tr td:nth-child(even) {
         border-right: 1px solid #E6E4E4;
     }
 
-    .fl-table tbody td {
+    .product-table tbody td {
         display: block;
         text-align: center;
     }
+}
+
+.pagination .page-no-button-container {
+    bottom: -125px;
 }

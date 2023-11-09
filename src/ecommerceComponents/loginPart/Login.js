@@ -10,8 +10,10 @@ export default function Login({ setAuth }) {
         "userNameError": "",
         "passwordError": ""
     });
+    const tempObject = { ...errorObject };
 
 
+    // invoke getData to  get details of various users from json document
     useEffect(() => {
         getData();
     }, []);
@@ -48,7 +50,6 @@ export default function Login({ setAuth }) {
     //check the format of the input credentials
     const isDataValid = () => {
         let isValid = true;
-        const tempObject = { ...errorObject };
         if (!((userName.indexOf("@seller.com") === -1) ^ (userName.indexOf("@buyer.com") === -1))) {
             tempObject.userNameError = "Enter proper username";
             isValid = false;
@@ -58,7 +59,7 @@ export default function Login({ setAuth }) {
         }
 
         if (userPassword.length < 8) {
-            tempObject.passwordError = "Password less than 8 characters in length"
+            tempObject.passwordError = "Invalid password"
             isValid = false;
         } else {
             tempObject.passwordError = ""
@@ -101,49 +102,51 @@ export default function Login({ setAuth }) {
                         }
                     }
                     else {
-                        alert("Incorrect password")
+                        tempObject.passwordError = "Incorrect password";
                     }
                     break;
                 }
                 else if (i === userData.length - 1) {
-                    alert("Username not found")
+                    tempObject.userNameError = "Username not found";
                 }
             }
         }
-
+        setErrorObject(tempObject);
     }
     return (
         <>
-            <div className="centerdiv">
-                <h1>Login</h1>
-            </div>
-            <br /><br /><br /><br /><br /><br />
-            <div className='centerdiv'>
-                <label><span className='login-text1'>User Name:</span>
-                    <input type="text" placeholder='Enter username' onChange={getName} />
-                </label>
-            </div>
+            <body className="login-container">
+                <div className="centerdiv">
+                    <h1 id='login-text0'>Login</h1>
+                </div>
+                <br /><br /><br /><br /><br /><br />
+                <div className='centerdiv'>
+                    <label><span className='login-text1'>User Name:</span>
+                        <input type="text" id="username" placeholder='Enter username' onChange={getName} />
+                    </label>
+                </div>
 
-            <div className='centerdiv error-message-one'>
-                {errorObject.userNameError}
-            </div>
+                <div className='centerdiv error-message-one'>
+                    {errorObject.userNameError}
+                </div>
 
-            <br /><br /><br />
-            <div className='centerdiv'>
-                <label>
-                    <span className='login-text2'>Password:</span>
-                    <input type="password" placeholder='Enter password' onChange={getPassword} />
-                </label><br />
-            </div>
+                <br /><br /><br />
+                <div className='centerdiv'>
+                    <label>
+                        <span className='login-text2'>Password:</span>
+                        <input type="password" id="password" placeholder='Enter password' onChange={getPassword} />
+                    </label><br />
+                </div>
 
-            <div className='centerdiv error-message-two'>
-                {errorObject.passwordError}
-            </div>
+                <div className='centerdiv error-message-two'>
+                    {errorObject.passwordError}
+                </div>
 
-            <br /><br /><br /><br />
-            <div className='centerdiv'>
-                <button className='signin' onClick={isUserValid}>Sign in</button>
-            </div>
+                <br /><br /><br /><br />
+                <div className='centerdiv'>
+                    <button className='signin' onClick={isUserValid}>Sign in</button>
+                </div>
+            </body>
         </>
     )
 }

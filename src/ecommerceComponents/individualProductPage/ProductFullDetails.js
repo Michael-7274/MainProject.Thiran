@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import './individualProductPage.css';
+import { useNavigate, useParams } from 'react-router-dom';
+import './productFullDetails.css';
+import NavBar from '../generalComponents/navBar/NavBar';
 export default function ProductFullDetails() {
 
   const { productID } = useParams();
   const [cart, setToCart] = useState([]);
+  const navigate=useNavigate();
 
   useEffect(() => {
     getCartItems();
   }, []);
+
   useEffect(() => {
     window.addEventListener('focus', refreshPage);//add a eventListener that calls refreshPage() when we get to the tab
     return () => {
@@ -41,16 +44,16 @@ export default function ProductFullDetails() {
 
   const product = getProductItem();
   console.log(product);
-  
-  //checks if there are new lines in the description and puts <br/> in place of '\n' to create new lines
-  const getProperDescription=()=>{
-    let descriptionLines=product.description.split('\n')
-    return descriptionLines.map((description)=><p>{description}</p>);
+
+  //checks if there are new lines in the description (i.e)'/n',this function puts <br/> in place of '\n' to create new lines
+  const getProperDescription = () => {
+    let descriptionLines = product.description.split('\n')
+    return descriptionLines.map((description) => <p>{description}</p>);
   }
 
   const isInCart = isProductInCart();
 
-  const description=getProperDescription();
+  const description = getProperDescription();
 
   //adds the current item shown to cart
   const addToCart = () => {
@@ -58,29 +61,34 @@ export default function ProductFullDetails() {
       let cartItems = [...cart, product];
       localStorage.setItem('cart', JSON.stringify(cartItems));
       setToCart(cartItems);
+      navigate('/cart');
+    }
+    else
+    {
+      navigate('/cart');
     }
   }
 
   return (
     <>
-        <div class="split-container">
+    <NavBar/>
+      <div class="split-container">
 
-          <div class="left-section">
-            <img src={product.imageurls.small} alt='product'/>
-          </div>
-
-          <div class="right-section">
-            <h2>{product.name}</h2>
-            <p>Category: {product.category}</p>
-            <p>Description: {description}</p>
-            <p>Price: Rs.{product.price}</p>
-            <p>Warranty: {product.warranty}</p>
-            <p>Return: {product.return}</p>
-            <button onClick={() => { addToCart() }}>{isInCart ? "Added to cart" : "Add to cart"}</button>
-          </div>
-
+        <div class="left-section">
+          <img src={product.imageurls.small} alt='product' />
         </div>
 
-      </>
+        <div class="right-section">
+          <h2>{product.name}</h2>
+          <p><b>Description:</b> {description}</p>
+          <p><b>Price:</b> Rs.{product.price}</p>
+          <p><b>Warranty:</b> {product.warranty}</p>
+          <p><b>Return:</b> {product.return}</p>
+          <button onClick={() => { addToCart() }}>{isInCart ? "Added to cart" : "Add to cart"}</button>
+        </div>
+
+      </div>
+
+    </>
   )
 }

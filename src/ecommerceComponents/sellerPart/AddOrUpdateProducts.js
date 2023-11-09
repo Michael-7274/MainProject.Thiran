@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import './form.css';
+import Alert from '../generalComponents/alert/Alert';
 export default function AddOrUpdateProducts() {
   const [productObject, setProductObject] = useState({
     "name": "",
@@ -32,6 +33,9 @@ export default function AddOrUpdateProducts() {
     },
     "seller": ""
   });
+
+  const [alert,setAlert]=useState('');
+  const [showAlert,setShowAlert]=useState(false);
 
   const { id } = useParams();
 
@@ -75,7 +79,6 @@ export default function AddOrUpdateProducts() {
       setProductObject(tempObject);
     }
   }
-
 
   //To validate the form input from user
   const validateForm = () => {
@@ -134,6 +137,11 @@ export default function AddOrUpdateProducts() {
     return isFormValid;
   }
 
+  const hideAlertAndGoToSellerPage=()=>{
+    setShowAlert(false);
+    navigate('/seller');
+  }
+
   //Evaluate product details and update local storage on the click of the submit button
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -148,8 +156,8 @@ export default function AddOrUpdateProducts() {
       productList = [...productList, objectToBeAdded];
       if (validateForm()) {
         localStorage.setItem('products', JSON.stringify(productList));
-        alert("product added");
-        navigate('/seller');
+        setAlert("Product added");
+        setShowAlert(true);
       }
 
     }
@@ -161,8 +169,9 @@ export default function AddOrUpdateProducts() {
       console.log(replaceIndex);
       if (validateForm()) {
         localStorage.setItem('products', JSON.stringify(products));
-        alert("product modified");
-        navigate('/seller');
+        setAlert("Product Modified");
+        setShowAlert(true);
+        
       }
     }
   }
@@ -170,9 +179,10 @@ export default function AddOrUpdateProducts() {
 
   return (
     <>
+    {showAlert&&<Alert alertMessage={alert} onOk={hideAlertAndGoToSellerPage}/>}
       <div className="form-container">
         <h1 id="form-title">{id === "addProduct" ? "Add product" : "Update product"}</h1>
-        <p>*all fields are required</p>
+        <p id="initial-form-condition">*all fields are required</p>
 
         <form id="acform" onSubmit={handleSubmit}>
 
@@ -184,7 +194,6 @@ export default function AddOrUpdateProducts() {
               name="name"
               value={productObject.name}
               onChange={handleChange}
-
             />
           </div>
 
