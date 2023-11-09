@@ -1,27 +1,37 @@
 import React, { useEffect, useState } from 'react'
-import './seller.css'
+import './sellerMain.css'
 import { NavLink, useNavigate } from 'react-router-dom';
-import ProductPagination from '../generalComponents/pagination/ProductPagination';
-import DeleteModal from '../generalComponents/confirmationModal/deleteModal/DeleteModal';
+import ProductPagination from '../../generalComponents/pagination/ProductPagination';
+import DeleteModal from '../../generalComponents/confirmationModal/deleteModal/DeleteModal';
 
 export default function SellerMainPage({ logout }) {
 
+  //state to store the list of products obtaained from local storage
+  //Don't try to save only seller products to it as this makes the product delete complicated
   const [productsList, setProductsList] = useState([]);
+  //state to store current page of the seller site
   const [currentPage, setCurrentPage] = useState(1);
 
+  //these states below are made for the use of Delete modal
+  //productToBeDeleted- stores an object which contains the product to be deleted
   const [productToBeDeleted, setProductToBeDeleted] = useState();
+  //deleteIsVisible- to control appearance the Delete Modal
   const [deleteIsVisible, setDeleteModalIsVisible] = useState();
 
+  //useNavigate to navigate to other pages
   const navigate = useNavigate();
+  //get the Id of the seller from local storage
   const sellerID = JSON.parse((localStorage.getItem('authentication'))).id;
 
+  //useEffect to automatically invoke getProductList() and getPageNo()
   useEffect(() => {
     getProductList();
     getPageNo();
   }, []);
 
-  //get the product array from the user
-  const getProductList = async () => {//return in async is different from normal function return ,here it returns a promise
+  //function to get the product array from local storage/JSON and store it in state
+  const getProductList = async () => {
+    //return in async is different from normal function return ,here it returns a promise
     const listOfProducts = JSON.parse(localStorage.getItem('products'));
     if ((listOfProducts !== "undefined") && listOfProducts) {
       console.log("if executed");
@@ -42,7 +52,9 @@ export default function SellerMainPage({ logout }) {
     }
   }
 
+  //function to get the page no from local storage
   const getPageNo = () => {
+    //to keep the same page on site when switching between different links
     let pageNo = localStorage.getItem('pgNo');
     if (pageNo && pageNo !== "undefined") {
       pageNo = JSON.parse(pageNo);
@@ -81,7 +93,12 @@ export default function SellerMainPage({ logout }) {
     });
   }
 
+  //checks if there are products in the page after delete
+  //if no then switches page
   const changePageOnDelete = () => {
+    //calling getSellerProducts().length here instead of using JSON.parse to calculate it doesn't give expected result
+    //don't call using useEffect(()=>{changePageOnDelete();},[productList]) because when the page is loaaded if
+    //the no.of.seller.products%10 is equal to 0, then the last page is automatically selected
     let sellerProductLength = JSON
       .parse(localStorage.getItem('products')).filter((product) => product.seller === sellerID).length;
     if (sellerProductLength !== 0 && sellerProductLength % 10 === 0) {
@@ -90,12 +107,7 @@ export default function SellerMainPage({ logout }) {
     }
   }
 
-  //delete the seller product from local storage and update the state productsList
-  const deleteSellerProduct = (product) => {
-    setDeleteModalIsVisible(true);
-    setProductToBeDeleted(product);
-  }
-
+  //function executed when delete is confirmed in Delete Modal
   const onDeleteConfirm = () => {
     const tempArr = [...productsList];
     const indexOfObjectToBeDeleted = tempArr.findIndex((product) => product.id === productToBeDeleted.id)
@@ -106,17 +118,25 @@ export default function SellerMainPage({ logout }) {
     changePageOnDelete();
   }
 
+  //function executed when delete is canceled in Delete Modal
   const onDeleteCancel = () => {
     setDeleteModalIsVisible(false);
   }
 
-  //call logout function and navigate to login page
+  //function to invoke the Delete Modal
+  const deleteSellerProduct = (product) => {
+    setDeleteModalIsVisible(true);
+    setProductToBeDeleted(product);
+  }
+
+  //function to call logout function and navigate to login page
   const logoutOfSite = () => {
     logout();
     localStorage.setItem("pgNo", JSON.stringify(1));
     navigate('/');
   }
 
+  //store the generated table rows array in productRows
   const productRows = generateProductRows();
 
   return (

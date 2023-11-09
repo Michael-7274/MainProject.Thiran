@@ -1,13 +1,18 @@
 import React from 'react'
 import './cart.css';
-//component to show individual cart items
+//component to show a single cart item
+//the props contain the item, it's index and function to delete the item
 export default function ShowCartItems({ cartItemAndIndex, deleteItem }) {
   const itemArr = cartItemAndIndex;
+
   //checks if there are new lines in the description (i.e)'/n' and returns them as text inside <p></p>
   const getProperDescription = () => {
+    const d = new Date();
     let descriptionLines = itemArr[0].description.split('\n')
-    return descriptionLines.map((description,i) => <p key={description.length+i}>{description}</p>);
+    return descriptionLines.map((description,i) => <p key={d.getTime()+i}>{description}</p>);
   }
+
+  //the array of description lines is stored here
   const description = getProperDescription();
 
   return (
@@ -15,7 +20,6 @@ export default function ShowCartItems({ cartItemAndIndex, deleteItem }) {
       <tr>
         <td>
           <div className='centerdiv'>
-            {/*Without require('./'+) the image won't apppear here*/}
             <img className='cart-item-image' alt='product' src={itemArr[0].imageurls.small} />
           </div>
         </td>

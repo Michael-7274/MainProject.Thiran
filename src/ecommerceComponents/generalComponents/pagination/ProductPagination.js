@@ -1,13 +1,15 @@
 import './pagination.css'
 export default function ProductPagination({ itemCount, currentPage, setCurrentPage }) {
 
+    //get the no of buttons to generate based on the itemcount of products
     const buttonCount = Math.ceil(itemCount / 10);
 
+    //function to set the changed pgNo on local storage
     const setPgNoToLocalStorage = (pgNo) => {
         localStorage.setItem("pgNo", JSON.stringify(pgNo));
     }
 
-    //decrease page count on click
+    //function to decrease page count on click
     function goToPreviousPage() {
         if (currentPage > 1) {
             setCurrentPage(currentPage - 1);
@@ -15,7 +17,7 @@ export default function ProductPagination({ itemCount, currentPage, setCurrentPa
         }
     }
 
-    //increase page count on click
+    //function to increase page count on click
     function goToNextPage() {
         if (currentPage < buttonCount) {
             setCurrentPage(currentPage + 1);
@@ -23,7 +25,7 @@ export default function ProductPagination({ itemCount, currentPage, setCurrentPa
         }
     }
 
-    //generate the buttons based on itemcount
+    //function to generate the buttons based on itemcount
     function generateButtons() {
         const buttons = [];
         for (let i = 1; i <= buttonCount; i++) {
@@ -34,13 +36,13 @@ export default function ProductPagination({ itemCount, currentPage, setCurrentPa
         return buttons;
     }
 
-    //changes page based on the button clicked
+    //function to changes page based on the page no of button clicked
     const changeCurrentPage = (i) => {
         setCurrentPage(i);
         setPgNoToLocalStorage(i);
     }
 
-    //the buttons are stored in the button array  
+    //the buttons are stored in the button variable as an array
     const buttons = generateButtons();
 
     return (

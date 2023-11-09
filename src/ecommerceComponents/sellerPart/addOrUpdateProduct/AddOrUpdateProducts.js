@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import './form.css';
-import Alert from '../generalComponents/alert/Alert';
+import './addOrUpdate.css';
+import Alert from '../../generalComponents/alert/Alert';
 export default function AddOrUpdateProducts() {
+
+  //states to store the value of the product object during creation and modification
   const [productObject, setProductObject] = useState({
     "name": "",
     "image": "",
@@ -18,6 +20,8 @@ export default function AddOrUpdateProducts() {
     },
     "seller": ""
   });
+
+  //states to store the error in the product input during creation and modification of products
   const [errorObject, setErrorObject] = useState({
     "name": "",
     "image": "",
@@ -34,53 +38,55 @@ export default function AddOrUpdateProducts() {
     "seller": ""
   });
 
-  const [alert,setAlert]=useState('');
-  const [showAlert,setShowAlert]=useState(false);
+  //states to use with the alert component
+  const [alert,setAlert]=useState('');//the alert message
+  const [showAlert,setShowAlert]=useState(false);//show the alert or not
 
+  //ID of the product from link
   const { id } = useParams();
+  let products = JSON.parse(localStorage.getItem('products'));
 
+  //usenavigate function to navigate the pages
   const navigate = useNavigate();
 
+  //useEffect to initially execute checkId() to check the Id from link
   useEffect(() => {
     checkId();
   }, []);
 
-  useEffect(() => {
-    console.log(errorObject);
-  }, [errorObject])
-
-
-  //check whether to add or update product, gets the product properties from local storage incase of update product
+  //function to check whether to add or update product 
+  //function gets the product properties from local storage incase of update product
   const checkId = () => {
     if (id !== "addProduct") {
-      const products = JSON.parse(localStorage.getItem('products'));
       const currentProduct = products.find((product) => product.id === id);
+      if(currentProduct===undefined){
+        navigate('/seller')
+      }
       setProductObject(currentProduct);
     }
   };
 
-  //Assign the form values to an object on input
+  //function to assign the form values to an object on input
   const handleChange = (event) => {
-
+    //select name and value attributes from event.target
     const { name, value } = event.target;
-    const [outerAttribute, innerAttribute] = name.split(".");//if string doesn't contain '.' then the entire name 
-    //is stored in outerAttribute
+    //if string doesn't contain '.' then the entire name is stored in outerAttribute
+    const [outerAttribute, innerAttribute] = name.split(".");
     const tempObject = { ...productObject }
     if (name === outerAttribute) {
       tempObject[name] = value;//to access an attribute directly
-      setProductObject(tempObject);
-
     }
+
     else {
       tempObject[outerAttribute] = {
         ...tempObject[outerAttribute],
         [innerAttribute]: value//to access an attribute inside an attribute
       }
-      setProductObject(tempObject);
     }
+    setProductObject(tempObject);
   }
 
-  //To validate the form input from user
+  //function to validate the form input from user
   const validateForm = () => {
     let isFormValid = true;
     const tempErrorObject = { ...errorObject };
@@ -88,9 +94,14 @@ export default function AddOrUpdateProducts() {
       tempErrorObject.name = "*Name can't be empty";
       isFormValid = false;
     }
+    else if(productObject.name.length>30){
+      tempErrorObject.name = "*Name can't be higher than 30 characters in length";
+      isFormValid = false;
+    }
     else {
       tempErrorObject.name = "";
     }
+
     if (productObject.category === "") {
       tempErrorObject.category = "*Category can't be empty";
       isFormValid = false;
@@ -98,6 +109,7 @@ export default function AddOrUpdateProducts() {
     else {
       tempErrorObject.category = "";
     }
+
     if (productObject.description === "") {
       tempErrorObject.description = "*Description can't be empty";
       isFormValid = false;
@@ -105,6 +117,7 @@ export default function AddOrUpdateProducts() {
     else {
       tempErrorObject.description = "";
     }
+
     if (productObject.warranty === "") {
       tempErrorObject.warranty = "*warranty can't be empty";
       isFormValid = false;
@@ -137,36 +150,32 @@ export default function AddOrUpdateProducts() {
     return isFormValid;
   }
 
-  const hideAlertAndGoToSellerPage=()=>{
+  //function invoked when we click on alert button or around alert window
+  const hideSuccessAlertAndGoToSellerPage=()=>{
     setShowAlert(false);
     navigate('/seller');
   }
 
-  //Evaluate product details and update local storage on the click of the submit button
+  //Function to evaluate product details and update local storage on the click of the submit button
   const handleSubmit = (e) => {
     e.preventDefault();
     if (id === "addProduct") {
-      let productList = JSON.parse(localStorage.getItem('products'));
       let sellerID = JSON.parse(localStorage.getItem('authentication')).id;
       const d = new Date();
       const objectToBeAdded = { ...productObject };
       objectToBeAdded.seller = sellerID;
       objectToBeAdded.id = "PID" + d.getTime();
       console.log(objectToBeAdded);
-      productList = [...productList, objectToBeAdded];
+      products = [...products, objectToBeAdded];
       if (validateForm()) {
-        localStorage.setItem('products', JSON.stringify(productList));
+        localStorage.setItem('products', JSON.stringify(products));
         setAlert("Product added");
         setShowAlert(true);
       }
-
     }
     else {
-      let products = JSON.parse(localStorage.getItem('products'));
       let replaceIndex = products.findIndex((product) => product.id === productObject.id);
-      console.log(productObject);
       products.splice(replaceIndex, 1, productObject);
-      console.log(replaceIndex);
       if (validateForm()) {
         localStorage.setItem('products', JSON.stringify(products));
         setAlert("Product Modified");
@@ -179,7 +188,7 @@ export default function AddOrUpdateProducts() {
 
   return (
     <>
-    {showAlert&&<Alert alertMessage={alert} onOk={hideAlertAndGoToSellerPage}/>}
+    {showAlert&&<Alert alertMessage={alert} onOk={hideSuccessAlertAndGoToSellerPage}/>}
       <div className="form-container">
         <h1 id="form-title">{id === "addProduct" ? "Add product" : "Update product"}</h1>
         <p id="initial-form-condition">*all fields are required</p>
@@ -207,7 +216,6 @@ export default function AddOrUpdateProducts() {
               name="category"
               value={productObject.category}
               onChange={handleChange}
-
             />
           </div>
 
@@ -248,7 +256,6 @@ export default function AddOrUpdateProducts() {
               name="return"
               value={productObject.return}
               onChange={handleChange}
-
             />
           </div>
 

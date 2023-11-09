@@ -3,14 +3,14 @@
     justify-content: center;
 }
 
-#cart-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
 .cart-item-image {
     height: 140px;
     width: 140px;
+}
+
+#cart-table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
 #cart-table tbody tr {

@@ -3,9 +3,11 @@ import './loginStyle.css'
 import { useNavigate } from 'react-router-dom';
 
 export default function Login({ setAuth }) {
+    //state to store 
     const [userData, setUserData] = useState([]);
     const [userName, setuserName] = useState("");
     const [userPassword, setUserPassword] = useState("");
+
     const [errorObject, setErrorObject] = useState({
         "userNameError": "",
         "passwordError": ""
@@ -68,7 +70,7 @@ export default function Login({ setAuth }) {
         return isValid;
     }
 
-    //check user credentials
+    //check user credentials and if correct then go to respective pages
     function isUserValid() {
         if (isDataValid()) {
             for (let i = 0; i < userData.length; i++) {
@@ -113,13 +115,16 @@ export default function Login({ setAuth }) {
         }
         setErrorObject(tempObject);
     }
+
     return (
         <>
             <body className="login-container">
+
                 <div className="centerdiv">
                     <h1 id='login-text0'>Login</h1>
                 </div>
                 <br /><br /><br /><br /><br /><br />
+
                 <div className='centerdiv'>
                     <label><span className='login-text1'>User Name:</span>
                         <input type="text" id="username" placeholder='Enter username' onChange={getName} />
@@ -146,6 +151,7 @@ export default function Login({ setAuth }) {
                 <div className='centerdiv'>
                     <button className='signin' onClick={isUserValid}>Sign in</button>
                 </div>
+                
             </body>
         </>
     )

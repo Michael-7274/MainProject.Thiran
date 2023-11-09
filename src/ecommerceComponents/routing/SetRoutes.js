@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from '../loginPart/Login';
-import AssignProducts from '../productCatalogPart/AssignProducts';
-import ProductFullDetails from '../individualProductPage/ProductFullDetails';
-import Cart from '../cartPart/Cart';
 import PageNotFound from '../PageNotFound';
-import SellerMainPage from '../sellerPart/SellerMainPage';
-import AddOrUpdateProducts from '../sellerPart/AddOrUpdateProducts';
+import SellerMainPage from '../sellerPart/sellerMainPage/SellerMainPage';
+import AddOrUpdateProducts from '../sellerPart/addOrUpdateProduct/AddOrUpdateProducts';
+import AssignProducts from '../buyerPart/productCatalogPage/AssignProducts';
+import ProductFullDetails from '../buyerPart/individualProductPage/ProductFullDetails';
+import Cart from '../buyerPart/cartPage/Cart';
 
 export default function SetRoutes() {
 
@@ -61,17 +61,21 @@ export default function SetRoutes() {
                                     <>
                                         {/* paths accessible to the buyer customer */}
                                         {/* '/' path overwitten to avoid showing the login page to user after login */}
-                                        <Route exact path='/' element={<AssignProducts logout={setNewAuthentication} />}></Route>
+                                        <Route exact path='/' element={<AssignProducts />}></Route>
+
                                         {/* catalog page to show products to the user */}
-                                        <Route exact path='/catalog' element={<AssignProducts logout={setNewAuthentication} />}>
+                                        <Route exact path='/catalog' element={<AssignProducts />}>
                                         </Route>
+
                                         {/* Page to show full details of the product */}
                                         <Route exact path='/product/:productID' element={<ProductFullDetails />}></Route>
+
                                         {/* Cart page to view the items added to cart */}
                                         <Route exact path='/cart' element={<Cart />}></Route>
                                     </> :
                                     <>
                                         {/* paths accessible to the seller */}
+                                        {/* '/' path overwitten to avoid showing the login page to user after login */}
                                         <Route exact path='/' element={<SellerMainPage logout={setNewAuthentication} />}>
                                         </Route>
                                         {/* seller page to show products soldby seller */}

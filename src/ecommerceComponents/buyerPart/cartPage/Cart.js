@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import ShowCartItems from './ShowCartItems';
 import './cart.css';
-import NavBar from '../generalComponents/navBar/NavBar';
-import DeleteModal from '../generalComponents/confirmationModal/deleteModal/DeleteModal';
+import NavBar from '../../generalComponents/navBar/NavBar';
+import DeleteModal from '../../generalComponents/confirmationModal/deleteModal/DeleteModal';
 export default function Cart() {
 
+  //state to store cart items
   const [cartItems, setCartItems] = useState([]);
 
   //states for delete modal
@@ -12,47 +13,45 @@ export default function Cart() {
   const[indexOfItemToDelete,setindexOfItemToDelete]=useState(null);
 
   let totalAmount=0;
+  const cartId="cart"+JSON.parse(localStorage.getItem('authentication')).id;
 
-  //gets the cart items from local storage on page load
+  //useEffect to invoke getCartitems() and set Event Listener 'focus' to refresh the page on visit
   useEffect(() => {
     getCartItems();
-  }, []);
-
-  // refreshes the page whenever we return to it from another tab-to make the cart items are present in the cart page
-  useEffect(() => {
     window.addEventListener('focus', refreshPage);//add a eventListener that calls refreshPage() when we get to the tab
     return () => {
       window.removeEventListener('focus', refreshPage);//removes the eventlistener when we are in the tab to avoid memory leaks
     }
   }, []);
 
-  //refreshes the page
+  //function to refresh the page
   const refreshPage = () => {
+    //the refresh is used to sync the cart with local storage
     window.location.reload();
   }
 
-  //to get the cart items from local storage on render
+  //function to get the cart items from local storage on render
   const getCartItems = () => {
-    const items = localStorage.getItem('cart');
+    const items = localStorage.getItem(cartId);
     setCartItems(items && items !== "undefined" ? JSON.parse(items) : []);
   }
 
-  // to delete a cart item using index of the item in the array
+  //function to invoke delete Modal
   const deleteItem = (i) => {
     setindexOfItemToDelete(i);
     setShowModal(true);
   }
 
-  //invoked if the delete is confirmed
+  //function invoked if the delete is confirmed(in Delete Modal)
   const confirmDelete=()=>{
     let tempArr = [...cartItems];
     tempArr.splice(indexOfItemToDelete, 1);
-    localStorage.setItem('cart', JSON.stringify(tempArr));
+    localStorage.setItem(cartId, JSON.stringify(tempArr));
     setCartItems(tempArr);
     setShowModal(false);
   }
 
-  //invoked if the delete is cancelled
+  // function invoked if the delete is cancelled(in Delete Modal)
   const cancelDelete=()=>{
 
     setShowModal(false);
@@ -60,7 +59,7 @@ export default function Cart() {
   }
   
 
-  //map the cart items array by using the child components 
+  //function to map the cartitems into child components, store it as an array and calculate total price of cart items
   const showCartItems = () => {
       return cartItems.map((item, i) => {
         totalAmount=totalAmount+Number(item.price);
@@ -68,8 +67,10 @@ export default function Cart() {
       });
   }
 
+  //the array of child components is stored into itemCards
   const itemCards = showCartItems();
 
+  //page to set when items are not found
   if(itemCards.length===0)
   {
     return(
