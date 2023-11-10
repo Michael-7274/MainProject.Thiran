@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/MainProject.Thiran/static/css/main.577e7b9b.css",
-    "main.js": "/MainProject.Thiran/static/js/main.1ec302df.js",
+    "main.js": "/MainProject.Thiran/static/js/main.c1d1376c.js",
     "static/js/787.46493d11.chunk.js": "/MainProject.Thiran/static/js/787.46493d11.chunk.js",
     "static/media/e-commerce-background.jpg": "/MainProject.Thiran/static/media/e-commerce-background.f1ab1cecece457ff6162.jpg",
     "index.html": "/MainProject.Thiran/index.html",
     "main.577e7b9b.css.map": "/MainProject.Thiran/static/css/main.577e7b9b.css.map",
-    "main.1ec302df.js.map": "/MainProject.Thiran/static/js/main.1ec302df.js.map",
+    "main.c1d1376c.js.map": "/MainProject.Thiran/static/js/main.c1d1376c.js.map",
     "787.46493d11.chunk.js.map": "/MainProject.Thiran/static/js/787.46493d11.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.577e7b9b.css",
-    "static/js/main.1ec302df.js"
+    "static/js/main.c1d1376c.js"
   ]
 }
