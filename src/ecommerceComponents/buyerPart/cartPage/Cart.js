@@ -15,6 +15,7 @@ export default function Cart() {
 
   let totalAmount = 0;
   const cartId = "cart" + JSON.parse(localStorage.getItem('authentication')).id;
+  const availableProducts = JSON.parse(localStorage.getItem('products'));
 
   //useEffect to invoke getCartitems() and set Event Listener 'focus' to refresh the page on visit
   useEffect(() => {
@@ -33,8 +34,17 @@ export default function Cart() {
 
   //function to get the cart items from local storage on render
   const getCartItems = () => {
-    const items = localStorage.getItem(cartId);
-    setCartItems(items && items !== "undefined" ? JSON.parse(items) : []);
+    let items = localStorage.getItem(cartId);
+
+    if (items && items !== "undefined") {
+      items = JSON.parse(items);
+      const availableCartItems = items
+        .filter(cartProduct => { return availableProducts.some(product => product.id === cartProduct.id) });
+      setCartItems(availableCartItems);
+    }
+    else {
+      setCartItems([]);
+    }
   }
 
   //function to invoke delete Modal

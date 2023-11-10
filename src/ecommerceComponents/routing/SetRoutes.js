@@ -50,7 +50,7 @@ export default function SetRoutes() {
 
     return (
         <>
-            <HashRouter>
+            <BrowserRouter>
                 <Routes>
                     {   //based on user authentication let user access site
                         (!auth.authentication) ?
@@ -88,7 +88,7 @@ export default function SetRoutes() {
                     }
                     <Route exact path='*' element={<PageNotFound />}></Route>
                 </Routes>
-            </HashRouter>
+            </BrowserRouter>
         </>
     )
 }
