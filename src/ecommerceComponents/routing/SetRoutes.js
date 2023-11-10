@@ -12,7 +12,7 @@ export default function SetRoutes() {
 
     //Authorization state object to control user login 
     const [auth, setAuth] = useState({
-        "authemtication":false,
+        "authentication":false,
         "role":null
     });
 

@@ -8,6 +8,13 @@
     width: 140px;
 }
 
+.cart-page{
+    background-image: url("e-commerce-background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
 #cart-table {
     width: 100%;
     border-collapse: collapse;
@@ -18,8 +25,8 @@
 }
 
 #cart-table tbody tr:hover {
-    background-color: #ddd;
-    border: 1px solid #ddd;
+    background-color: #ffff99;
+    border: 1px solid #ffff99;
     border-bottom: 2px solid black;
 }
 

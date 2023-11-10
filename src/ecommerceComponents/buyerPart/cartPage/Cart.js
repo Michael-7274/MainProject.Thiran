@@ -3,17 +3,18 @@ import ShowCartItems from './ShowCartItems';
 import './cart.css';
 import NavBar from '../../generalComponents/navBar/NavBar';
 import DeleteModal from '../../generalComponents/confirmationModal/deleteModal/DeleteModal';
+
 export default function Cart() {
 
   //state to store cart items
   const [cartItems, setCartItems] = useState([]);
 
   //states for delete modal
-  const[showModal,setShowModal]=useState(false);
-  const[indexOfItemToDelete,setindexOfItemToDelete]=useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [indexOfItemToDelete, setindexOfItemToDelete] = useState(null);
 
-  let totalAmount=0;
-  const cartId="cart"+JSON.parse(localStorage.getItem('authentication')).id;
+  let totalAmount = 0;
+  const cartId = "cart" + JSON.parse(localStorage.getItem('authentication')).id;
 
   //useEffect to invoke getCartitems() and set Event Listener 'focus' to refresh the page on visit
   useEffect(() => {
@@ -43,7 +44,7 @@ export default function Cart() {
   }
 
   //function invoked if the delete is confirmed(in Delete Modal)
-  const confirmDelete=()=>{
+  const confirmDelete = () => {
     let tempArr = [...cartItems];
     tempArr.splice(indexOfItemToDelete, 1);
     localStorage.setItem(cartId, JSON.stringify(tempArr));
@@ -52,63 +53,63 @@ export default function Cart() {
   }
 
   // function invoked if the delete is cancelled(in Delete Modal)
-  const cancelDelete=()=>{
+  const cancelDelete = () => {
 
     setShowModal(false);
 
   }
-  
 
   //function to map the cartitems into child components, store it as an array and calculate total price of cart items
   const showCartItems = () => {
-      return cartItems.map((item, i) => {
-        totalAmount=totalAmount+Number(item.price);
-        return <ShowCartItems key={item.id} cartItemAndIndex={[item, i]} deleteItem={deleteItem} />
-      });
+    return cartItems.map((item, i) => {
+      totalAmount = totalAmount + Number(item.price);
+      return <ShowCartItems key={item.id} cartItemAndIndex={[item, i]} deleteItem={deleteItem} />
+    });
   }
 
   //the array of child components is stored into itemCards
   const itemCards = showCartItems();
 
   //page to set when items are not found
-  if(itemCards.length===0)
-  {
-    return(
+  if (itemCards.length === 0) {
+    return (
       <>
-      <NavBar/>
-      <h1>No items in your Cart</h1>
+        <NavBar />
+        <h1>No items in your Cart</h1>
       </>
     );
   }
 
   return (
     <>
-    {
-    showModal&&<DeleteModal message={`Do you really want to delete ${cartItems[indexOfItemToDelete].name} from cart?`} 
-    onConfirm={confirmDelete} onCancel={cancelDelete}/>
-    }
-      <NavBar />
-      <div className='cart-table-container'>
-        <table id="cart-table">
-          <tbody>
-            {itemCards}
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colSpan={2}>
-                <div className='centerdiv'>
-              <h3>Total</h3>
-              </div>
-              </td>
-              <td>
-                Rs.{totalAmount}
-              </td>
-              <td>
-              </td>
-            </tr>
-          </tfoot>
-        </table>
+      <body className="cart-page">
+        {
+          showModal && <DeleteModal message={`Do you really want to delete ${cartItems[indexOfItemToDelete].name} from cart?`}
+            onConfirm={confirmDelete} onCancel={cancelDelete} />
+        }
+        <NavBar />
+        <div className='cart-table-container'>
+          <table id="cart-table">
+            <tbody>
+              {itemCards}
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colSpan={2}>
+                  <div className='centerdiv'>
+                    <h3>Total</h3>
+                  </div>
+                </td>
+                <td>
+                  Rs.{totalAmount}
+                </td>
+                <td>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
         </div>
+      </body>
     </>
   )
 }

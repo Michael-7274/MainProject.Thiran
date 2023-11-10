@@ -1,3 +1,9 @@
+.add-or-update-form-body{
+    background-image: url("../../e-commerce-background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
 .form-container {
     max-width: 600px;
     margin: 0 auto;

@@ -1,3 +1,10 @@
+.catalog-page{
+    background-image: url("e-commerce-background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
 .zoom:hover {
     -ms-transform: scale(1.1);
     /* for the transform to work on IE 9 */

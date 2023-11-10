@@ -108,11 +108,13 @@ export default function AssignProducts() {
   let showProduct = filterProducts();
   return (
     <>
+    <body className='catalog-page'>
       <NavBar />
       <div className='card-container'>
         {showProduct}
       </div>
       <ProductPagination itemCount={itemCount} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      </body>
     </>
   )
 }

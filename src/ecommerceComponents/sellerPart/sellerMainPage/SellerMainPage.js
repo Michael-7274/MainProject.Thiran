@@ -141,49 +141,50 @@ export default function SellerMainPage({ logout }) {
 
   return (
     <>
-      <div className='seller-main-page'>
+      <body className='full-seller-main-page'>
+        <div className='seller-table'>
 
-        <div id='seller-headline-container'>
-          <div className='centerdiv'>
-            <div id='seller-title'>SellerMainPage</div>
+          <div id='seller-headline-container'>
+            <div className='centerdiv'>
+              <div id='seller-title'>SellerMainPage</div>
+            </div>
+            <button id='seller-logout' onClick={logoutOfSite}>Logout</button>
           </div>
-          <button id='seller-logout' onClick={logoutOfSite}>Logout</button>
+          {deleteIsVisible && <DeleteModal message={"Do you really want to remove " + productToBeDeleted.name + " from your store?"}
+            onConfirm={onDeleteConfirm} onCancel={onDeleteCancel} />}
+
+          <br /><br /><br /><br />
+
+          <div id='product-seller-body'>
+            <div id='add-button-container'>
+              <NavLink to={`/productcreateorupdate/${'addProduct'}`}>
+                <button id='seller-add-product-button'>Add product +</button>
+              </NavLink>
+            </div><br />
+
+            <table className="product-table">
+              <thead>
+                <tr>
+                  <th>S.no</th>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody >
+                {productRows}
+              </tbody>
+            </table>
+
+          </div>
+
         </div>
-        {deleteIsVisible && <DeleteModal message={"Do you really want to remove " + productToBeDeleted.name + " from your store?"}
-          onConfirm={onDeleteConfirm} onCancel={onDeleteCancel} />}
 
-        <br /><br /><br /><br />
-
-        <div id='product-seller-body'>
-          <div id='add-button-container'>
-            <NavLink to={`/productcreateorupdate/${'addProduct'}`}>
-              <button id='seller-add-product-button'>Add product +</button>
-            </NavLink>
-          </div><br />
-
-          <table className="product-table">
-            <thead>
-              <tr>
-                <th>S.no</th>
-                <th>Product</th>
-                <th>Price</th>
-                <th></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody >
-              {productRows}
-            </tbody>
-          </table>
-
+        <div className='pagination'>
+          <ProductPagination itemCount={sellerProducts.length} currentPage={currentPage} setCurrentPage={setCurrentPage} />
         </div>
-
-      </div>
-
-      <div className='pagination'>
-        <ProductPagination itemCount={sellerProducts.length} currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      </div>
-
+      </body>
 
     </>
   )

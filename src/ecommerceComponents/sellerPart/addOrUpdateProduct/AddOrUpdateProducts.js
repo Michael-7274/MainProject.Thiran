@@ -39,8 +39,8 @@ export default function AddOrUpdateProducts() {
   });
 
   //states to use with the alert component
-  const [alert,setAlert]=useState('');//the alert message
-  const [showAlert,setShowAlert]=useState(false);//show the alert or not
+  const [alert, setAlert] = useState('');//the alert message
+  const [showAlert, setShowAlert] = useState(false);//show the alert or not
 
   //ID of the product from link
   const { id } = useParams();
@@ -59,7 +59,7 @@ export default function AddOrUpdateProducts() {
   const checkId = () => {
     if (id !== "addProduct") {
       const currentProduct = products.find((product) => product.id === id);
-      if(currentProduct===undefined){
+      if (currentProduct === undefined) {
         navigate('/seller')
       }
       setProductObject(currentProduct);
@@ -94,7 +94,7 @@ export default function AddOrUpdateProducts() {
       tempErrorObject.name = "*Name can't be empty";
       isFormValid = false;
     }
-    else if(productObject.name.length>30){
+    else if (productObject.name.length > 30) {
       tempErrorObject.name = "*Name can't be higher than 30 characters in length";
       isFormValid = false;
     }
@@ -151,7 +151,7 @@ export default function AddOrUpdateProducts() {
   }
 
   //function invoked when we click on alert button or around alert window
-  const hideSuccessAlertAndGoToSellerPage=()=>{
+  const hideSuccessAlertAndGoToSellerPage = () => {
     setShowAlert(false);
     navigate('/seller');
   }
@@ -180,7 +180,7 @@ export default function AddOrUpdateProducts() {
         localStorage.setItem('products', JSON.stringify(products));
         setAlert("Product Modified");
         setShowAlert(true);
-        
+
       }
     }
   }
@@ -188,110 +188,112 @@ export default function AddOrUpdateProducts() {
 
   return (
     <>
-    {showAlert&&<Alert alertMessage={alert} onOk={hideSuccessAlertAndGoToSellerPage}/>}
-      <div className="form-container">
-        <h1 id="form-title">{id === "addProduct" ? "Add product" : "Update product"}</h1>
-        <p id="initial-form-condition">*all fields are required</p>
+      <body className='add-or-update-form-body'>
+        {showAlert && <Alert alertMessage={alert} onOk={hideSuccessAlertAndGoToSellerPage} />}
+        <div className="form-container">
+          <h1 id="form-title">{id === "addProduct" ? "Add product" : "Update product"}</h1>
+          <p id="initial-form-condition">*all fields are required</p>
 
-        <form id="acform" onSubmit={handleSubmit}>
+          <form id="acform" onSubmit={handleSubmit}>
 
-          <div className="newdiv">
-            <label htmlFor="name">Product Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={productObject.name}
-              onChange={handleChange}
-            />
-          </div>
+            <div className="newdiv">
+              <label htmlFor="name">Product Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={productObject.name}
+                onChange={handleChange}
+              />
+            </div>
 
-          <div className='error-message'>{errorObject.name}</div>
+            <div className='error-message'>{errorObject.name}</div>
 
-          <div className="newdiv">
-            <label htmlFor="category">Product Category:</label>
-            <input
-              type="text"
-              id="category"
-              name="category"
-              value={productObject.category}
-              onChange={handleChange}
-            />
-          </div>
+            <div className="newdiv">
+              <label htmlFor="category">Product Category:</label>
+              <input
+                type="text"
+                id="category"
+                name="category"
+                value={productObject.category}
+                onChange={handleChange}
+              />
+            </div>
 
-          <div className='error-message'>{errorObject.category}</div>
+            <div className='error-message'>{errorObject.category}</div>
 
-          <div className="newdiv">
-            <label htmlFor="description">Product Description:</label>
-            <textarea
-              id="description"
-              name="description"
-              value={productObject.description}
-              onChange={handleChange}
+            <div className="newdiv">
+              <label htmlFor="description">Product Description:</label>
+              <textarea
+                id="description"
+                name="description"
+                value={productObject.description}
+                onChange={handleChange}
 
-            ></textarea>
-          </div>
+              ></textarea>
+            </div>
 
-          <div className='error-message'>{errorObject.description}</div>
+            <div className='error-message'>{errorObject.description}</div>
 
-          <div className="newdiv">
-            <label htmlFor="warranty">Product Warranty:</label>
-            <input
-              type="text"
-              id="warranty"
-              name="warranty"
-              value={productObject.warranty}
-              onChange={handleChange}
+            <div className="newdiv">
+              <label htmlFor="warranty">Product Warranty:</label>
+              <input
+                type="text"
+                id="warranty"
+                name="warranty"
+                value={productObject.warranty}
+                onChange={handleChange}
 
-            />
-          </div>
+              />
+            </div>
 
-          <div className='error-message'>{errorObject.warranty}</div>
+            <div className='error-message'>{errorObject.warranty}</div>
 
-          <div className="newdiv">
-            <label htmlFor="return">Return time period:</label>
-            <input
-              type="text"
-              id="return"
-              name="return"
-              value={productObject.return}
-              onChange={handleChange}
-            />
-          </div>
+            <div className="newdiv">
+              <label htmlFor="return">Return time period:</label>
+              <input
+                type="text"
+                id="return"
+                name="return"
+                value={productObject.return}
+                onChange={handleChange}
+              />
+            </div>
 
-          <div className='error-message'>{errorObject.return}</div>
+            <div className='error-message'>{errorObject.return}</div>
 
-          <div className="newdiv">
-            <label htmlFor="small-image-url">Image URL:</label>
-            <input
-              type="text"
-              id="small-image-url"
-              name="imageurls.small"
-              value={productObject.imageurls.small}
-              onChange={handleChange}
-            />
-          </div>
+            <div className="newdiv">
+              <label htmlFor="small-image-url">Image URL:</label>
+              <input
+                type="text"
+                id="small-image-url"
+                name="imageurls.small"
+                value={productObject.imageurls.small}
+                onChange={handleChange}
+              />
+            </div>
 
-          <div className='error-message'>{errorObject.imageurls.small}</div>
+            <div className='error-message'>{errorObject.imageurls.small}</div>
 
-          <div className="newdiv">
-            <label htmlFor="price">Product price:</label>
-            <input
-              type="number"
-              id="price"
-              name="price"
-              value={id !== "addProduct" ? Number(productObject.price) : null}
-              onChange={handleChange}
-            />
-          </div>
+            <div className="newdiv">
+              <label htmlFor="price">Product price:</label>
+              <input
+                type="number"
+                id="price"
+                name="price"
+                value={id !== "addProduct" ? Number(productObject.price) : null}
+                onChange={handleChange}
+              />
+            </div>
 
-          <div className='error-message'>{errorObject.price}</div>
+            <div className='error-message'>{errorObject.price}</div>
 
-          <div className="newdiv">
-            <button type="submit" >{id === "addProduct" ? "Add" : "Modify"}</button>
-          </div>
-        </form>
-      </div>
+            <div className="newdiv">
+              <button type="submit" >{id === "addProduct" ? "Add" : "Modify"}</button>
+            </div>
+          </form>
+        </div>
+      </body>
     </>
   );
 }
