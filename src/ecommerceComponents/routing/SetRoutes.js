@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Login from '../loginPart/Login';
 import PageNotFound from '../PageNotFound';
 import SellerMainPage from '../sellerPart/sellerMainPage/SellerMainPage';
@@ -7,7 +7,7 @@ import AddOrUpdateProducts from '../sellerPart/addOrUpdateProduct/AddOrUpdatePro
 import AssignProducts from '../buyerPart/productCatalogPage/AssignProducts';
 import ProductFullDetails from '../buyerPart/individualProductPage/ProductFullDetails';
 import Cart from '../buyerPart/cartPage/Cart';
-//localhost build
+//github pages build
 export default function SetRoutes() {
 
     //Authorization state object to control user login 
@@ -50,7 +50,7 @@ export default function SetRoutes() {
 
     return (
         <>
-            <BrowserRouter>
+            <HashRouter>
                 <Routes>
                     {   //based on user authentication let user access site
                         (!auth.authentication) ?
@@ -88,7 +88,7 @@ export default function SetRoutes() {
                     }
                     <Route exact path='*' element={<PageNotFound />}></Route>
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </>
     )
 }
