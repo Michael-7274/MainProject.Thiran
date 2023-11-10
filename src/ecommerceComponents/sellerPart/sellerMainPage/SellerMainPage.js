@@ -34,12 +34,10 @@ export default function SellerMainPage({ logout }) {
     //return in async is different from normal function return ,here it returns a promise
     const listOfProducts = JSON.parse(localStorage.getItem('products'));
     if ((listOfProducts !== "undefined") && listOfProducts) {
-      console.log("if executed");
       const data = JSON.parse(localStorage.getItem('products'));//JSON.parse() converts a JSON string into a JS object
       setProductsList(data);
     }
     else {
-      console.log("else executed");
       try {
         const response = await fetch('products.json');
         const data = await response.json();
@@ -141,7 +139,7 @@ export default function SellerMainPage({ logout }) {
 
   return (
     <>
-      <body className='full-seller-main-page'>
+      <div className='full-seller-main-page'>
         <div className='seller-table'>
 
           <div id='seller-headline-container'>
@@ -184,7 +182,7 @@ export default function SellerMainPage({ logout }) {
         <div className='pagination'>
           <ProductPagination itemCount={sellerProducts.length} currentPage={currentPage} setCurrentPage={setCurrentPage} />
         </div>
-      </body>
+      </div>
 
     </>
   )

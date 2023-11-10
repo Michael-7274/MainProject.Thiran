@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import Login from '../loginPart/Login';
 import PageNotFound from '../PageNotFound';
 import SellerMainPage from '../sellerPart/sellerMainPage/SellerMainPage';
@@ -50,7 +50,7 @@ export default function SetRoutes() {
 
     return (
         <>
-            <BrowserRouter>
+            <HashRouter>
                 <Routes>
                     {   //based on user authentication let user access site
                         (!auth.authentication) ?
@@ -88,7 +88,7 @@ export default function SetRoutes() {
                     }
                     <Route exact path='*' element={<PageNotFound />}></Route>
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </>
     )
 }

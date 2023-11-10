@@ -82,7 +82,7 @@ export default function Cart() {
 
   return (
     <>
-      <body className="cart-page">
+      <div className="cart-page">
         {
           showModal && <DeleteModal message={`Do you really want to delete ${cartItems[indexOfItemToDelete].name} from cart?`}
             onConfirm={confirmDelete} onCancel={cancelDelete} />
@@ -109,7 +109,7 @@ export default function Cart() {
             </tfoot>
           </table>
         </div>
-      </body>
+      </div>
     </>
   )
 }

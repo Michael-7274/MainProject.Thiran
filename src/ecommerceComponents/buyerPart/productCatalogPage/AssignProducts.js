@@ -44,7 +44,6 @@ export default function AssignProducts() {
       try {
         const response = await fetch('products.json');
         const data = await response.json();
-        console.log(data);
         setProductsList(data ? data : []);
         localStorage.setItem('products', JSON.stringify(data));
       }
@@ -72,7 +71,6 @@ export default function AssignProducts() {
     let pgNo = localStorage.getItem('pgNo');
     if (pgNo && (pgNo !== "undefined")) {
       pgNo = Number(JSON.parse(pgNo));
-      console.log(pgNo);
       setCurrentPage(pgNo);
     }
     else {
@@ -108,13 +106,13 @@ export default function AssignProducts() {
   let showProduct = filterProducts();
   return (
     <>
-    <body className='catalog-page'>
+    <div className='catalog-page'>
       <NavBar />
       <div className='card-container'>
         {showProduct}
       </div>
       <ProductPagination itemCount={itemCount} currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      </body>
+      </div>
     </>
   )
 }

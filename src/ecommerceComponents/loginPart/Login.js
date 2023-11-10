@@ -118,7 +118,7 @@ export default function Login({ setAuth }) {
 
     return (
         <>
-            <body className="login-container">
+            <div className="login-container">
 
                 <div className="centerdiv">
                     <h1 id='login-text0'>Login</h1>
@@ -152,7 +152,7 @@ export default function Login({ setAuth }) {
                     <button className='signin' onClick={isUserValid}>Sign in</button>
                 </div>
                 
-            </body>
+            </div>
         </>
     )
 }
