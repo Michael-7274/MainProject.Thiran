@@ -7,7 +7,7 @@ import AddOrUpdateProducts from '../sellerPart/addOrUpdateProduct/AddOrUpdatePro
 import AssignProducts from '../buyerPart/productCatalogPage/AssignProducts';
 import ProductFullDetails from '../buyerPart/individualProductPage/ProductFullDetails';
 import Cart from '../buyerPart/cartPage/Cart';
-
+//localhost build
 export default function SetRoutes() {
 
     //Authorization state object to control user login 
