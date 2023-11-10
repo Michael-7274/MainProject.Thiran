@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/MainProject.Thiran/static/css/main.577e7b9b.css",
-    "main.js": "/MainProject.Thiran/static/js/main.efebe1c2.js",
-    "static/js/787.46493d11.chunk.js": "/MainProject.Thiran/static/js/787.46493d11.chunk.js",
-    "static/media/e-commerce-background.jpg": "/MainProject.Thiran/static/media/e-commerce-background.f1ab1cecece457ff6162.jpg",
-    "index.html": "/MainProject.Thiran/index.html",
-    "main.577e7b9b.css.map": "/MainProject.Thiran/static/css/main.577e7b9b.css.map",
-    "main.efebe1c2.js.map": "/MainProject.Thiran/static/js/main.efebe1c2.js.map",
-    "787.46493d11.chunk.js.map": "/MainProject.Thiran/static/js/787.46493d11.chunk.js.map"
+    "main.css": "/static/css/main.d9ae29c3.css",
+    "main.js": "/static/js/main.f406fdec.js",
+    "static/js/787.46493d11.chunk.js": "/static/js/787.46493d11.chunk.js",
+    "static/media/e-commerce-background.jpg": "/static/media/e-commerce-background.f1ab1cecece457ff6162.jpg",
+    "index.html": "/index.html",
+    "main.d9ae29c3.css.map": "/static/css/main.d9ae29c3.css.map",
+    "main.f406fdec.js.map": "/static/js/main.f406fdec.js.map",
+    "787.46493d11.chunk.js.map": "/static/js/787.46493d11.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.577e7b9b.css",
-    "static/js/main.efebe1c2.js"
+    "static/css/main.d9ae29c3.css",
+    "static/js/main.f406fdec.js"
   ]
 }
