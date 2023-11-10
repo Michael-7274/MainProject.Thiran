@@ -47,7 +47,6 @@ export default function ProductFullDetails() {
   //checks if there are new lines in the description (i.e)'/n',this function puts <br/> in place of '\n' to create new lines
   const getProperDescription = () => {
     const d= new Date();
-
     let descriptionLines = product.description.split('\n')
     console.log(descriptionLines);
     return descriptionLines.map((description,i) => <li key={d.getTime()+i}>{description}</li>);
