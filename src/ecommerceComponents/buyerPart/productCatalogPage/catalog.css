@@ -1,0 +1,56 @@
+.catalog-page{
+    background-image: url("e-commerce-background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.1);
+    /* for the transform to work on IE 9 */
+    -webkit-transform: scale(1.1);
+    /* for the transform to work on Safari 3-8 */
+    transform: scale(1.1);
+}
+
+.centerdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.product-card {
+    position: relative;
+    width: 201px;
+    height: 201px;
+    border: 3px solid #febd69;
+    background-color: #232F3E;
+    border-radius: 20px;
+    margin: 30px;
+}
+
+.image-style {
+    position: absolute;
+    border: 1px solid black;
+    height: 140px;
+    width: 140px;
+    left: 29px;
+    right: 50px;
+    top: 1px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.card-text {
+    position: absolute;
+    bottom: -2px;
+    left:15px;
+}
+
+.card-text p {
+    color: #febd69;
+    margin: 0px;
+}
+

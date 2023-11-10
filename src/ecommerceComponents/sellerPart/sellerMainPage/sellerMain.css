@@ -1,0 +1,267 @@
+.full-seller-main-page{
+    background-image: url("../../e-commerce-background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+#seller-headline-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background-color: #232F3E;
+    z-index: 999;
+    /* Ensures it stays on top of other elements */
+}
+
+#seller-title {
+    font-size: large;
+    font-weight: bolder;
+    position: absolute;
+    top: 15px;
+    color: #FEBD69;
+}
+
+#seller-logout {
+    position: absolute;
+    top: 10px;
+    width: 100px;
+    height: 36px;
+    left: 50px;
+    background-color: #FEBD69;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #232F3E;
+    font-weight: 900;
+}
+
+#seller-add-product-button {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#seller-add-product-button:hover {
+    background-color: #FEBD69;
+    box-shadow: #febd692d 0 -6px 8px inset;
+    transform: scale(1.125);
+}
+
+#seller-add-product-button:active {
+    transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+    #seller-add-product-button {
+        font-size: 1.5rem;
+        padding: .75rem 2rem;
+    }
+}
+
+
+
+
+.product-table .product-delete-button {
+    background: linear-gradient(to bottom right, #EF4765, #d90404);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+}
+
+.product-table .product-delete-button:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.product-table .product-delete-button:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.product-table .product-update-button {
+    background-color: #13aa52;
+    border: 1px solid #13aa52;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    outline: none;
+    outline: 0;
+    padding: 5px 10px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.product-table .product-update-button:hover {
+    box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+    transform: translateY(-2px);
+}
+
+.product-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.product-table td,
+.product-table th {
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.product-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 14px;
+}
+
+.product-table thead th {
+    color: #FEBD69;
+    background: #232F3E;
+    font-size: 14px;
+}
+
+
+.product-table thead th:nth-child(odd) {
+    color: #232F3E;
+    background: #FEBD69
+}
+
+.product-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .product-table {
+        display: block;
+        width: 100%;
+    }
+
+    .table-wrapper:before {
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+
+    .product-table thead,
+    .product-table tbody,
+    .product-table thead th {
+        display: block;
+    }
+
+    .product-table thead th:last-child {
+        border-bottom: none;
+    }
+
+    .product-table thead {
+        float: left;
+    }
+
+    .product-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+
+    .product-table td,
+    .product-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+
+    .product-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+
+    .product-table tbody tr {
+        display: table-cell;
+    }
+
+    .product-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+
+    .product-table tr:nth-child(even) {
+        background: transparent;
+    }
+
+    .product-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+
+    .product-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+
+    .product-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+
+.pagination .page-no-button-container {
+    bottom: -125px;
+}

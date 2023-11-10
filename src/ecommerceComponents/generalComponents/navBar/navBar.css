@@ -1,0 +1,70 @@
+.centerdiv {
+    display: flex;
+    justify-content: center;
+}
+
+#catalog-logout-button {
+    position: absolute;
+    top: 10px;
+    width: 100px;
+    height: 36px;
+    left: 50px;
+    background-color: #FEBD69;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #232F3E;
+    font-weight: 900;
+
+}
+
+.search-container {
+    position: relative;
+    height: 75px;
+    background-color:#232F3E;
+}
+
+#search-bar {
+    font-size: large;
+    position: absolute;
+    border-radius: 30px;
+    top: 10px;
+    right: 390px;
+    width: 600px;
+    height: 30px;
+}
+
+#search-button {
+    position: absolute;
+    cursor: pointer;
+    background-image: url('./searchIcon.png');
+    border: none;
+    top: 15px;
+    width: 25px;
+    height: 25px;
+    right: 360px;
+}
+
+#cart-button {
+    position: absolute;
+    background-image: url('./cartIcon.png');
+    cursor: pointer;
+    border: none;
+    top: 0px;
+    width: 64px;
+    height: 64px;
+    right: 50px;
+}
+
+#home {
+    position: absolute;
+    cursor: pointer;
+    background-image: url('./homeIcon.png');
+    background-size: cover;
+    background-color: #232F3E;
+    top:10px;
+    right:1000px;
+    width: 30px; /* Adjust the width and height to fit your icon */
+    height: 30px;
+    border: none; /* Remove border if desired */
+  }
+  

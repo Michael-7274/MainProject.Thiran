@@ -1,3 +1,11 @@
+# To use the app
+# Buyer:
+username: michael@buyer.com
+password: michael@buyer.com
+# seller:
+username: michael@seller.com
+password: michael@seller.com
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

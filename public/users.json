@@ -1,0 +1,14 @@
+[
+    {
+        "userName":"michael@seller.com",
+        "password":"michael@seller.com",
+        "role":"seller",
+        "id":"seller1"
+    },
+    {
+        "userName":"michael@buyer.com",
+        "password":"michael@buyer.com",
+        "role":"buyer",
+        "id":"buyer1"
+    }
+]

@@ -1,0 +1,6 @@
+.page-not-found{
+    background-image: url("e-commerce-background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
