@@ -38,8 +38,10 @@ export default function Cart() {
 
     if (items && items !== "undefined") {
       items = JSON.parse(items);
-      const availableCartItems = items
-        .filter(cartProduct => { return availableProducts.some(product => product.id === cartProduct.id) });
+      const availableCartItems = availableProducts
+        .filter(availableProduct => { return items.some(product => product.id === availableProduct.id) });
+
+      localStorage.setItem(cartId,JSON.stringify(availableCartItems));
       setCartItems(availableCartItems);
     }
     else {
