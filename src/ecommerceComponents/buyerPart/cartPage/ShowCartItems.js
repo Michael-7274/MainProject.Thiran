@@ -9,7 +9,7 @@ export default function ShowCartItems({ cartItemAndIndex, deleteItem }) {
   const getProperDescription = () => {
     const d = new Date();
     let descriptionLines = itemArr[0].description.split('\n')
-    return descriptionLines.map((description,i) => <p key={d.getTime()+i}>{description}</p>);
+    return descriptionLines.map((description, i) => <p key={d.getTime() + i}>{description}</p>);
   }
 
   //the array of description lines is stored here
@@ -25,7 +25,7 @@ export default function ShowCartItems({ cartItemAndIndex, deleteItem }) {
         </td>
 
         <td>
-          <h3>{itemArr[0].name}</h3><br/>
+          <h3>{itemArr[0].name}</h3><br />
           {description}
         </td>
 

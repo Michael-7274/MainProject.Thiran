@@ -16,7 +16,7 @@ export default function ProductFullDetails() {
 
   //get the cartId for the current user
   //used to store the item in the appropriate cart
-  const cartId = "cart" +JSON.parse(localStorage.getItem('authentication')).id;
+  const cartId = "cart" + JSON.parse(localStorage.getItem('authentication')).id;
 
   //useEffect to invoke getCartItems() and add event listener 'focus' to page 
   useEffect(() => {
@@ -46,9 +46,9 @@ export default function ProductFullDetails() {
 
   //checks if there are new lines in the description (i.e)'/n',this function puts <br/> in place of '\n' to create new lines
   const getProperDescription = () => {
-    const d= new Date();
+    const d = new Date();
     let descriptionLines = product.description.split('\n')
-    return descriptionLines.map((description,i) => <li key={d.getTime()+i}>{description}</li>);
+    return descriptionLines.map((description, i) => <li key={d.getTime() + i}>{description}</li>);
   }
 
   //the description array is stored into description constant

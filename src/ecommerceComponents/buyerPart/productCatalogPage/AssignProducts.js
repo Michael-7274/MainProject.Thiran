@@ -54,7 +54,7 @@ export default function AssignProducts() {
   }
 
   //function to get filter word and pg no from localstorage, if unavailable set new value in local storage
-  const getFilter= () => {
+  const getFilter = () => {
     let filterWord = localStorage.getItem('filter');
     if (filterWord && (filterWord !== "undefined")) {
       filterWord = JSON.parse(filterWord);
@@ -67,7 +67,7 @@ export default function AssignProducts() {
   }
 
   //function to get pg no from local storage, if unavailable set new initial value inlocal storage
-  const getPageNo=()=>{
+  const getPageNo = () => {
     let pgNo = localStorage.getItem('pgNo');
     if (pgNo && (pgNo !== "undefined")) {
       pgNo = Number(JSON.parse(pgNo));
@@ -106,12 +106,12 @@ export default function AssignProducts() {
   let showProduct = filterProducts();
   return (
     <>
-    <div className='catalog-page'>
-      <NavBar />
-      <div className='card-container'>
-        {showProduct}
-      </div>
-      <ProductPagination itemCount={itemCount} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <div className='catalog-page'>
+        <NavBar />
+        <div className='card-container'>
+          {showProduct}
+        </div>
+        <ProductPagination itemCount={itemCount} currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </div>
     </>
   )

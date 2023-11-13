@@ -12,8 +12,8 @@ export default function SetRoutes() {
 
     //Authorization state object to control user login 
     const [auth, setAuth] = useState({
-        "authentication":false,
-        "role":null
+        "authentication": false,
+        "role": null
     });
 
     //invoke getAuthentication() to get auth object 
@@ -39,8 +39,8 @@ export default function SetRoutes() {
     const getAuthentication = () => {
 
         let data = localStorage.getItem('authentication');
-        if (data && (data!=="undefined")) {
-            data=JSON.parse(data);
+        if (data && (data !== "undefined")) {
+            data = JSON.parse(data);
             setAuth(data);
         }
         else {
@@ -79,10 +79,11 @@ export default function SetRoutes() {
                                         <Route exact path='/' element={<SellerMainPage logout={setNewAuthentication} />}>
                                         </Route>
                                         {/* seller page to show products soldby seller */}
-                                        <Route exact path='/seller'element={<SellerMainPage logout={setNewAuthentication} />}>
+                                        <Route exact path='/seller' element={<SellerMainPage logout={setNewAuthentication} />}>
                                         </Route>
                                         {/* form page to add or update products*/}
-                                        <Route exact path='/productcreateorupdate/:id' element={<AddOrUpdateProducts />}></Route>
+                                        <Route exact path='/productcreateorupdate/:id' element={<AddOrUpdateProducts />}>
+                                        </Route>
                                     </>
                             )
                     }

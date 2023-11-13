@@ -1,6 +1,7 @@
 .page-no-button-container {
     height: 45px;
-    position: absolute;/*fix the position of the pagination component in the screen*/
+    position: absolute;
+    /*fix the position of the pagination component in the screen*/
     left: 0px;
     right: 0px;
     bottom: 0px;
@@ -10,18 +11,19 @@
     width: auto;
 }
 
-.page-no-button-container button{
-    background-color:#232F3E ;
-    color:#FEBD69 ;
+.page-no-button-container button {
+    background-color: #232F3E;
+    color: #FEBD69;
     font-size: large;
     border-radius: 10px;
 }
 
-.page-no-button-container .pages{
-    padding: 20px;/*padding separates prev and next buttons from page buttons*/
+.page-no-button-container .pages {
+    padding: 20px;
+    /*padding separates prev and next buttons from page buttons*/
 }
 
-.page-no-button-container .pages .highlight{
-    background-color:#FEBD69;
-    color: #232F3E; 
+.page-no-button-container .pages .highlight {
+    background-color: #FEBD69;
+    color: #232F3E;
 }

@@ -1,50 +1,59 @@
 .split-container {
-    display: flex;
-    height: 100vh; /* Make the container take up the full height of the viewport */
-  }
+  display: flex;
+  height: 100vh;
+  /* Make the container take up the full height of the viewport */
+}
 
-  .left-section, .right-section {
-    flex: 1; /* Each section takes up equal space */
-  }
+.left-section,
+.right-section {
+  flex: 1;
+  /* Each section takes up equal space */
+}
 
-  .left-section {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0; /* Example background color for left section */
-    background-image: url("e-commerce-background.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-  }
+.left-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  /* Example background color for left section */
+  background-image: url("e-commerce-background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
 
-  .left-section img {
-    width: 300px;
-    height: 500px;
-  }
+.left-section img {
+  width: 300px;
+  height: 500px;
+}
 
-  .right-section {
-    display:flex;
-    flex-direction:column;
-    background-color: #ffff99; /* Example background color for right section */
-    padding: 20px; /* Add some padding for spacing */
-  }
+.right-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffff99;
+  /* Example background color for right section */
+  padding: 20px;
+  /* Add some padding for spacing */
+}
 
-  .right-section h2 {
-    margin-bottom: 10px; /* Add margin below the h2 element */
-  }
+.right-section h2 {
+  margin-bottom: 10px;
+  /* Add margin below the h2 element */
+}
 
-  .right-section p {
-    margin-bottom: 5px; /* Add margin below the p elements */
-  }
+.right-section p {
+  margin-bottom: 5px;
+  /* Add margin below the p elements */
+}
 
-  .right-section button {
-    height:50px;
-    width:200px;
-    background-color:#FFD814;
-    border-color:#FCD200;
-    color:black;
-    font-weight:500;
-    border-radius:8px;
-    margin-top: 10px; /* Add margin on top of the button */
-  }
+.right-section button {
+  height: 50px;
+  width: 200px;
+  background-color: #FFD814;
+  border-color: #FCD200;
+  color: black;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-top: 10px;
+  /* Add margin on top of the button */
+}

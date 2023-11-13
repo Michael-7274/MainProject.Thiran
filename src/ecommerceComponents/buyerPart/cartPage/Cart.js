@@ -22,7 +22,7 @@ export default function Cart() {
     getCartItems();
     window.addEventListener('focus', refreshPage);//add a eventListener that calls refreshPage() when we get to the tab
     return () => {
-      window.removeEventListener('focus', refreshPage);//removes the eventlistener when we are in the tab to avoid memory leaks
+      window.removeEventListener('focus', refreshPage);//removes the eventlistener when we are in tab to avoid memory leaks
     }
   }, []);
 
@@ -41,7 +41,7 @@ export default function Cart() {
       const availableCartItems = availableProducts
         .filter(availableProduct => { return items.some(product => product.id === availableProduct.id) });
 
-      localStorage.setItem(cartId,JSON.stringify(availableCartItems));
+      localStorage.setItem(cartId, JSON.stringify(availableCartItems));
       setCartItems(availableCartItems);
     }
     else {

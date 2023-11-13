@@ -95,7 +95,7 @@ export default function SellerMainPage({ logout }) {
   //if no then switches page
   const changePageOnDelete = () => {
     //calling getSellerProducts().length here instead of using JSON.parse to calculate it doesn't give expected result
-    //don't call using useEffect(()=>{changePageOnDelete();},[productList]) because when the page is loaaded if
+    //don't call using useEffect(()=>{changePageOnDelete();},[productList]) because when the page is loaded if
     //the no.of.seller.products%10 is equal to 0, then the last page is automatically selected
     let sellerProductLength = JSON
       .parse(localStorage.getItem('products')).filter((product) => product.seller === sellerID).length;
@@ -148,7 +148,8 @@ export default function SellerMainPage({ logout }) {
             </div>
             <button id='seller-logout' onClick={logoutOfSite}>Logout</button>
           </div>
-          {deleteIsVisible && <DeleteModal message={"Do you really want to remove " + productToBeDeleted.name + " from your store?"}
+          {deleteIsVisible && <DeleteModal
+            message={"Do you really want to remove " + productToBeDeleted.name + " from your store?"}
             onConfirm={onDeleteConfirm} onCancel={onDeleteCancel} />}
 
           <br /><br /><br /><br />
