@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import './navBar.css'
 export default function NavBar() {
     //filter is given as a state to maintain the filter text in search bar when switching pages
     const [filter, setFilter] = useState('');
 
     const navigate = useNavigate();
+    const location=useLocation();
 
     //invoke getFilterWordFromLocalStorage() to show filter word in search bar
     useEffect(() => {
@@ -30,7 +31,7 @@ export default function NavBar() {
     const goToCatalogHome=()=>{
         localStorage.setItem("filter", JSON.stringify(''));
         localStorage.setItem("pgNo",JSON.stringify(1));
-        let path=window.location.pathname;
+        let path=location.pathname;
         if(path==='/'||path==='/catalog')
         {
             window.location.reload();
@@ -45,7 +46,7 @@ export default function NavBar() {
     const searchProduct = () => {
         localStorage.setItem("filter", JSON.stringify(filter));
         localStorage.setItem("pgNo", JSON.stringify(1));
-        let path=window.location.pathname;
+        let path=location.pathname;
         if(path==='/'||path==='/catalog')
         {
             window.location.reload();

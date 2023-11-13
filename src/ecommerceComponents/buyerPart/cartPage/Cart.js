@@ -15,6 +15,7 @@ export default function Cart() {
 
   let totalAmount = 0;
   const cartId = "cart" + JSON.parse(localStorage.getItem('authentication')).id;
+  const availableProducts = JSON.parse(localStorage.getItem('products'));
 
   //useEffect to invoke getCartitems() and set Event Listener 'focus' to refresh the page on visit
   useEffect(() => {
@@ -33,8 +34,19 @@ export default function Cart() {
 
   //function to get the cart items from local storage on render
   const getCartItems = () => {
-    const items = localStorage.getItem(cartId);
-    setCartItems(items && items !== "undefined" ? JSON.parse(items) : []);
+    let items = localStorage.getItem(cartId);
+
+    if (items && items !== "undefined") {
+      items = JSON.parse(items);
+      const availableCartItems = availableProducts
+        .filter(availableProduct => { return items.some(product => product.id === availableProduct.id) });
+
+      localStorage.setItem(cartId,JSON.stringify(availableCartItems));
+      setCartItems(availableCartItems);
+    }
+    else {
+      setCartItems([]);
+    }
   }
 
   //function to invoke delete Modal
@@ -82,7 +94,7 @@ export default function Cart() {
 
   return (
     <>
-      <body className="cart-page">
+      <div className="cart-page">
         {
           showModal && <DeleteModal message={`Do you really want to delete ${cartItems[indexOfItemToDelete].name} from cart?`}
             onConfirm={confirmDelete} onCancel={cancelDelete} />
@@ -109,7 +121,7 @@ export default function Cart() {
             </tfoot>
           </table>
         </div>
-      </body>
+      </div>
     </>
   )
 }

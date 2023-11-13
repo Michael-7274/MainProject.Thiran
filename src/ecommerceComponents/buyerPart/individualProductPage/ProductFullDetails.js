@@ -48,13 +48,11 @@ export default function ProductFullDetails() {
   const getProperDescription = () => {
     const d= new Date();
     let descriptionLines = product.description.split('\n')
-    console.log(descriptionLines);
     return descriptionLines.map((description,i) => <li key={d.getTime()+i}>{description}</li>);
   }
 
   //the description array is stored into description constant
   const description = getProperDescription();
-  console.log(description);
 
   //function to get the items which are in cart or create an empty array if cart unavailable in local storage
   const getCartItems = () => {

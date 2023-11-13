@@ -1,9 +1,13 @@
-.catalog-page{
+body{
     background-image: url("e-commerce-background.jpg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
-}
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
 
 .zoom:hover {
     -ms-transform: scale(1.1);

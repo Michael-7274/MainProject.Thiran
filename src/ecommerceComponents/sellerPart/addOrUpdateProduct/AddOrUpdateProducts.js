@@ -165,7 +165,6 @@ export default function AddOrUpdateProducts() {
       const objectToBeAdded = { ...productObject };
       objectToBeAdded.seller = sellerID;
       objectToBeAdded.id = "PID" + d.getTime();
-      console.log(objectToBeAdded);
       products = [...products, objectToBeAdded];
       if (validateForm()) {
         localStorage.setItem('products', JSON.stringify(products));
@@ -188,7 +187,7 @@ export default function AddOrUpdateProducts() {
 
   return (
     <>
-      <body className='add-or-update-form-body'>
+      <div className='add-or-update-form-body'>
         {showAlert && <Alert alertMessage={alert} onOk={hideSuccessAlertAndGoToSellerPage} />}
         <div className="form-container">
           <h1 id="form-title">{id === "addProduct" ? "Add product" : "Update product"}</h1>
@@ -293,7 +292,7 @@ export default function AddOrUpdateProducts() {
             </div>
           </form>
         </div>
-      </body>
+      </div>
     </>
   );
 }
