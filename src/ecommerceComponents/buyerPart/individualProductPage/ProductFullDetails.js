@@ -2,26 +2,23 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import './productFullDetails.css';
 import NavBar from '../../generalComponents/navBar/NavBar';
-export default function ProductFullDetails() {
+
+export default function ProductFullDetails({logout}) {
 
   //product ID obtained as params
   const { productID } = useParams();
 
-  //cart state to store cart items
-  //Don' t remove this state because it helps change the button text to "Added to cart" when clicked
-  const [cart, setToCart] = useState([]);
+  //get the cartId for the current user
+  //used to store the item in the appropriate cart
+  const cartId = "cart" + JSON.parse(localStorage.getItem('authentication')).id;
+
+  //getting the cart items from localstorage
+  const cartList = localStorage.getItem(cartId);
+  const cart=cartList && (cartList !== "undefined") ? JSON.parse(cartList) : []
 
   //useNavigate to navigate to another page
   const navigate = useNavigate();
 
-  //get the cartId for the current user
-  //used to store the item in the appropriate cart
-  const cartId = "cart" +JSON.parse(localStorage.getItem('authentication')).id;
-
-  //useEffect to invoke getCartItems() and add event listener 'focus' to page 
-  useEffect(() => {
-    getCartItems();
-  }, []);
 
   //function to get a particular product object from productList array
   const getProductItem = () => {
@@ -35,9 +32,7 @@ export default function ProductFullDetails() {
       "price": "",
       "warranty": "",
       "return": "",
-      "imageurls": {
-        "small": ""
-      }
+      "imageurl": ""
     };
   }
 
@@ -46,19 +41,13 @@ export default function ProductFullDetails() {
 
   //checks if there are new lines in the description (i.e)'/n',this function puts <br/> in place of '\n' to create new lines
   const getProperDescription = () => {
-    const d= new Date();
+    const d = new Date();
     let descriptionLines = product.description.split('\n')
-    return descriptionLines.map((description,i) => <li key={d.getTime()+i}>{description}</li>);
+    return descriptionLines.map((description, i) => <li key={d.getTime() + i}>{description}</li>);
   }
 
   //the description array is stored into description constant
   const description = getProperDescription();
-
-  //function to get the items which are in cart or create an empty array if cart unavailable in local storage
-  const getCartItems = () => {
-    const cartList = localStorage.getItem(cartId);
-    setToCart(cartList && (cartList !== "undefined") ? JSON.parse(cartList) : []);
-  }
 
   //function to check if the product is in cart
   const isProductInCart = () => {
@@ -71,9 +60,9 @@ export default function ProductFullDetails() {
   //adds the current item shown to cart
   const addToCart = () => {
     if (!isInCart) {
-      let cartItems = [...cart, product];
+      let cartItems = [...cart];
+      cartItems.splice(0, 0, product);
       localStorage.setItem(cartId, JSON.stringify(cartItems));
-      setToCart(cartItems);
       navigate('/cart');
     }
     else {
@@ -83,11 +72,11 @@ export default function ProductFullDetails() {
 
   return (
     <>
-      <NavBar />
+      <NavBar logout={logout}/>
       <div className="split-container">
 
         <div className="left-section">
-          <img src={product.imageurls.small} alt='product' />
+          <img src={product.imageurl} alt='product' />
         </div>
 
         <div className="right-section">

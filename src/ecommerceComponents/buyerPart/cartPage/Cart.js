@@ -4,7 +4,7 @@ import './cart.css';
 import NavBar from '../../generalComponents/navBar/NavBar';
 import DeleteModal from '../../generalComponents/confirmationModal/deleteModal/DeleteModal';
 
-export default function Cart() {
+export default function Cart({logout}) {
 
   //state to store cart items
   const [cartItems, setCartItems] = useState([]);
@@ -22,7 +22,7 @@ export default function Cart() {
     getCartItems();
     window.addEventListener('focus', refreshPage);//add a eventListener that calls refreshPage() when we get to the tab
     return () => {
-      window.removeEventListener('focus', refreshPage);//removes the eventlistener when we are in the tab to avoid memory leaks
+      window.removeEventListener('focus', refreshPage);//removes the eventlistener when we are in tab to avoid memory leaks
     }
   }, []);
 
@@ -38,10 +38,20 @@ export default function Cart() {
 
     if (items && items !== "undefined") {
       items = JSON.parse(items);
-      const availableCartItems = availableProducts
-        .filter(availableProduct => { return items.some(product => product.id === availableProduct.id) });
+      let availableCartItems=[];
+      for(let i=0;i<items.length;i++)
+      {
+        if(availableProducts.some(product=>product.id===items[i].id)){
+          let product=availableProducts.find(product=>product.id===items[i].id);
+          availableCartItems.push(product);
+        }
+      }
+      // const availableCartItems = items
+      //   .filter(availableProduct => {
+      //     return availableProducts.some(product => product.id === availableProduct.id) 
+      //   });
 
-      localStorage.setItem(cartId,JSON.stringify(availableCartItems));
+      localStorage.setItem(cartId, JSON.stringify(availableCartItems));
       setCartItems(availableCartItems);
     }
     else {
@@ -86,7 +96,7 @@ export default function Cart() {
   if (itemCards.length === 0) {
     return (
       <>
-        <NavBar />
+        <NavBar logout={logout}/>
         <h1>No items in your Cart</h1>
       </>
     );
@@ -99,7 +109,7 @@ export default function Cart() {
           showModal && <DeleteModal message={`Do you really want to delete ${cartItems[indexOfItemToDelete].name} from cart?`}
             onConfirm={confirmDelete} onCancel={cancelDelete} />
         }
-        <NavBar />
+        <NavBar logout={logout}/>
         <div className='cart-table-container'>
           <table id="cart-table">
             <tbody>

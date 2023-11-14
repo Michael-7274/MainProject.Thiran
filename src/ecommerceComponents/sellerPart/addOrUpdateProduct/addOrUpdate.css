@@ -1,9 +1,10 @@
-.add-or-update-form-body{
+.add-or-update-form-body {
     background-image: url("../../e-commerce-background.jpg");
     background-size: cover;
     background-position: center;
     height: 100%;
 }
+
 .form-container {
     max-width: 600px;
     margin: 0 auto;
@@ -27,15 +28,16 @@
     margin-bottom: 5px;
 }
 
-.form-container #initial-form-condition{
+.form-container #initial-form-condition {
     color: red;
 }
+
 .form-container input[type="text"],
 .form-container input[type="email"],
 .form-container input[type="url"],
 .form-container input[type="number"],
 .form-container input[type="date"],
-.form-container textarea{
+.form-container textarea {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -67,9 +69,9 @@
 .form-container button:active {
     box-shadow: 0 5px rgb(3, 3, 3);
     transform: translateY(5px);
-  }
+}
 
-.form-container .error-message{
+.form-container .error-message {
     font-size: small;
     color: red;
 }

@@ -1,4 +1,4 @@
-body{
+body {
     background-image: url("e-commerce-background.jpg");
     background-size: cover;
     background-position: center;
@@ -6,8 +6,8 @@ body{
     margin: 0;
     display: flex;
     flex-direction: column;
-  }
-  
+}
+
 
 .zoom:hover {
     -ms-transform: scale(1.1);
@@ -15,6 +15,7 @@ body{
     -webkit-transform: scale(1.1);
     /* for the transform to work on Safari 3-8 */
     transform: scale(1.1);
+    z-index: 1000;
 }
 
 .centerdiv {
@@ -24,19 +25,19 @@ body{
 
 .product-card {
     position: relative;
-    width: 201px;
-    height: 201px;
+    width: 260px;
+    height: 256px;
     border: 3px solid #febd69;
     background-color: #232F3E;
-    border-radius: 20px;
-    margin: 30px;
+    border-radius: 0px;
+    margin: 0px;
 }
 
 .image-style {
     position: absolute;
     border: 1px solid black;
-    height: 140px;
-    width: 140px;
+    height: 190px;
+    width: 200px;
     left: 29px;
     right: 50px;
     top: 1px;
@@ -46,11 +47,15 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 
 .card-text {
     position: absolute;
     bottom: -2px;
-    left:15px;
+    left: 15px;
 }
 
 .card-text p {
@@ -58,3 +63,6 @@ body{
     margin: 0px;
 }
 
+.catalog-page .page-no-button-container{
+    bottom: -22px;
+}

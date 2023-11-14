@@ -15,9 +15,7 @@ export default function AddOrUpdateProducts() {
     "return": "",
     "id": "",
     "slug": "",
-    "imageurls": {
-      "small": ""
-    },
+    "imageurl":"",
     "seller": ""
   });
 
@@ -32,9 +30,7 @@ export default function AddOrUpdateProducts() {
     "return": "",
     "id": "",
     "slug": "",
-    "imageurls": {
-      "small": ""
-    },
+    "imageurl":"",
     "seller": ""
   });
 
@@ -86,6 +82,16 @@ export default function AddOrUpdateProducts() {
     setProductObject(tempObject);
   }
 
+  const handleUpload=(event)=>{
+    let imageFile=event.target.files[0];
+    if(imageFile){
+      imageFile=URL.createObjectURL(imageFile);
+      const tempObject = { ...productObject }
+      tempObject.imageurl=imageFile;
+      setProductObject(tempObject);
+    }
+  }
+
   //function to validate the form input from user
   const validateForm = () => {
     let isFormValid = true;
@@ -132,12 +138,12 @@ export default function AddOrUpdateProducts() {
     else {
       tempErrorObject.return = "";
     }
-    if (!((productObject.imageurls.small.indexOf("http://") === -1) ^ (productObject.imageurls.small.indexOf("https://") === -1))) {
-      tempErrorObject.imageurls.small = "*Please give proper url either in http or https";
+    if ((productObject.imageurl.indexOf(".") === -1) && (productObject.imageurl.indexOf("/") === -1)) {
+      tempErrorObject.imageurl = "*Please give proper url";
       isFormValid = false;
     }
     else {
-      tempErrorObject.imageurls.small = "";
+      tempErrorObject.imageurl = "";
     }
     if (Number(productObject.price) < 1 || productObject.price === "") {
       tempErrorObject.price = "*Invalid price";
@@ -191,7 +197,6 @@ export default function AddOrUpdateProducts() {
         {showAlert && <Alert alertMessage={alert} onOk={hideSuccessAlertAndGoToSellerPage} />}
         <div className="form-container">
           <h1 id="form-title">{id === "addProduct" ? "Add product" : "Update product"}</h1>
-          <p id="initial-form-condition">*all fields are required</p>
 
           <form id="acform" onSubmit={handleSubmit}>
 
@@ -262,17 +267,27 @@ export default function AddOrUpdateProducts() {
             <div className='error-message'>{errorObject.return}</div>
 
             <div className="newdiv">
+              <label htmlFor="return">To upload image(optional):</label>
+              <input 
+              type="file" 
+              id="image-upload"
+              name='imageUpload'
+              accept="image/*" 
+              onChange={handleUpload} />
+            </div>
+
+            <div className="newdiv">
               <label htmlFor="small-image-url">Image URL:</label>
               <input
                 type="text"
                 id="small-image-url"
-                name="imageurls.small"
-                value={productObject.imageurls.small}
+                name="imageurl"
+                value={productObject.imageurl}
                 onChange={handleChange}
               />
             </div>
 
-            <div className='error-message'>{errorObject.imageurls.small}</div>
+            <div className='error-message'>{errorObject.imageurl}</div>
 
             <div className="newdiv">
               <label htmlFor="price">Product price:</label>

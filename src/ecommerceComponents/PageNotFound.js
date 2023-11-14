@@ -4,7 +4,7 @@ import './pageNotFound.css'
 export default function PageNotFound() {
   return (
     <div className="page-not-found">
-    <div>Page not Found login again or check page link</div>
+      <div>Page not Found login again or check page link</div>
     </div>
   )
 }

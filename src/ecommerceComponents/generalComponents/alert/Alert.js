@@ -1,6 +1,6 @@
 import React from 'react'
 import './alert.css'
-export default function Alert({ alertMessage,onOk }) {
+export default function Alert({ alertMessage, onOk }) {
     return (
         <>
             <div className='overlay' onClick={onOk}>
