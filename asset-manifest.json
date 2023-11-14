@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/MainProject.Thiran/static/css/main.3e454556.css",
-    "main.js": "/MainProject.Thiran/static/js/main.7edd8d57.js",
+    "main.css": "/MainProject.Thiran/static/css/main.db1a52a7.css",
+    "main.js": "/MainProject.Thiran/static/js/main.644bda07.js",
     "static/js/787.46493d11.chunk.js": "/MainProject.Thiran/static/js/787.46493d11.chunk.js",
     "static/media/e-commerce-background.jpg": "/MainProject.Thiran/static/media/e-commerce-background.f1ab1cecece457ff6162.jpg",
     "index.html": "/MainProject.Thiran/index.html",
-    "main.3e454556.css.map": "/MainProject.Thiran/static/css/main.3e454556.css.map",
-    "main.7edd8d57.js.map": "/MainProject.Thiran/static/js/main.7edd8d57.js.map",
+    "main.db1a52a7.css.map": "/MainProject.Thiran/static/css/main.db1a52a7.css.map",
+    "main.644bda07.js.map": "/MainProject.Thiran/static/js/main.644bda07.js.map",
     "787.46493d11.chunk.js.map": "/MainProject.Thiran/static/js/787.46493d11.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e454556.css",
-    "static/js/main.7edd8d57.js"
+    "static/css/main.db1a52a7.css",
+    "static/js/main.644bda07.js"
   ]
 }

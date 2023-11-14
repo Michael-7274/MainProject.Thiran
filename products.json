@@ -1,8 +1,6 @@
 [
-
     {
         "name": "Ariel",
-        "image": "product.jpg",
         "category": "Detergent",
         "description": "For washing clothes",
         "price": "200",
@@ -10,19 +8,11 @@
         "return": "2 days from delivery",
         "id": "TFE_-9eLmEs",
         "slug": "yellow-inflatable-ring-on-persons-hand-TFE_-9eLmEs",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1598238179116-ec3c4c0f7a29?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxfHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1598238179116-ec3c4c0f7a29?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxfHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1598238179116-ec3c4c0f7a29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxfHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1598238179116-ec3c4c0f7a29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxfHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1598238179116-ec3c4c0f7a29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxfHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1598238179116-ec3c4c0f7a29"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://www.jiomart.com/images/product/original/490003864/ariel-complete-detergent-powder-500-g-get-200-g-free-product-images-o490003864-p490003864-0-202203170807.jpg"
     },
     {
         "name": "Whirlpool Washing Machine",
-        "image": "product.jpg",
         "category": "Appliance",
         "description": "Fully automatic washing machine",
         "price": "20000",
@@ -30,19 +20,11 @@
         "return": "30 days from delivery",
         "id": "mraOfEC7sxk",
         "slug": "a-black-and-white-photo-of-a-tower-in-the-distance-recnadocsidamai",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1697017669892-45ed5ed77161?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwzMTB8fCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMGVsZWN0cm9uaWNzfGVufDB8fHx8MTY5ODY3NjIwMXww&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1697017669892-45ed5ed77161?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwzMTB8fCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMGVsZWN0cm9uaWNzfGVufDB8fHx8MTY5ODY3NjIwMXww&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1697017669892-45ed5ed77161?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwzMTB8fCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMGVsZWN0cm9uaWNzfGVufDB8fHx8MTY5ODY3NjIwMXww&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1697017669892-45ed5ed77161?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwzMTB8fCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMGVsZWN0cm9uaWNzfGVufDB8fHx8MTY5ODY3NjIwMXww&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1697017669892-45ed5ed77161?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwzMTB8fCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMGVsZWN0cm9uaWNzfGVufDB8fHx8MTY5ODY3NjIwMXww&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1697017669892-45ed5ed77161"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/41Qu0JmnpYL._SY445_SX342_QL70_FMwebp_.jpg"
     },
     {
         "name": "Cool Breeze Air Cooler",
-        "image": "product.jpg",
         "category": "Appliance",
         "description": "Powerful air cooler for large spaces",
         "price": "2000",
@@ -50,19 +32,11 @@
         "return": "15 days from delivery",
         "id": "yq8c6k5fBnQ",
         "slug": "view-of-red-moon-yq8c6k5fBnQ",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1542961996-3f032eec02cb?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwzfHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1542961996-3f032eec02cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwzfHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1542961996-3f032eec02cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwzfHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1542961996-3f032eec02cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwzfHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1542961996-3f032eec02cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwzfHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1542961996-3f032eec02cb"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/31rusFpkzPL._SX300_SY300_QL70_FMwebp_.jpg"
     },
     {
         "name": "Iron Master Iron Box",
-        "image": "product.jpg",
         "category": "Appliance",
         "description": "Steam iron for wrinkle-free clothes",
         "price": "2000",
@@ -70,19 +44,11 @@
         "return": "7 days from delivery",
         "id": "qG_VQQjwQM4",
         "slug": "city-during-daytime-qG_VQQjwQM4",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1567079318398-089a1b74c2d5?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw0fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1567079318398-089a1b74c2d5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw0fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1567079318398-089a1b74c2d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw0fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1567079318398-089a1b74c2d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw0fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1567079318398-089a1b74c2d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw0fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1567079318398-089a1b74c2d5"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/31WXnM9XIYL._SX342_SY445_.jpg"
     },
     {
         "name": "Samsung Refrigerator",
-        "image": "product.jpg",
         "category": "Appliance",
         "description": "Double door refrigerator with inverter compressor",
         "price": "200000",
@@ -90,19 +56,11 @@
         "return": "30 days from delivery",
         "id": "151nS8pCCo0",
         "slug": "aerial-view-of-city-151nS8pCCo0",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1567202170721-bd01fbdea30a?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw1fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1567202170721-bd01fbdea30a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw1fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1567202170721-bd01fbdea30a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw1fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1567202170721-bd01fbdea30a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw1fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1567202170721-bd01fbdea30a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw1fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1567202170721-bd01fbdea30a"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/21r3ehyLYsL._SY445_SX342_QL70_FMwebp_.jpg"
     },
     {
         "name": "Sony 4K Smart TV",
-        "image": "product.jpg",
         "category": "Electronics",
         "description": "55 inch LED TV with Android TV",
         "price": "200000",
@@ -110,19 +68,11 @@
         "return": "60 days from delivery",
         "id": "yABOky8kebc",
         "slug": "10-and-10-banknotes-on-brown-wooden-table-yABOky8kebc",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1621277315766-707081bf66a2?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw2fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1621277315766-707081bf66a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw2fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1621277315766-707081bf66a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw2fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1621277315766-707081bf66a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw2fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1621277315766-707081bf66a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw2fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1621277315766-707081bf66a2"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/71hyZH9ISyL._SX425_.jpg"
     },
     {
         "name": "Nike Running Shoes",
-        "image": "product.jpg",
         "category": "Footwear",
         "description": "Men's running shoes with air cushioning",
         "price": "20000",
@@ -130,19 +80,11 @@
         "return": "14 days from delivery",
         "id": "NFpDwv0QWHY",
         "slug": "black-and-white-round-analog-wall-clock-NFpDwv0QWHY",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1605821054230-4fdb3cf7701d?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw3fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1605821054230-4fdb3cf7701d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw3fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1605821054230-4fdb3cf7701d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw3fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1605821054230-4fdb3cf7701d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw3fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1605821054230-4fdb3cf7701d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw3fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1605821054230-4fdb3cf7701d"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/61BDntquURL._SY575_.jpg"
     },
     {
         "name": "Canon EOS DSLR Camera",
-        "image": "product.jpg",
         "category": "Electronics",
         "description": "24.1 MP camera with EF-S 18-55mm lens",
         "price": "200000",
@@ -150,19 +92,11 @@
         "return": "30 days from delivery",
         "id": "LhTCG5mGh3A",
         "slug": "a-tall-building-with-a-spire-on-top-of-it-LhTCG5mGh3A",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1692656479597-05c4f67cffde?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw4fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1692656479597-05c4f67cffde?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw4fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1692656479597-05c4f67cffde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw4fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1692656479597-05c4f67cffde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw4fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1692656479597-05c4f67cffde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw4fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1692656479597-05c4f67cffde"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/51UHoxzInpL._SY300_SX300_QL70_FMwebp_.jpg"
     },
     {
         "name": "Bosch Drill Machine",
-        "image": "product.jpg",
         "category": "Tools",
         "description": "Cordless drill with extra battery",
         "price": "200000",
@@ -170,19 +104,11 @@
         "return": "30 days from delivery",
         "id": "4mLKBKMPoHo",
         "slug": "selective-focus-photo-of-smiling-woman-wearing-black-dress-standing-on-concrete-pavement-4mLKBKMPoHo",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1533659828870-95ee305cee3e?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw5fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1533659828870-95ee305cee3e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw5fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1533659828870-95ee305cee3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw5fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1533659828870-95ee305cee3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw5fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1533659828870-95ee305cee3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHw5fHwlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjBlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTg2NzYxOTl8MA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1533659828870-95ee305cee3e"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/51c6eT0sGuL._AC_UL320_.jpg"
     },
     {
         "name": "LG Microwave Oven",
-        "image": "product.jpg",
         "category": "Appliance",
         "description": "Convection microwave with grill",
         "price": "20000",
@@ -190,19 +116,11 @@
         "return": "20 days from delivery",
         "id": "v8lbzNITbCA",
         "slug": "roasted-chicken-v8lbzNITbCA",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1564860488704-9d0de018663d?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxMHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1564860488704-9d0de018663d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxMHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1564860488704-9d0de018663d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxMHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1564860488704-9d0de018663d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxMHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1564860488704-9d0de018663d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxMHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1564860488704-9d0de018663d"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/41vq2OTtaxL._SY445_SX342_QL70_FMwebp_.jpg"
     },
     {
         "name": "Dove Shampoo",
-        "image": "product.jpg",
         "category": "Hair Care",
         "description": "Nourishing shampoo for smooth hair",
         "price": "200",
@@ -210,19 +128,11 @@
         "return": "2 days from delivery",
         "id": "jqa5G-4tWzs",
         "slug": "brown-brick-building-under-blue-sky-during-daytime-jqa5G-4tWzs",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1588955606878-c3316b6808c2?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxMXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1588955606878-c3316b6808c2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxMXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1588955606878-c3316b6808c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxMXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1588955606878-c3316b6808c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxMXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1588955606878-c3316b6808c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxMXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1588955606878-c3316b6808c2"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/41bkvhgqSOL._SX569_.jpg"
     },
     {
         "name": "HP Laptop",
-        "image": "product.jpg",
         "category": "Electronics",
         "description": "15.6 inch laptop with Intel i5 processor",
         "price": "200000",
@@ -230,19 +140,11 @@
         "return": "30 days from delivery",
         "id": "r1a4eA1LeTQ",
         "slug": "topless-man-standing-on-rock-under-blue-and-white-skies-r1a4eA1LeTQ",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1564859934639-ee7f803a6627?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxMnx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1564859934639-ee7f803a6627?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxMnx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1564859934639-ee7f803a6627?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxMnx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1564859934639-ee7f803a6627?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxMnx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1564859934639-ee7f803a6627?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxMnx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1564859934639-ee7f803a6627"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/712Jcrkd8gL._SX569_.jpg"
     },
     {
         "name": "Adidas Sports Shoes",
-        "image": "product.jpg",
         "category": "Footwear",
         "description": "Men's sports shoes with Boost technology",
         "price": "20000",
@@ -250,19 +152,11 @@
         "return": "14 days from delivery",
         "id": "e17kA5K6TCs",
         "slug": "green-trees-under-blue-sky-at-daytime-e17kA5K6TCs",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1564860596616-951365c2960e?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxM3x8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1564860596616-951365c2960e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxM3x8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1564860596616-951365c2960e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxM3x8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1564860596616-951365c2960e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxM3x8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1564860596616-951365c2960e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxM3x8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1564860596616-951365c2960e"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/61Uzk7BKmOL._SY575_.jpg"
     },
     {
         "name": "LG 4K UHD Smart TV",
-        "image": "product.jpg",
         "category": "Electronics",
         "description": "65 inch LED TV with webOS",
         "price": "200000",
@@ -270,19 +164,11 @@
         "return": "60 days from delivery",
         "id": "tFUVpKevU8E",
         "slug": "white-concrete-building-tFUVpKevU8E",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1560081843-8f38ca957369?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxNHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1560081843-8f38ca957369?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxNHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1560081843-8f38ca957369?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxNHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1560081843-8f38ca957369?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxNHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1560081843-8f38ca957369?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxNHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1560081843-8f38ca957369"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/81OnFolEvpL._SX425_.jpg"
     },
     {
         "name": "Bajaj Mixer Grinder",
-        "image": "product.jpg",
         "category": "Appliance",
         "description": "550W mixer grinder with 3 jars",
         "price": "20000",
@@ -290,19 +176,11 @@
         "return": "15 days from delivery",
         "id": "y6fTK4k2J6c",
         "slug": "man-lying-on-30-yards-on-football-field-y6fTK4k2J6c",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1485827031228-b1736cb1fd06?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxNXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1485827031228-b1736cb1fd06?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxNXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1485827031228-b1736cb1fd06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxNXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1485827031228-b1736cb1fd06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxNXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1485827031228-b1736cb1fd06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxNXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1485827031228-b1736cb1fd06"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/31rucE-db2L._SX300_SY300_QL70_FMwebp_.jpg"
     },
     {
         "name": "Puma Running Shorts",
-        "image": "product.jpg",
         "category": "Apparel",
         "description": "Men's shorts for running",
         "price": "200",
@@ -310,19 +188,11 @@
         "return": "7 days from delivery",
         "id": "dl5kAZxq0u0",
         "slug": "20-number-emblem-dl5kAZxq0u0",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1522448053768-3b5ffd05c2f5?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxNnx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1522448053768-3b5ffd05c2f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxNnx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1522448053768-3b5ffd05c2f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxNnx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1522448053768-3b5ffd05c2f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxNnx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1522448053768-3b5ffd05c2f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxNnx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1522448053768-3b5ffd05c2f5"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/61cyqVVsrRL._SX466_.jpg"
     },
     {
         "name": "LG Front Load Washing Machine",
-        "image": "product.jpg",
         "category": "Appliance",
         "description": "7 kg fully automatic washing machine",
         "price": "200000",
@@ -330,19 +200,11 @@
         "return": "30 days from delivery",
         "id": "k2VOtbh7QDA",
         "slug": "white-and-black-number-9-k2VOtbh7QDA",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1593507377427-517837375cca?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxN3x8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1593507377427-517837375cca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxN3x8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1593507377427-517837375cca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxN3x8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1593507377427-517837375cca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxN3x8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1593507377427-517837375cca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxN3x8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1593507377427-517837375cca"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/71ZTkrCLFQL._SX569_.jpg"
     },
     {
         "name": "Sony Noise Cancelling Headphones",
-        "image": "product.jpg",
         "category": "Electronics",
         "description": "Wireless headphones with industry-leading noise cancellation",
         "price": "200000",
@@ -350,19 +212,11 @@
         "return": "30 days from delivery",
         "id": "N_TFAu9gtf0",
         "slug": "20-euro-bill-on-white-textile-N_TFAu9gtf0",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1579635827170-e17ba1c201f5?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxOHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1579635827170-e17ba1c201f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxOHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1579635827170-e17ba1c201f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxOHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1579635827170-e17ba1c201f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxOHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1579635827170-e17ba1c201f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxOHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1579635827170-e17ba1c201f5"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/61WFNqf8hVL._SX425_.jpg"
     },
     {
         "name": "Bosch Angle Grinder",
-        "image": "product.jpg",
         "category": "Tools",
         "description": "800W angle grinder with auxiliary handle",
         "price": "20000",
@@ -370,19 +224,11 @@
         "return": "30 days from delivery",
         "id": "u9VFEhrmXSo",
         "slug": "20-us-dollar-bill-u9VFEhrmXSo",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1591616014190-5cc2ea1e8a49?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxOXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1591616014190-5cc2ea1e8a49?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxOXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1591616014190-5cc2ea1e8a49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxOXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1591616014190-5cc2ea1e8a49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxOXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1591616014190-5cc2ea1e8a49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwxOXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1591616014190-5cc2ea1e8a49"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/417OeIt9yPL._SY300_SX300_QL70_FMwebp_.jpg"
     },
     {
         "name": "Philips Air Fryer",
-        "image": "product.jpg",
         "category": "Appliance",
         "description": "1400W air fryer with rapid air technology",
         "price": "20000",
@@ -390,19 +236,11 @@
         "return": "20 days from delivery",
         "id": "SXnfy2nnPUE",
         "slug": "10-euro-bill-on-black-textile-SXnfy2nnPUE",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1580634240015-a9f56295699f?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwyMHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1580634240015-a9f56295699f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwyMHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1580634240015-a9f56295699f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwyMHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1580634240015-a9f56295699f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwyMHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1580634240015-a9f56295699f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwyMHx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1580634240015-a9f56295699f"
-        },
-        "seller": "seller1"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/51PwsOOMErL._SX466_.jpg"
     },
     {
         "name": "Nike Pro Training Tights",
-        "image": "product.jpg",
         "category": "Apparel",
         "description": "Women's training tights with Dri-FIT technology",
         "price": "20000",
@@ -410,14 +248,7 @@
         "return": "7 days from delivery",
         "id": "gjEHjqkW-uM",
         "slug": "a-woman-sitting-on-steps-with-a-basket-of-flowers-gjEHjqkW-uM",
-        "imageurls": {
-            "raw": "https://images.unsplash.com/photo-1623375803518-fafede512d4b?ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwyMXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3",
-            "full": "https://images.unsplash.com/photo-1623375803518-fafede512d4b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwyMXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=85",
-            "regular": "https://images.unsplash.com/photo-1623375803518-fafede512d4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwyMXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=1080",
-            "small": "https://images.unsplash.com/photo-1623375803518-fafede512d4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwyMXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=400",
-            "thumb": "https://images.unsplash.com/photo-1623375803518-fafede512d4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjIyNDV8MHwxfHNlYXJjaHwyMXx8JTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwJTI1MjAlMjUyMCUyNTIwZWxlY3Ryb25pY3N8ZW58MHx8fHwxNjk4Njc2MTk5fDA&ixlib=rb-4.0.3&q=80&w=200",
-            "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1623375803518-fafede512d4b"
-        },
-        "seller": "seller2"
+        "seller": "seller1",
+        "imageurl": "https://m.media-amazon.com/images/I/71lEMP4KPFL._SX679_.jpg"
     }
 ]
