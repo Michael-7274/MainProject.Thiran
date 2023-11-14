@@ -10,7 +10,7 @@ export default function ProductShow({ productItem }) {
     <div className="zoom">
       <NavLink to={`/product/${productVariable.id}`}>
         <div className="product-card">
-          <img className='image-style' alt='product' src={productItem.imageurls.small} />
+          <img className='image-style' alt='product' src={productItem.imageurl} />
           <div className='card-text'>
             <p>{productVariable.name}</p>
             <p>Rs.{productVariable.price}</p>

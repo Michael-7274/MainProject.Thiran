@@ -5,12 +5,14 @@ import ProductPagination from '../../generalComponents/pagination/ProductPaginat
 import DeleteModal from '../../generalComponents/confirmationModal/deleteModal/DeleteModal';
 
 export default function SellerMainPage({ logout }) {
-
+  
   //state to store the list of products obtaained from local storage
   //Don't try to save only seller products to it as this makes the product delete complicated
   const [productsList, setProductsList] = useState([]);
+
+  let pageNo = localStorage.getItem('pgNo');
   //state to store current page of the seller site
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(pageNo && pageNo !== "undefined"?JSON.parse(pageNo):1);
 
   //these states below are made for the use of Delete modal
   //productToBeDeleted- stores an object which contains the product to be deleted
@@ -26,15 +28,14 @@ export default function SellerMainPage({ logout }) {
   //useEffect to automatically invoke getProductList() and getPageNo()
   useEffect(() => {
     getProductList();
-    getPageNo();
   }, []);
 
   //function to get the product array from local storage/JSON and store it in state
   const getProductList = async () => {
     //return in async is different from normal function return ,here it returns a promise
-    const listOfProducts = JSON.parse(localStorage.getItem('products'));
+    const listOfProducts =localStorage.getItem('products');
     if ((listOfProducts !== "undefined") && listOfProducts) {
-      const data = JSON.parse(localStorage.getItem('products'));//JSON.parse() converts a JSON string into a JS object
+      const data = JSON.parse(listOfProducts);//JSON.parse() converts a JSON string into a JS object
       setProductsList(data);
     }
     else {
@@ -47,19 +48,6 @@ export default function SellerMainPage({ logout }) {
       catch (err) {
         console.error(err);
       }
-    }
-  }
-
-  //function to get the page no from local storage
-  const getPageNo = () => {
-    //to keep the same page on site when switching between different links
-    let pageNo = localStorage.getItem('pgNo');
-    if (pageNo && pageNo !== "undefined") {
-      pageNo = JSON.parse(pageNo);
-      setCurrentPage(Number(pageNo));
-    }
-    else {
-      localStorage.setItem("pgNo", JSON.stringify(1));
     }
   }
 
@@ -129,9 +117,9 @@ export default function SellerMainPage({ logout }) {
 
   //function to call logout function and navigate to login page
   const logoutOfSite = () => {
+    localStorage.setItem("pgNo", JSON.stringify(1));        
     logout();
-    localStorage.setItem("pgNo", JSON.stringify(1));
-    navigate('/');
+    navigate('/');    
   }
 
   //store the generated table rows array in productRows

@@ -7,45 +7,19 @@ import AddOrUpdateProducts from '../sellerPart/addOrUpdateProduct/AddOrUpdatePro
 import AssignProducts from '../buyerPart/productCatalogPage/AssignProducts';
 import ProductFullDetails from '../buyerPart/individualProductPage/ProductFullDetails';
 import Cart from '../buyerPart/cartPage/Cart';
-//github pages build
+import authStructCreator from '../generalComponents/structureCreator/authStructCreactor';
+
 export default function SetRoutes() {
 
+    const defaultAuth = new authStructCreator(false, null);
+    const isAlreadyAuth = localStorage.getItem('authentication');
     //Authorization state object to control user login 
-    const [auth, setAuth] = useState({
-        "authentication": false,
-        "role": null
-    });
-
-    //invoke getAuthentication() to get auth object 
-    useEffect(() => {
-        getAuthentication();
-    }, [])
+    const [auth, setAuth] = useState(isAlreadyAuth && isAlreadyAuth !== "undefined" ? JSON.parse(isAlreadyAuth) : defaultAuth);
 
     //set the authentication to null(no one) , also doubles as logout
-    function setNewAuthentication() {
-        localStorage.setItem('authentication', JSON.stringify(
-            {
-                authentication: false,
-                role: null
-            }
-        ));
-        setAuth({
-            authentication: false,
-            role: null
-        });
-    }
-
-    //Find the user who is currently logged in from local storage
-    const getAuthentication = () => {
-
-        let data = localStorage.getItem('authentication');
-        if (data && (data !== "undefined")) {
-            data = JSON.parse(data);
-            setAuth(data);
-        }
-        else {
-            setNewAuthentication();
-        }
+    function logout() {
+        localStorage.setItem('authentication', JSON.stringify(defaultAuth));
+        setAuth(defaultAuth);
     }
 
     return (
@@ -61,25 +35,26 @@ export default function SetRoutes() {
                                     <>
                                         {/* paths accessible to the buyer customer */}
                                         {/* '/' path overwitten to avoid showing the login page to user after login */}
-                                        <Route exact path='/' element={<AssignProducts />}></Route>
+                                        <Route exact path='/' element={<AssignProducts logout={logout} />}></Route>
 
                                         {/* catalog page to show products to the user */}
-                                        <Route exact path='/catalog' element={<AssignProducts />}>
+                                        <Route exact path='/catalog' element={<AssignProducts logout={logout} />}>
                                         </Route>
 
                                         {/* Page to show full details of the product */}
-                                        <Route exact path='/product/:productID' element={<ProductFullDetails />}></Route>
+                                        <Route exact path='/product/:productID'element={<ProductFullDetails logout={logout}/>}>
+                                        </Route>
 
                                         {/* Cart page to view the items added to cart */}
-                                        <Route exact path='/cart' element={<Cart />}></Route>
+                                        <Route exact path='/cart' element={<Cart logout={logout} />}></Route>
                                     </> :
                                     <>
                                         {/* paths accessible to the seller */}
                                         {/* '/' path overwitten to avoid showing the login page to user after login */}
-                                        <Route exact path='/' element={<SellerMainPage logout={setNewAuthentication} />}>
+                                        <Route exact path='/' element={<SellerMainPage logout={logout} />}>
                                         </Route>
                                         {/* seller page to show products soldby seller */}
-                                        <Route exact path='/seller' element={<SellerMainPage logout={setNewAuthentication} />}>
+                                        <Route exact path='/seller' element={<SellerMainPage logout={logout} />}>
                                         </Route>
                                         {/* form page to add or update products*/}
                                         <Route exact path='/productcreateorupdate/:id' element={<AddOrUpdateProducts />}>

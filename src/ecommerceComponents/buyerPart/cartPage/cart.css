@@ -40,6 +40,10 @@ body {
     border-bottom: 2px solid black;
 }
 
+.product-title-in-cart{
+    text-decoration: none;
+}
+
 #cart-table .product-delete-button {
     background: linear-gradient(to bottom right, #EF4765, #d90404);
     border: 0;

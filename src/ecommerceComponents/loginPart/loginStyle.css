@@ -35,6 +35,16 @@ input#username,input#password{
     font-weight: bold;
     font-size: x-large;
 }
+
+.login-text3{
+    color: white;
+    margin-left: 95px;
+}
+
+.show-password{
+    left: 30px;
+}
+
 button.signin{
     height: 50px;
     width: 100px;
