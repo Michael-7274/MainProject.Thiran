@@ -1,0 +1,77 @@
+body {
+    background-image: url("../assets/images/e-commerce-background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-table-container {
+    flex: 1;
+    /* This will make sure the table container takes up the remaining space */
+    overflow: auto;
+    /* Enable scrolling if the content overflows */
+}
+
+.centerdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.cart-item-image {
+    height: 140px;
+    width: 140px;
+}
+
+#cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#cart-table tbody tr {
+    border-bottom: 2px solid black;
+}
+
+#cart-table tbody tr:hover {
+    background-color: #ffff99;
+    border: 1px solid #ffff99;
+    border-bottom: 2px solid black;
+}
+
+.product-title-in-cart{
+    text-decoration: none;
+}
+
+#cart-table .cart-product-delete-button {
+    background: linear-gradient(to bottom right, #EF4765, #d90404);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+}
+
+#cart-table .cart-product-delete-button:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5),
+        -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+#cart-table .cart-product-delete-button:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5),
+        -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
