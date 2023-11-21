@@ -1,0 +1,6 @@
+.loading-animation {
+  background-image: url("../assets/images/loadingAnimation.gif");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}

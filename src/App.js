@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import createAuthStruct from "./components/structureCreator/createAuthStruct";
 import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import SellerMainPage from "./pages/sellerPages/sellerMainPage/SellerMainPage";
@@ -8,7 +8,35 @@ import Login from "./pages/loginPage/Login";
 import AssignProducts from "./pages/buyerPages/productCatalogPage/AssignProducts";
 import ProductFullDetails from "./pages/buyerPages/individualProductPage/ProductFullDetails";
 import Cart from "./pages/buyerPages/cartPage/Cart";
+import LoadingScreen from "./components/loadingScreen/LoadingScreen";
 export default function App() {
+
+    const[loading,setLoading]=useState(false);
+
+    useEffect(() => {
+      let timeoutId;
+    
+      const handleUnload = () => {
+        setLoading(true);
+    
+        // Set a timeout to clear the loading state after 2 seconds
+        timeoutId = setTimeout(() => {
+          setLoading(false);
+        }, 2000);
+      };
+    
+      window.addEventListener('unload', handleUnload);
+    
+      return () => {
+        // Clear the timeout and remove the event listener on component unmount
+        if (timeoutId) {
+          clearTimeout(timeoutId);
+        }
+        window.removeEventListener('unload', handleUnload);
+      };
+    }, []);
+    
+
 
     const defaultAuth = new createAuthStruct(false, null);
     const isAlreadyAuth = localStorage.getItem('authentication');
@@ -24,6 +52,11 @@ export default function App() {
     const isAuth = auth.authentication;
     const isSeller = (auth.role === 'seller');
 
+    if(loading){
+      return(
+        <LoadingScreen/>
+      );
+    }
     return (
         <>
             <HashRouter>
